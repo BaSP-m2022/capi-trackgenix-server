@@ -1,11 +1,14 @@
 // use "import" to import libraries
 import express from 'express';
+import * as adminControllers from './resources/admins';
 
 // use "require" to import JSON files
 const admins = require('./data/admins.json');
 
 const app = express();
 const port = process.env.PORT || 3000;
+
+app.get('/admins', adminControllers.getAdminsAll);
 
 app.get('/', async (req, res) => {
   res.send('Hello World!');
