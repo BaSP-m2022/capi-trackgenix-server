@@ -78,5 +78,29 @@
         "email": "djeffray9@uol.com.br",
         "adminStatus": true,
         "projects": []
+    },
+    {
+        "firstName": "Rick",
+        "lastName": "Sanchez",
+        "id": 11,
+        "email": "impicklerick@radiumrocket.com",
+        "adminStatus": true,
+        "projects": []
+    },
+    {
+        "firstName": "Carlos",
+        "lastName": "Garcia",
+        "id": 12,
+        "email": "charlyg@radiumrocket.com",
+        "adminStatus": true,
+        "projects": []
+    },
+    {
+        "firstName": "Gustavo",
+        "lastName": "Cera",
+        "id": 14,
+        "email": "gustianimal@radiumrocket.com",
+        "adminStatus": true,
+        "projects": []
     }
 ]

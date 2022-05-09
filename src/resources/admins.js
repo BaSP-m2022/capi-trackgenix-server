@@ -1,10 +1,7 @@
-const fs = require('fs');
+const fs = require('file-system');
+// const fs = require('fs');
 // const req = require('express/lib/request');
 const admins = require('../data/admins.json');
-
-// admins.forEach((admin, index) => {
-//     console.log(admin.firstName , index);
-// })
 
 // get all admins
 const getAdminsAll = (req, res) => {
@@ -24,25 +21,26 @@ function getAdminById(req, res) {
   }
 }
 
+// create admin
 function createAdmin(req, res) {
-//   const {
-//     firstName, lastName, id, email, adminStatus, projects,
-//   } = req.body;
-//   if (firstName && lastName && id && email && adminStatus && projects) {
-  const adminNew = {
-    firstName: req.body.firstName || '',
-    lastName: req.body.lastName || '',
-    id: parseInt(req.body.id, 10),
-    email: req.body.email || '',
-    adminStatus: req.body.adminStatus || '',
-    projects: req.body.projects || '',
-  };
-  admins.push(adminNew);
-  fs.writeFile('./src/data/admins.json', JSON.stringify(admins));
-  res.status(201).json({ msg: 'Admin created', adminNew });
-//   } else {
-//     res.status(400).json({ msg: 'Error: Complete all data to create an admin' });
-//   }
+  const {
+    firstName, lastName, id, email, adminStatus, projects,
+  } = req.body;
+  if (firstName && lastName && id && email && adminStatus && projects) {
+    const adminNew = {
+      firstName: req.body.firstName || '',
+      lastName: req.body.lastName || '',
+      id: parseInt(req.body.id, 10),
+      email: req.body.email || '',
+      adminStatus: true || '',
+      projects: req.body.projects || '',
+    };
+    admins.push(adminNew);
+    fs.writeFile('./src/data/admins.json', JSON.stringify(admins));
+    res.status(201).json({ msg: 'Admin created', adminNew });
+  } else {
+    res.status(400).json({ msg: 'Error: Complete all data to create an admin and status must be true' });
+  }
 }
 
 module.exports = {

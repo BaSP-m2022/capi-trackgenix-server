@@ -8,6 +8,9 @@ const admins = require('./data/admins.json');
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.set('json spaces', 2);
+app.use(express.json());
+
 app.get('/admins', adminControllers.getAdminsAll);
 app.get('/admins/:id', adminControllers.getAdminById);
 app.post('/admins/create', adminControllers.createAdmin);
