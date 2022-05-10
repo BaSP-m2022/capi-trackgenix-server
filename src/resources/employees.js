@@ -55,4 +55,22 @@ router.post('/', (req, res) => {
   }
 });
 
+// ELIMINAR un Employee
+// Por ID (/deleteById/:id) o (/delete/:id) FUNCIONA
+router.delete('/:id', (req, res) => {
+  const employeeId = req.params.id;
+  const filteredEmployees = employees.filter((employee) => employee.id !== employeeId);
+  if (employees.length === filteredEmployees.length) {
+    res.send('Coud not delete employee because it was not found');
+  } else {
+    fs.writeFile('src/data/employees.json', JSON.stringify(filteredEmployees), (err) => {
+      if (err) {
+        res.send(err);
+      } else {
+        res.send('Employee deleted');
+      }
+    });
+  }
+});
+
 module.exports = router;
