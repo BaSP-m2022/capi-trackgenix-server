@@ -14,6 +14,8 @@ app.use(express.json());
 app.get('/admins', adminControllers.getAdminsAll);
 app.get('/admins/:id', adminControllers.getAdminById);
 app.post('/admins/create', adminControllers.createAdmin);
+app.put('/admins/:id', adminControllers.editAdmin);
+app.delete('/admins/:id', adminControllers.deleteAdmin);
 
 app.get('/', async (req, res) => {
   res.send('Hello World!');
