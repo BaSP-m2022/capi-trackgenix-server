@@ -21,6 +21,26 @@ function getAdminById(req, res) {
   }
 }
 
+// filter admin by first name
+function getAdminByFirstName(req, res) {
+  const adminName = admins.some((user) => user.firstName === req.params.firstName);
+  if (adminName) {
+    res.json(admins.filter((user) => user.firstName === req.params.firstName));
+  } else {
+    res.status(404).json(`Admin name: ${req.params.firstName} not found`);
+  }
+}
+
+// filter admin by last name
+function getAdminByLastName(req, res) {
+  const adminName = admins.some((user) => user.lastName === req.params.lastName);
+  if (adminName) {
+    res.json(admins.filter((user) => user.lastName === req.params.lastName));
+  } else {
+    res.status(404).json(`Admin name: ${req.params.lastName} not found`);
+  }
+}
+
 // create admin
 function createAdmin(req, res) {
   const {
@@ -80,24 +100,18 @@ function deleteAdmin(req, res) {
       if (error) {
         res.send(error);
       } else {
-        res.json(`Admin id: ${adminId} deleted`);
+        res.status(200).json(`Admin id: ${adminId} deleted`);
       }
     });
   }
 }
 
-// filter admin
-
 module.exports = {
   getAdminsAll,
   getAdminById,
+  getAdminByFirstName,
+  getAdminByLastName,
   createAdmin,
   editAdmin,
   deleteAdmin,
 };
-
-// Crear un Admin
-// Editar un Admin
-// Obtener un Admin
-// Eliminar un Admin
-// Obtener la lista de Admins con la opción de usar filtros
