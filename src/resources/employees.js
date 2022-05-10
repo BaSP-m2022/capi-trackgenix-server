@@ -1,5 +1,5 @@
 const express = require('express');
-// const fs = require('fs');
+const fs = require('fs');
 // fs es un librería que nos permite interactuar con cualquier archivo del sistema
 const employees = require('../data/employees.json');
 // Estamos requiriendo este archivo
@@ -32,6 +32,26 @@ router.get('/', (req, res) => {
     res.send(filteredEmployees);
   } else {
     res.send(`There are no ${employeeLocation} employees`);
+  }
+});
+
+// CREAR un Employee (/add) FUNCIONA
+router.post('/', (req, res) => {
+  const employeeData = req.body;
+  employees.push(employeeData);
+  if (employeeData.id && employeeData.firstName && employeeData.lastName
+    && employeeData.dob && employeeData.email && employeeData.phone && employeeData.address
+    && employeeData.location) {
+    fs.writeFile('src/data/employees.json', JSON.stringify(employees), (err) => {
+      if (err) {
+        res.send(err);
+      } else {
+        res.send('Employee added');
+      }
+    });
+  } else {
+    // throw new Error('Faltan datos');
+    res.send('Faltan datos');
   }
 });
 
