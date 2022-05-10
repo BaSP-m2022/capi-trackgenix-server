@@ -7,9 +7,9 @@ const timeSheets = require('../data/time-sheets.json');
 const router = express.Router();
 
 // GET method
-router.get('/', (req, res) => res.status(200).send(timeSheets));
+router.get('/get', (req, res) => res.status(200).send(timeSheets));
 
-router.get('/:id', (req, res) => {
+router.get('/get/:id', (req, res) => {
   const sheet = timeSheets.find((c) => c.id === parseInt(req.params.id, 10));
 
   if (!sheet) {
@@ -20,12 +20,12 @@ router.get('/:id', (req, res) => {
 
 // POST method
 // eslint-disable-next-line consistent-return
-router.post('/', (req, res) => {
+router.post('/post', (req, res) => {
   const { body } = req;
   const find = timeSheets.find((c) => c.id === parseInt(body.id, 10));
   const index = timeSheets.indexOf(find);
   // eslint-disable-next-line max-len
-  if (body.id === null || body.idEmployee === null || body.hoursWorked === null || body.dailyHs === null) {
+  if (body.id === null || body.idEmployee === null || body.hoursWorked === null || body.dailyHS === null) {
     return res.status(404).send('The data is not correct');
   // eslint-disable-next-line no-else-return
   } else if (index !== -1) { // Se puede mejorar u optimizar?
@@ -35,7 +35,7 @@ router.post('/', (req, res) => {
     id: body.id,
     idEmployee: body.idEmployee,
     hoursWorked: body.hoursWorked,
-    dailyHs: body.dailyHs,
+    dailyHS: body.dailyHS,
   };
 
   timeSheets.push(sheet);
