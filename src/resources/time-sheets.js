@@ -22,9 +22,14 @@ router.get('/:id', (req, res) => {
 // eslint-disable-next-line consistent-return
 router.post('/', (req, res) => {
   const { body } = req;
+  const find = timeSheets.find((c) => c.id === parseInt(body.id, 10));
+  const index = timeSheets.indexOf(find);
   // eslint-disable-next-line max-len
   if (body.id === null || body.idEmployee === null || body.hoursWorked === null || body.dailyHs === null) {
     return res.status(404).send('The data is not correct');
+  // eslint-disable-next-line no-else-return
+  } else if (index !== -1) { // Se puede mejorar u optimizar?
+    return res.status(404).send(`The time sheets already exist \n${find}`);
   }
   const sheet = {
     id: body.id,
@@ -36,10 +41,9 @@ router.post('/', (req, res) => {
   timeSheets.push(sheet);
   fs.writeFile('src/data/time-sheets.json', JSON.stringify(timeSheets), (err) => {
     if (err) {
-      res.send(err);
-    } else {
-      res.send('TimeSheet created');
+      return res.send(err);
     }
+    return res.send('TimeSheet created');
   });
 });
 
