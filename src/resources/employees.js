@@ -1,9 +1,7 @@
 const express = require('express');
 const fs = require('fs');
-// fs es un librería que nos permite interactuar con cualquier archivo del sistema
 const employees = require('../data/employees.json');
-// Estamos requiriendo este archivo
-// y guardando la lista de employees dentro de la constante employees
+
 const router = express.Router();
 // const path = require('path'); ?????????????????????
 
@@ -31,7 +29,7 @@ router.get('/', (req, res) => {
   if (filteredEmployees.length > 0) {
     res.send(filteredEmployees);
   } else {
-    res.send(`There are no ${employeeLocation} employees`);
+    res.send(`There are no employees from ${employeeLocation}`);
   }
 });
 
@@ -61,7 +59,7 @@ router.delete('/:id', (req, res) => {
   const employeeId = req.params.id;
   const filteredEmployees = employees.filter((employee) => employee.id !== employeeId);
   if (employees.length === filteredEmployees.length) {
-    res.send('Coud not delete employee because it was not found');
+    res.send('Could not delete employee because it was not found');
   } else {
     fs.writeFile('src/data/employees.json', JSON.stringify(filteredEmployees), (err) => {
       if (err) {
@@ -70,6 +68,40 @@ router.delete('/:id', (req, res) => {
         res.send('Employee deleted');
       }
     });
+  }
+});
+
+// EDITAR un Employee
+router.put('/:id', (req, res) => {
+  const employeeId = parseInt(req.params.id, 10);
+  const found = employees.find((employee) => parseInt(employee.id, 10) === employeeId);
+  const employeeUpdated = req.body;
+  if (found) {
+    employees.forEach((employee) => {
+      const newEmployee = employee;
+      if (employee.id === employeeId) {
+        newEmployee.firstName = employeeUpdated.firstName ? employeeUpdated.firstName
+          : employee.firstName;
+        newEmployee.lastName = employeeUpdated.lastName ? employeeUpdated.lastName
+          : employee.lastName;
+        newEmployee.dob = employeeUpdated.dob ? employeeUpdated.dob : employee.dob;
+        newEmployee.email = employeeUpdated.email ? employeeUpdated.email : employee.email;
+        newEmployee.phone = employeeUpdated.phone ? employeeUpdated.phone : employee.phone;
+        newEmployee.address = employeeUpdated.address ? employeeUpdated.address
+          : employee.address;
+        newEmployee.location = employeeUpdated.location ? employeeUpdated.location
+          : employee.location;
+      }
+    });
+    fs.writeFile('src/data/employees.json', JSON.stringify(employees), (err) => {
+      if (err) {
+        res.send(err);
+      } else {
+        res.send('Employee updated');
+      }
+    });
+  } else {
+    res.send(`No employee with id = ${req.params.id}`);
   }
 });
 
