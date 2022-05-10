@@ -55,3 +55,38 @@ router.get('/getbyType', (req, res) => {
 });
 
 export default router;
+router.get('/getAll', (req, res) => {
+  res.send(projects);
+});
+
+// router.get('/getByType/:type', (req, res) => {
+//   const projectType = req.params.type;
+//   const projectasd = projects.find((project) => project.type === projectType);
+//   if (projectasd) {
+//     res.send(project);
+//   } else {
+//     res.send('Project not found');
+//   }
+// });
+
+router.post('/add', (req, res) => {
+  const projectData = req.body;
+  if (req.body.id && req.body.name && req.body.type && req.body.employeesAndRoles) {
+    projects.push(projectData);
+    fs.writeFile('src/data/projects.json', JSON.stringify(projects), (err) => {
+      if (err) {
+        res.send(err);
+      } else {
+        res.send('Project created');
+      }
+    });
+  } else {
+    res.send('Data missing');
+  }
+});
+
+router.put('/add', (req, res) => {
+  res.send(req.body);
+});
+
+module.exports = router;

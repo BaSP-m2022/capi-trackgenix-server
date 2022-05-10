@@ -11,6 +11,7 @@ const port = process.env.PORT || 3000;
 
 app.set('json spaces', 2);
 app.use(express.json());
+const projectsRouter = require('./resources/projects');
 
 app.get('/admins', adminControllers.getAdminsAll);
 app.get('/admins/:id', adminControllers.getAdminById);
