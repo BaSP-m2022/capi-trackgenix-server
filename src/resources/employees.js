@@ -23,4 +23,16 @@ router.get('/:id', (req, res) => {
   }
 });
 
+// OBTENER la lista de Employees con la opción de usar filtros
+// Por LOCATION (/getByLocation) FUNCIONA
+router.get('/', (req, res) => {
+  const employeeLocation = req.query.location;
+  const filteredEmployees = employees.filter((employee) => employee.location === employeeLocation);
+  if (filteredEmployees.length > 0) {
+    res.send(filteredEmployees);
+  } else {
+    res.send(`There are no ${employeeLocation} employees`);
+  }
+});
+
 module.exports = router;
