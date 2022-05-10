@@ -21,3 +21,7 @@ app.listen(port, () => {
   // eslint-disable-next-line no-console
   console.log(`Example app listening on port ${port}`);
 });
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use('/time-sheets', require('./resources/time-sheets'));
