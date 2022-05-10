@@ -18,6 +18,10 @@ app.get('/admins/lname/:lastName', adminControllers.getAdminByLastName);
 app.post('/admins', adminControllers.createAdmin);
 app.put('/admins/:id', adminControllers.editAdmin);
 app.delete('/admins/:id', adminControllers.deleteAdmin);
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 app.use('/projects', require('./resources/projects'));
 
 app.get('/', async (req, res) => {
