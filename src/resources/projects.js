@@ -59,15 +59,15 @@ router.get('/getAll', (req, res) => {
   res.send(projects);
 });
 
-// router.get('/getByType/:type', (req, res) => {
-//   const projectType = req.params.type;
-//   const projectasd = projects.find((project) => project.type === projectType);
-//   if (projectasd) {
-//     res.send(project);
-//   } else {
-//     res.send('Project not found');
-//   }
-// });
+router.get('/getById/:id', (req, res) => {
+  const projectId = req.params.id;
+  const projectFind = projects.find((project) => project.id === parseInt(projectId, 10));
+  if (projectFind) {
+    res.send(projectFind);
+  } else {
+    res.send('Project not found');
+  }
+});
 
 router.post('/add', (req, res) => {
   const projectData = req.body;
@@ -85,8 +85,22 @@ router.post('/add', (req, res) => {
   }
 });
 
-router.put('/add', (req, res) => {
-  res.send(req.body);
+router.put('/edit/:id', (req, res) => {
+  const { body } = req;
+  const sheet = projects.find((c) => c.id === parseInt(req.params.id, 10));
+  if (body.name === null || body.type === null || !sheet) {
+    return res.status(404).send('The data is not correct');
+  }
+  const index = projects.indexOf(sheet);
+  projects[index].name = body.name;
+  projects[index].type = body.type;
+  fs.writeFile('src/data/projects.json', JSON.stringify(projects), (err) => {
+    if (err) {
+      res.send(err);
+    } else {
+      res.send('Project edited correctly');
+    }
+  });
 });
 
 module.exports = router;

@@ -1,1 +1,4392 @@
 [{"id":1,"name":"Gembucket","type":"Testing","employeesAndRoles":[{"Id":101,"Role":"QA","PM":"true","projectHs":4,"salary":84394},{"Id":341,"Role":"QA","PM":"false","projectHs":65,"salary":31451},{"Id":484,"Role":"QA","PM":"false","projectHs":63,"salary":65964},{"Id":325,"Role":"DEV","PM":"false","projectHs":92,"salary":64168}]},{"id":2,"name":"Sonsing","type":"Back-End","employeesAndRoles":[{"Id":371,"Role":"TL","PM":"true","projectHs":20,"salary":89454},{"Id":296,"Role":"TL","PM":"false","projectHs":7,"salary":49793},{"Id":338,"Role":"DEV","PM":"false","projectHs":40,"salary":75612},{"Id":315,"Role":"TL","PM":"false","projectHs":74,"salary":37241},{"Id":154,"Role":"QA","PM":"false","projectHs":53,"salary":48915},{"Id":274,"Role":"TL","PM":"false","projectHs":94,"salary":34447},{"Id":243,"Role":"QA","PM":"false","projectHs":4,"salary":77326}]},{"id":3,"name":"Konklab","type":"Security","employeesAndRoles":[{"Id":232,"Role":"QA","PM":"true","projectHs":67,"salary":47143},{"Id":357,"Role":"QA","PM":"false","projectHs":84,"salary":68471},{"Id":104,"Role":"TL","PM":"false","projectHs":34,"salary":92915},{"Id":111,"Role":"TL","PM":"false","projectHs":67,"salary":44923},{"Id":316,"Role":"QA","PM":"false","projectHs":46,"salary":37358},{"Id":188,"Role":"QA","PM":"false","projectHs":17,"salary":41007},{"Id":21,"Role":"TL","PM":"false","projectHs":4,"salary":40913},{"Id":309,"Role":"DEV","PM":"false","projectHs":18,"salary":63999},{"Id":468,"Role":"TL","PM":"false","projectHs":14,"salary":65541}]},{"id":4,"name":"Keylex","type":"Security","employeesAndRoles":[{"Id":151,"Role":"QA","PM":"true","projectHs":63,"salary":69376},{"Id":450,"Role":"DEV","PM":"false","projectHs":64,"salary":19850},{"Id":167,"Role":"DEV","PM":"false","projectHs":37,"salary":58101}]},{"id":5,"name":"Zoolab","type":"Maintenance","employeesAndRoles":[{"Id":41,"Role":"TL","PM":"true","projectHs":40,"salary":39997},{"Id":55,"Role":"QA","PM":"false","projectHs":33,"salary":41823},{"Id":331,"Role":"QA","PM":"false","projectHs":69,"salary":23139},{"Id":164,"Role":"QA","PM":"false","projectHs":50,"salary":64217},{"Id":302,"Role":"QA","PM":"false","projectHs":94,"salary":66260},{"Id":117,"Role":"TL","PM":"false","projectHs":29,"salary":89658},{"Id":309,"Role":"QA","PM":"false","projectHs":12,"salary":77523}]},{"id":6,"name":"Biodex","type":"Maintenance","employeesAndRoles":[{"Id":348,"Role":"TL","PM":"true","projectHs":17,"salary":23401},{"Id":466,"Role":"QA","PM":"false","projectHs":60,"salary":28174},{"Id":298,"Role":"QA","PM":"false","projectHs":22,"salary":44094},{"Id":238,"Role":"DEV","PM":"false","projectHs":42,"salary":43653},{"Id":319,"Role":"DEV","PM":"false","projectHs":94,"salary":90127}]},{"id":7,"name":"Otcom","type":"Front-End","employeesAndRoles":[{"Id":294,"Role":"TL","PM":"true","projectHs":68,"salary":43075},{"Id":441,"Role":"TL","PM":"false","projectHs":70,"salary":41359},{"Id":28,"Role":"QA","PM":"false","projectHs":16,"salary":38142}]},{"id":8,"name":"Tresom","type":"Maintenance","employeesAndRoles":[{"Id":493,"Role":"QA","PM":"true","projectHs":85,"salary":53670},{"Id":417,"Role":"TL","PM":"false","projectHs":79,"salary":19207},{"Id":279,"Role":"QA","PM":"false","projectHs":89,"salary":21802},{"Id":114,"Role":"DEV","PM":"false","projectHs":54,"salary":86920},{"Id":199,"Role":"QA","PM":"false","projectHs":55,"salary":18142},{"Id":363,"Role":"DEV","PM":"false","projectHs":36,"salary":27408},{"Id":252,"Role":"DEV","PM":"false","projectHs":67,"salary":26049},{"Id":433,"Role":"TL","PM":"false","projectHs":9,"salary":27472},{"Id":370,"Role":"QA","PM":"false","projectHs":12,"salary":43148}]},{"id":9,"name":"Prodder","type":"Testing","employeesAndRoles":[{"Id":250,"Role":"TL","PM":"true","projectHs":12,"salary":97546},{"Id":147,"Role":"QA","PM":"false","projectHs":6,"salary":59432},{"Id":340,"Role":"QA","PM":"false","projectHs":92,"salary":37449},{"Id":317,"Role":"TL","PM":"false","projectHs":20,"salary":90229},{"Id":473,"Role":"QA","PM":"false","projectHs":78,"salary":28266},{"Id":54,"Role":"QA","PM":"false","projectHs":38,"salary":40744},{"Id":398,"Role":"TL","PM":"false","projectHs":44,"salary":52245},{"Id":233,"Role":"DEV","PM":"false","projectHs":23,"salary":21935}]},{"id":10,"name":"Home Ing","type":"Testing","employeesAndRoles":[{"Id":354,"Role":"QA","PM":"true","projectHs":55,"salary":94225},{"Id":200,"Role":"QA","PM":"false","projectHs":17,"salary":30946},{"Id":186,"Role":"TL","PM":"false","projectHs":16,"salary":25480},{"Id":459,"Role":"DEV","PM":"false","projectHs":23,"salary":59466},{"Id":290,"Role":"QA","PM":"false","projectHs":2,"salary":88288}]},{"id":11,"name":"Ronstring","type":"Database","employeesAndRoles":[{"Id":84,"Role":"TL","PM":"true","projectHs":73,"salary":58343},{"Id":257,"Role":"QA","PM":"false","projectHs":33,"salary":19089},{"Id":64,"Role":"DEV","PM":"false","projectHs":84,"salary":20898},{"Id":270,"Role":"DEV","PM":"false","projectHs":64,"salary":49136}]},{"id":12,"name":"Redhold","type":"Front-End","employeesAndRoles":[{"Id":139,"Role":"TL","PM":"true","projectHs":5,"salary":77043},{"Id":290,"Role":"DEV","PM":"false","projectHs":80,"salary":84639},{"Id":86,"Role":"QA","PM":"false","projectHs":80,"salary":77446},{"Id":8,"Role":"DEV","PM":"false","projectHs":35,"salary":49840},{"Id":25,"Role":"QA","PM":"false","projectHs":6,"salary":17451},{"Id":118,"Role":"DEV","PM":"false","projectHs":39,"salary":77117},{"Id":471,"Role":"DEV","PM":"false","projectHs":39,"salary":76807}]},{"id":13,"name":"Biodex","type":"Back-End","employeesAndRoles":[{"Id":271,"Role":"QA","PM":"true","projectHs":74,"salary":43004},{"Id":261,"Role":"TL","PM":"false","projectHs":60,"salary":72935},{"Id":424,"Role":"QA","PM":"false","projectHs":42,"salary":25303},{"Id":157,"Role":"DEV","PM":"false","projectHs":6,"salary":28415}]},{"id":14,"name":"Sonsing","type":"Testing","employeesAndRoles":[{"Id":237,"Role":"DEV","PM":"true","projectHs":9,"salary":67328},{"Id":389,"Role":"QA","PM":"false","projectHs":16,"salary":53618},{"Id":219,"Role":"TL","PM":"false","projectHs":28,"salary":59310},{"Id":5,"Role":"DEV","PM":"false","projectHs":13,"salary":22818},{"Id":170,"Role":"QA","PM":"false","projectHs":80,"salary":64459},{"Id":73,"Role":"DEV","PM":"false","projectHs":23,"salary":49017}]},{"id":15,"name":"Transcof","type":"Maintenance","employeesAndRoles":[{"Id":266,"Role":"TL","PM":"true","projectHs":51,"salary":90495},{"Id":152,"Role":"TL","PM":"false","projectHs":42,"salary":51107},{"Id":89,"Role":"QA","PM":"false","projectHs":4,"salary":66471},{"Id":372,"Role":"DEV","PM":"false","projectHs":5,"salary":52143},{"Id":36,"Role":"QA","PM":"false","projectHs":53,"salary":59658},{"Id":55,"Role":"DEV","PM":"false","projectHs":32,"salary":59130},{"Id":434,"Role":"QA","PM":"false","projectHs":32,"salary":13832},{"Id":458,"Role":"QA","PM":"false","projectHs":33,"salary":84237}]},{"id":16,"name":"Aerified","type":"Database","employeesAndRoles":[{"Id":225,"Role":"QA","PM":"true","projectHs":8,"salary":79792},{"Id":254,"Role":"TL","PM":"false","projectHs":100,"salary":46315},{"Id":242,"Role":"TL","PM":"false","projectHs":67,"salary":96170},{"Id":416,"Role":"TL","PM":"false","projectHs":10,"salary":83294},{"Id":394,"Role":"TL","PM":"false","projectHs":49,"salary":74851},{"Id":202,"Role":"TL","PM":"false","projectHs":8,"salary":67313},{"Id":310,"Role":"DEV","PM":"false","projectHs":63,"salary":55015},{"Id":463,"Role":"TL","PM":"false","projectHs":67,"salary":13880}]},{"id":17,"name":"Ventosanzap","type":"Front-End","employeesAndRoles":[{"Id":416,"Role":"QA","PM":"true","projectHs":31,"salary":34153},{"Id":326,"Role":"DEV","PM":"false","projectHs":65,"salary":38425},{"Id":113,"Role":"DEV","PM":"false","projectHs":36,"salary":51586}]},{"id":18,"name":"Tampflex","type":"Back-End","employeesAndRoles":[{"Id":369,"Role":"QA","PM":"true","projectHs":83,"salary":78372},{"Id":54,"Role":"TL","PM":"false","projectHs":60,"salary":65394},{"Id":31,"Role":"DEV","PM":"false","projectHs":39,"salary":93025},{"Id":214,"Role":"DEV","PM":"false","projectHs":1,"salary":50487},{"Id":500,"Role":"DEV","PM":"false","projectHs":74,"salary":12645},{"Id":172,"Role":"QA","PM":"false","projectHs":51,"salary":44462},{"Id":180,"Role":"QA","PM":"false","projectHs":68,"salary":61310}]},{"id":19,"name":"Biodex","type":"Maintenance","employeesAndRoles":[{"Id":400,"Role":"QA","PM":"true","projectHs":68,"salary":64457},{"Id":18,"Role":"TL","PM":"false","projectHs":50,"salary":41774}]},{"id":20,"name":"Keylex","type":"Back-End","employeesAndRoles":[{"Id":70,"Role":"QA","PM":"true","projectHs":18,"salary":92885},{"Id":204,"Role":"DEV","PM":"false","projectHs":36,"salary":67996},{"Id":490,"Role":"QA","PM":"false","projectHs":68,"salary":45391},{"Id":48,"Role":"QA","PM":"false","projectHs":72,"salary":69913},{"Id":131,"Role":"QA","PM":"false","projectHs":41,"salary":58262}]},{"id":21,"name":"Tampflex","type":"Database","employeesAndRoles":[{"Id":14,"Role":"TL","PM":"true","projectHs":17,"salary":79548},{"Id":300,"Role":"TL","PM":"false","projectHs":21,"salary":34057},{"Id":367,"Role":"TL","PM":"false","projectHs":85,"salary":33559},{"Id":280,"Role":"DEV","PM":"false","projectHs":91,"salary":34800},{"Id":196,"Role":"TL","PM":"false","projectHs":50,"salary":14519},{"Id":73,"Role":"TL","PM":"false","projectHs":1,"salary":91530},{"Id":47,"Role":"DEV","PM":"false","projectHs":50,"salary":75905}]},{"id":22,"name":"Mat Lam Tam","type":"Back-End","employeesAndRoles":[{"Id":373,"Role":"DEV","PM":"true","projectHs":18,"salary":78618},{"Id":105,"Role":"QA","PM":"false","projectHs":29,"salary":33077},{"Id":213,"Role":"QA","PM":"false","projectHs":100,"salary":97393}]},{"id":23,"name":"Aerified","type":"Front-End","employeesAndRoles":[{"Id":2,"Role":"QA","PM":"true","projectHs":11,"salary":49079},{"Id":17,"Role":"QA","PM":"false","projectHs":100,"salary":55920},{"Id":185,"Role":"QA","PM":"false","projectHs":38,"salary":29940}]},{"id":24,"name":"Bitchip","type":"Security","employeesAndRoles":[{"Id":306,"Role":"TL","PM":"true","projectHs":8,"salary":35875},{"Id":133,"Role":"QA","PM":"false","projectHs":35,"salary":84149},{"Id":8,"Role":"TL","PM":"false","projectHs":86,"salary":10177},{"Id":56,"Role":"QA","PM":"false","projectHs":9,"salary":62472},{"Id":125,"Role":"QA","PM":"false","projectHs":50,"salary":26075},{"Id":77,"Role":"TL","PM":"false","projectHs":76,"salary":60429}]},{"id":25,"name":"Bytecard","type":"Back-End","employeesAndRoles":[{"Id":310,"Role":"QA","PM":"true","projectHs":38,"salary":16992},{"Id":302,"Role":"DEV","PM":"false","projectHs":96,"salary":88922}]},{"id":26,"name":"Flowdesk","type":"Database","employeesAndRoles":[{"Id":496,"Role":"DEV","PM":"true","projectHs":42,"salary":44449},{"Id":224,"Role":"DEV","PM":"false","projectHs":87,"salary":56300},{"Id":2,"Role":"DEV","PM":"false","projectHs":100,"salary":18105}]},{"id":27,"name":"Flexidy","type":"Front-End","employeesAndRoles":[{"Id":98,"Role":"TL","PM":"true","projectHs":100,"salary":23920},{"Id":83,"Role":"QA","PM":"false","projectHs":55,"salary":49410}]},{"id":28,"name":"Bitwolf","type":"Front-End","employeesAndRoles":[{"Id":393,"Role":"TL","PM":"true","projectHs":11,"salary":24653},{"Id":434,"Role":"DEV","PM":"false","projectHs":64,"salary":43484},{"Id":482,"Role":"DEV","PM":"false","projectHs":23,"salary":72233},{"Id":98,"Role":"QA","PM":"false","projectHs":53,"salary":76019},{"Id":276,"Role":"TL","PM":"false","projectHs":89,"salary":18734},{"Id":303,"Role":"DEV","PM":"false","projectHs":66,"salary":19250},{"Id":91,"Role":"TL","PM":"false","projectHs":78,"salary":37339},{"Id":86,"Role":"TL","PM":"false","projectHs":91,"salary":22853}]},{"id":29,"name":"Regrant","type":"Front-End","employeesAndRoles":[{"Id":38,"Role":"QA","PM":"true","projectHs":2,"salary":17740},{"Id":111,"Role":"TL","PM":"false","projectHs":7,"salary":48385},{"Id":255,"Role":"QA","PM":"false","projectHs":26,"salary":80826},{"Id":165,"Role":"TL","PM":"false","projectHs":21,"salary":82755},{"Id":61,"Role":"TL","PM":"false","projectHs":88,"salary":90930},{"Id":296,"Role":"DEV","PM":"false","projectHs":75,"salary":67874}]},{"id":30,"name":"Bytecard","type":"Maintenance","employeesAndRoles":[{"Id":182,"Role":"TL","PM":"true","projectHs":53,"salary":16523},{"Id":35,"Role":"DEV","PM":"false","projectHs":61,"salary":36132},{"Id":286,"Role":"DEV","PM":"false","projectHs":66,"salary":28385}]},{"id":31,"name":"Prodder","type":"Database","employeesAndRoles":[{"Id":170,"Role":"TL","PM":"true","projectHs":37,"salary":80718},{"Id":151,"Role":"QA","PM":"false","projectHs":45,"salary":23985},{"Id":389,"Role":"DEV","PM":"false","projectHs":89,"salary":98485},{"Id":146,"Role":"DEV","PM":"false","projectHs":91,"salary":19856}]},{"id":32,"name":"It","type":"Front-End","employeesAndRoles":[{"Id":206,"Role":"TL","PM":"true","projectHs":39,"salary":31063},{"Id":124,"Role":"DEV","PM":"false","projectHs":36,"salary":95267},{"Id":25,"Role":"DEV","PM":"false","projectHs":14,"salary":29075}]},{"id":33,"name":"Zathin","type":"Back-End","employeesAndRoles":[{"Id":243,"Role":"QA","PM":"true","projectHs":88,"salary":24088},{"Id":39,"Role":"DEV","PM":"false","projectHs":49,"salary":89177},{"Id":27,"Role":"TL","PM":"false","projectHs":20,"salary":94177},{"Id":458,"Role":"TL","PM":"false","projectHs":93,"salary":89994}]},{"id":34,"name":"Solarbreeze","type":"Testing","employeesAndRoles":[{"Id":426,"Role":"TL","PM":"true","projectHs":17,"salary":52874},{"Id":368,"Role":"DEV","PM":"false","projectHs":79,"salary":16904},{"Id":166,"Role":"TL","PM":"false","projectHs":96,"salary":35349},{"Id":100,"Role":"QA","PM":"false","projectHs":17,"salary":43666}]},{"id":35,"name":"Fix San","type":"Database","employeesAndRoles":[{"Id":114,"Role":"DEV","PM":"true","projectHs":51,"salary":63284},{"Id":134,"Role":"DEV","PM":"false","projectHs":11,"salary":17096},{"Id":491,"Role":"QA","PM":"false","projectHs":92,"salary":36325},{"Id":278,"Role":"TL","PM":"false","projectHs":26,"salary":75475},{"Id":83,"Role":"DEV","PM":"false","projectHs":81,"salary":65988}]},{"id":36,"name":"Regrant","type":"Back-End","employeesAndRoles":[{"Id":278,"Role":"DEV","PM":"true","projectHs":95,"salary":23901},{"Id":42,"Role":"DEV","PM":"false","projectHs":22,"salary":47472},{"Id":404,"Role":"QA","PM":"false","projectHs":79,"salary":50329},{"Id":179,"Role":"DEV","PM":"false","projectHs":38,"salary":92333},{"Id":82,"Role":"DEV","PM":"false","projectHs":39,"salary":76883},{"Id":398,"Role":"QA","PM":"false","projectHs":98,"salary":38071},{"Id":219,"Role":"QA","PM":"false","projectHs":13,"salary":29547},{"Id":379,"Role":"DEV","PM":"false","projectHs":34,"salary":56847},{"Id":206,"Role":"DEV","PM":"false","projectHs":33,"salary":74098}]},{"id":37,"name":"Viva","type":"Front-End","employeesAndRoles":[{"Id":343,"Role":"QA","PM":"true","projectHs":85,"salary":79226},{"Id":385,"Role":"QA","PM":"false","projectHs":3,"salary":23143}]},{"id":38,"name":"Tempsoft","type":"Maintenance","employeesAndRoles":[{"Id":217,"Role":"DEV","PM":"true","projectHs":4,"salary":14660},{"Id":424,"Role":"TL","PM":"false","projectHs":15,"salary":50412},{"Id":329,"Role":"TL","PM":"false","projectHs":70,"salary":32047}]},{"id":39,"name":"Daltfresh","type":"Maintenance","employeesAndRoles":[{"Id":47,"Role":"QA","PM":"true","projectHs":1,"salary":99555},{"Id":16,"Role":"QA","PM":"false","projectHs":49,"salary":24737},{"Id":328,"Role":"DEV","PM":"false","projectHs":67,"salary":78242},{"Id":321,"Role":"DEV","PM":"false","projectHs":10,"salary":84903},{"Id":448,"Role":"TL","PM":"false","projectHs":35,"salary":46497}]},{"id":40,"name":"Latlux","type":"Testing","employeesAndRoles":[{"Id":58,"Role":"DEV","PM":"true","projectHs":67,"salary":12100},{"Id":202,"Role":"DEV","PM":"false","projectHs":7,"salary":62633},{"Id":23,"Role":"DEV","PM":"false","projectHs":30,"salary":71762},{"Id":291,"Role":"DEV","PM":"false","projectHs":17,"salary":26085},{"Id":452,"Role":"QA","PM":"false","projectHs":72,"salary":13296}]},{"id":41,"name":"Daltfresh","type":"Testing","employeesAndRoles":[{"Id":367,"Role":"DEV","PM":"true","projectHs":67,"salary":87741},{"Id":451,"Role":"TL","PM":"false","projectHs":20,"salary":26478},{"Id":280,"Role":"DEV","PM":"false","projectHs":33,"salary":14795},{"Id":389,"Role":"QA","PM":"false","projectHs":90,"salary":91896},{"Id":483,"Role":"DEV","PM":"false","projectHs":33,"salary":49961},{"Id":321,"Role":"TL","PM":"false","projectHs":52,"salary":62387},{"Id":236,"Role":"DEV","PM":"false","projectHs":56,"salary":66086},{"Id":313,"Role":"TL","PM":"false","projectHs":70,"salary":62930},{"Id":202,"Role":"TL","PM":"false","projectHs":76,"salary":53858}]},{"id":42,"name":"Y-Solowarm","type":"Maintenance","employeesAndRoles":[{"Id":206,"Role":"DEV","PM":"true","projectHs":54,"salary":88509},{"Id":308,"Role":"QA","PM":"false","projectHs":20,"salary":70529},{"Id":216,"Role":"QA","PM":"false","projectHs":99,"salary":39868},{"Id":478,"Role":"TL","PM":"false","projectHs":92,"salary":80819},{"Id":488,"Role":"QA","PM":"false","projectHs":70,"salary":78617}]},{"id":43,"name":"Bamity","type":"Security","employeesAndRoles":[{"Id":410,"Role":"QA","PM":"true","projectHs":17,"salary":67275},{"Id":213,"Role":"TL","PM":"false","projectHs":89,"salary":89689},{"Id":188,"Role":"DEV","PM":"false","projectHs":19,"salary":18149},{"Id":206,"Role":"QA","PM":"false","projectHs":7,"salary":88493},{"Id":183,"Role":"DEV","PM":"false","projectHs":7,"salary":50223},{"Id":274,"Role":"QA","PM":"false","projectHs":29,"salary":48872},{"Id":50,"Role":"QA","PM":"false","projectHs":40,"salary":85231},{"Id":294,"Role":"TL","PM":"false","projectHs":52,"salary":13991}]},{"id":44,"name":"Viva","type":"Security","employeesAndRoles":[{"Id":199,"Role":"DEV","PM":"true","projectHs":56,"salary":72333},{"Id":216,"Role":"DEV","PM":"false","projectHs":38,"salary":81711},{"Id":436,"Role":"TL","PM":"false","projectHs":97,"salary":37462},{"Id":457,"Role":"QA","PM":"false","projectHs":10,"salary":53913},{"Id":345,"Role":"DEV","PM":"false","projectHs":2,"salary":51240},{"Id":46,"Role":"QA","PM":"false","projectHs":23,"salary":46334},{"Id":112,"Role":"DEV","PM":"false","projectHs":79,"salary":94751}]},{"id":45,"name":"Konklux","type":"Front-End","employeesAndRoles":[{"Id":67,"Role":"QA","PM":"true","projectHs":27,"salary":12562},{"Id":459,"Role":"DEV","PM":"false","projectHs":59,"salary":91412}]},{"id":46,"name":"Bitchip","type":"Back-End","employeesAndRoles":[{"Id":236,"Role":"DEV","PM":"true","projectHs":87,"salary":76350},{"Id":60,"Role":"TL","PM":"false","projectHs":21,"salary":82082},{"Id":461,"Role":"TL","PM":"false","projectHs":15,"salary":83844},{"Id":85,"Role":"TL","PM":"false","projectHs":95,"salary":24534},{"Id":53,"Role":"QA","PM":"false","projectHs":32,"salary":87992}]},{"id":47,"name":"Cardguard","type":"Database","employeesAndRoles":[{"Id":105,"Role":"DEV","PM":"true","projectHs":23,"salary":45339},{"Id":439,"Role":"TL","PM":"false","projectHs":34,"salary":21328},{"Id":14,"Role":"TL","PM":"false","projectHs":16,"salary":84568}]},{"id":48,"name":"Wrapsafe","type":"Security","employeesAndRoles":[{"Id":86,"Role":"TL","PM":"true","projectHs":62,"salary":88427},{"Id":19,"Role":"QA","PM":"false","projectHs":23,"salary":59266},{"Id":133,"Role":"DEV","PM":"false","projectHs":51,"salary":39994},{"Id":337,"Role":"DEV","PM":"false","projectHs":25,"salary":82932},{"Id":183,"Role":"DEV","PM":"false","projectHs":81,"salary":88524},{"Id":178,"Role":"QA","PM":"false","projectHs":29,"salary":62344},{"Id":401,"Role":"TL","PM":"false","projectHs":45,"salary":51741},{"Id":88,"Role":"QA","PM":"false","projectHs":71,"salary":98916},{"Id":247,"Role":"QA","PM":"false","projectHs":72,"salary":59100}]},{"id":49,"name":"Alpha","type":"Maintenance","employeesAndRoles":[{"Id":396,"Role":"DEV","PM":"true","projectHs":35,"salary":28513},{"Id":37,"Role":"DEV","PM":"false","projectHs":99,"salary":38087},{"Id":235,"Role":"QA","PM":"false","projectHs":71,"salary":79105},{"Id":75,"Role":"DEV","PM":"false","projectHs":22,"salary":29087},{"Id":3,"Role":"TL","PM":"false","projectHs":80,"salary":46468}]},{"id":50,"name":"Matsoft","type":"Maintenance","employeesAndRoles":[{"Id":206,"Role":"TL","PM":"true","projectHs":17,"salary":85452},{"Id":14,"Role":"QA","PM":"false","projectHs":46,"salary":80673},{"Id":174,"Role":"TL","PM":"false","projectHs":55,"salary":62059},{"Id":196,"Role":"DEV","PM":"false","projectHs":97,"salary":72405},{"Id":219,"Role":"DEV","PM":"false","projectHs":31,"salary":72467},{"Id":386,"Role":"TL","PM":"false","projectHs":96,"salary":50372},{"Id":34,"Role":"DEV","PM":"false","projectHs":53,"salary":55736}]},{"id":51,"name":"Treeflex","type":"Back-End","employeesAndRoles":[{"Id":330,"Role":"DEV","PM":"true","projectHs":62,"salary":22337},{"Id":179,"Role":"QA","PM":"false","projectHs":22,"salary":89275},{"Id":143,"Role":"TL","PM":"false","projectHs":42,"salary":94322},{"Id":287,"Role":"TL","PM":"false","projectHs":57,"salary":27720},{"Id":388,"Role":"TL","PM":"false","projectHs":5,"salary":33962},{"Id":479,"Role":"DEV","PM":"false","projectHs":46,"salary":56817},{"Id":4,"Role":"DEV","PM":"false","projectHs":2,"salary":72186},{"Id":194,"Role":"TL","PM":"false","projectHs":68,"salary":59736}]},{"id":52,"name":"Subin","type":"Database","employeesAndRoles":[{"Id":245,"Role":"TL","PM":"true","projectHs":36,"salary":11207},{"Id":217,"Role":"DEV","PM":"false","projectHs":49,"salary":66034}]},{"id":53,"name":"Viva","type":"Back-End","employeesAndRoles":[{"Id":113,"Role":"TL","PM":"true","projectHs":22,"salary":78648},{"Id":264,"Role":"TL","PM":"false","projectHs":71,"salary":57862},{"Id":38,"Role":"TL","PM":"false","projectHs":47,"salary":92961},{"Id":394,"Role":"QA","PM":"false","projectHs":86,"salary":68226},{"Id":471,"Role":"DEV","PM":"false","projectHs":8,"salary":61588},{"Id":18,"Role":"QA","PM":"false","projectHs":83,"salary":58113},{"Id":335,"Role":"QA","PM":"false","projectHs":6,"salary":19383}]},{"id":54,"name":"Pannier","type":"Security","employeesAndRoles":[{"Id":182,"Role":"DEV","PM":"true","projectHs":63,"salary":21137},{"Id":215,"Role":"QA","PM":"false","projectHs":33,"salary":90214},{"Id":398,"Role":"DEV","PM":"false","projectHs":75,"salary":73518},{"Id":283,"Role":"TL","PM":"false","projectHs":47,"salary":23336}]},{"id":55,"name":"Andalax","type":"Testing","employeesAndRoles":[{"Id":428,"Role":"TL","PM":"true","projectHs":27,"salary":35654},{"Id":159,"Role":"DEV","PM":"false","projectHs":23,"salary":52699},{"Id":443,"Role":"DEV","PM":"false","projectHs":35,"salary":26381},{"Id":482,"Role":"QA","PM":"false","projectHs":72,"salary":45692},{"Id":486,"Role":"QA","PM":"false","projectHs":1,"salary":26830},{"Id":364,"Role":"DEV","PM":"false","projectHs":87,"salary":34837}]},{"id":56,"name":"Matsoft","type":"Back-End","employeesAndRoles":[{"Id":109,"Role":"DEV","PM":"true","projectHs":12,"salary":65624},{"Id":365,"Role":"QA","PM":"false","projectHs":62,"salary":58086},{"Id":407,"Role":"QA","PM":"false","projectHs":64,"salary":28454},{"Id":2,"Role":"DEV","PM":"false","projectHs":49,"salary":70719}]},{"id":57,"name":"Aerified","type":"Back-End","employeesAndRoles":[{"Id":21,"Role":"QA","PM":"true","projectHs":75,"salary":97129},{"Id":266,"Role":"TL","PM":"false","projectHs":35,"salary":20513},{"Id":85,"Role":"QA","PM":"false","projectHs":40,"salary":20945},{"Id":365,"Role":"TL","PM":"false","projectHs":63,"salary":12457},{"Id":227,"Role":"QA","PM":"false","projectHs":52,"salary":36091}]},{"id":58,"name":"Zamit","type":"Testing","employeesAndRoles":[{"Id":49,"Role":"TL","PM":"true","projectHs":49,"salary":59723},{"Id":365,"Role":"DEV","PM":"false","projectHs":85,"salary":42302},{"Id":421,"Role":"DEV","PM":"false","projectHs":80,"salary":56357}]},{"id":59,"name":"Transcof","type":"Back-End","employeesAndRoles":[{"Id":427,"Role":"TL","PM":"true","projectHs":3,"salary":56759},{"Id":127,"Role":"QA","PM":"false","projectHs":54,"salary":10127},{"Id":268,"Role":"QA","PM":"false","projectHs":91,"salary":97122}]},{"id":60,"name":"Zathin","type":"Testing","employeesAndRoles":[{"Id":72,"Role":"DEV","PM":"true","projectHs":74,"salary":91341},{"Id":303,"Role":"DEV","PM":"false","projectHs":27,"salary":98881},{"Id":71,"Role":"DEV","PM":"false","projectHs":60,"salary":63816},{"Id":89,"Role":"TL","PM":"false","projectHs":36,"salary":30603}]},{"id":61,"name":"Prodder","type":"Security","employeesAndRoles":[{"Id":348,"Role":"QA","PM":"true","projectHs":20,"salary":37173},{"Id":184,"Role":"TL","PM":"false","projectHs":76,"salary":35040},{"Id":2,"Role":"DEV","PM":"false","projectHs":94,"salary":65195},{"Id":484,"Role":"TL","PM":"false","projectHs":69,"salary":51987},{"Id":185,"Role":"DEV","PM":"false","projectHs":11,"salary":20525},{"Id":150,"Role":"DEV","PM":"false","projectHs":34,"salary":23768},{"Id":121,"Role":"TL","PM":"false","projectHs":57,"salary":62102},{"Id":499,"Role":"TL","PM":"false","projectHs":2,"salary":46038}]},{"id":62,"name":"Daltfresh","type":"Maintenance","employeesAndRoles":[{"Id":314,"Role":"TL","PM":"true","projectHs":31,"salary":55268},{"Id":381,"Role":"TL","PM":"false","projectHs":66,"salary":29556}]},{"id":63,"name":"Aerified","type":"Database","employeesAndRoles":[{"Id":470,"Role":"TL","PM":"true","projectHs":45,"salary":97439},{"Id":286,"Role":"DEV","PM":"false","projectHs":73,"salary":74187},{"Id":399,"Role":"QA","PM":"false","projectHs":27,"salary":82751},{"Id":383,"Role":"DEV","PM":"false","projectHs":39,"salary":49278},{"Id":312,"Role":"QA","PM":"false","projectHs":57,"salary":26353}]},{"id":64,"name":"Aerified","type":"Maintenance","employeesAndRoles":[{"Id":439,"Role":"DEV","PM":"true","projectHs":64,"salary":77326},{"Id":95,"Role":"DEV","PM":"false","projectHs":15,"salary":61953},{"Id":39,"Role":"TL","PM":"false","projectHs":20,"salary":75995},{"Id":201,"Role":"QA","PM":"false","projectHs":72,"salary":70087},{"Id":423,"Role":"QA","PM":"false","projectHs":7,"salary":28885},{"Id":408,"Role":"QA","PM":"false","projectHs":37,"salary":56511},{"Id":421,"Role":"QA","PM":"false","projectHs":92,"salary":75428}]},{"id":65,"name":"Holdlamis","type":"Security","employeesAndRoles":[{"Id":90,"Role":"QA","PM":"true","projectHs":73,"salary":40370},{"Id":171,"Role":"QA","PM":"false","projectHs":71,"salary":17554},{"Id":454,"Role":"DEV","PM":"false","projectHs":95,"salary":77804},{"Id":66,"Role":"TL","PM":"false","projectHs":14,"salary":22292}]},{"id":66,"name":"Alphazap","type":"Front-End","employeesAndRoles":[{"Id":222,"Role":"TL","PM":"true","projectHs":83,"salary":36712},{"Id":179,"Role":"DEV","PM":"false","projectHs":46,"salary":14696},{"Id":405,"Role":"TL","PM":"false","projectHs":98,"salary":12958},{"Id":242,"Role":"TL","PM":"false","projectHs":92,"salary":70197},{"Id":400,"Role":"TL","PM":"false","projectHs":36,"salary":13477},{"Id":328,"Role":"TL","PM":"false","projectHs":77,"salary":41493},{"Id":427,"Role":"QA","PM":"false","projectHs":40,"salary":27016},{"Id":202,"Role":"DEV","PM":"false","projectHs":34,"salary":54281}]},{"id":67,"name":"Bitwolf","type":"Maintenance","employeesAndRoles":[{"Id":482,"Role":"TL","PM":"true","projectHs":46,"salary":28403},{"Id":101,"Role":"QA","PM":"false","projectHs":52,"salary":32591},{"Id":234,"Role":"QA","PM":"false","projectHs":11,"salary":54636},{"Id":78,"Role":"QA","PM":"false","projectHs":48,"salary":23847}]},{"id":68,"name":"Mat Lam Tam","type":"Database","employeesAndRoles":[{"Id":67,"Role":"TL","PM":"true","projectHs":51,"salary":80502},{"Id":349,"Role":"QA","PM":"false","projectHs":15,"salary":78886},{"Id":461,"Role":"DEV","PM":"false","projectHs":55,"salary":60098},{"Id":262,"Role":"DEV","PM":"false","projectHs":80,"salary":14958},{"Id":279,"Role":"TL","PM":"false","projectHs":14,"salary":70983},{"Id":406,"Role":"DEV","PM":"false","projectHs":13,"salary":93677},{"Id":363,"Role":"TL","PM":"false","projectHs":45,"salary":76541}]},{"id":69,"name":"Treeflex","type":"Back-End","employeesAndRoles":[{"Id":52,"Role":"QA","PM":"true","projectHs":65,"salary":95218},{"Id":214,"Role":"QA","PM":"false","projectHs":99,"salary":56594},{"Id":137,"Role":"TL","PM":"false","projectHs":19,"salary":59662},{"Id":65,"Role":"TL","PM":"false","projectHs":9,"salary":38685},{"Id":376,"Role":"DEV","PM":"false","projectHs":58,"salary":65015}]},{"id":70,"name":"Trippledex","type":"Testing","employeesAndRoles":[{"Id":70,"Role":"DEV","PM":"true","projectHs":88,"salary":59825},{"Id":244,"Role":"DEV","PM":"false","projectHs":76,"salary":29470},{"Id":260,"Role":"QA","PM":"false","projectHs":97,"salary":45734},{"Id":124,"Role":"QA","PM":"false","projectHs":37,"salary":13039}]},{"id":71,"name":"Matsoft","type":"Maintenance","employeesAndRoles":[{"Id":329,"Role":"DEV","PM":"true","projectHs":77,"salary":61215},{"Id":178,"Role":"DEV","PM":"false","projectHs":57,"salary":23214}]},{"id":72,"name":"Tin","type":"Database","employeesAndRoles":[{"Id":367,"Role":"TL","PM":"true","projectHs":57,"salary":35786},{"Id":244,"Role":"TL","PM":"false","projectHs":42,"salary":54566},{"Id":354,"Role":"QA","PM":"false","projectHs":14,"salary":17159},{"Id":326,"Role":"DEV","PM":"false","projectHs":32,"salary":77697},{"Id":185,"Role":"DEV","PM":"false","projectHs":60,"salary":49631},{"Id":472,"Role":"QA","PM":"false","projectHs":53,"salary":28179},{"Id":177,"Role":"QA","PM":"false","projectHs":16,"salary":82607},{"Id":400,"Role":"DEV","PM":"false","projectHs":34,"salary":91776}]},{"id":73,"name":"Voyatouch","type":"Back-End","employeesAndRoles":[{"Id":27,"Role":"QA","PM":"true","projectHs":30,"salary":42639},{"Id":428,"Role":"DEV","PM":"false","projectHs":64,"salary":11831},{"Id":171,"Role":"QA","PM":"false","projectHs":19,"salary":20512}]},{"id":74,"name":"Holdlamis","type":"Maintenance","employeesAndRoles":[{"Id":454,"Role":"DEV","PM":"true","projectHs":90,"salary":34667},{"Id":253,"Role":"DEV","PM":"false","projectHs":37,"salary":47951}]},{"id":75,"name":"Lotlux","type":"Back-End","employeesAndRoles":[{"Id":119,"Role":"DEV","PM":"true","projectHs":73,"salary":58199},{"Id":159,"Role":"TL","PM":"false","projectHs":54,"salary":95226},{"Id":429,"Role":"DEV","PM":"false","projectHs":23,"salary":84334},{"Id":417,"Role":"DEV","PM":"false","projectHs":81,"salary":30471},{"Id":379,"Role":"TL","PM":"false","projectHs":17,"salary":89160},{"Id":160,"Role":"QA","PM":"false","projectHs":19,"salary":46797},{"Id":161,"Role":"DEV","PM":"false","projectHs":39,"salary":53024},{"Id":108,"Role":"DEV","PM":"false","projectHs":36,"salary":20547},{"Id":448,"Role":"TL","PM":"false","projectHs":14,"salary":48796}]},{"id":76,"name":"Quo Lux","type":"Back-End","employeesAndRoles":[{"Id":369,"Role":"DEV","PM":"true","projectHs":99,"salary":17649},{"Id":348,"Role":"TL","PM":"false","projectHs":19,"salary":70225},{"Id":203,"Role":"DEV","PM":"false","projectHs":61,"salary":17061},{"Id":242,"Role":"QA","PM":"false","projectHs":58,"salary":70503},{"Id":114,"Role":"QA","PM":"false","projectHs":48,"salary":25274},{"Id":287,"Role":"QA","PM":"false","projectHs":42,"salary":80862},{"Id":172,"Role":"TL","PM":"false","projectHs":67,"salary":91708}]},{"id":77,"name":"Otcom","type":"Testing","employeesAndRoles":[{"Id":451,"Role":"TL","PM":"true","projectHs":67,"salary":25072},{"Id":343,"Role":"DEV","PM":"false","projectHs":96,"salary":55901},{"Id":283,"Role":"DEV","PM":"false","projectHs":86,"salary":85627},{"Id":185,"Role":"TL","PM":"false","projectHs":38,"salary":59235},{"Id":189,"Role":"DEV","PM":"false","projectHs":57,"salary":21165},{"Id":292,"Role":"TL","PM":"false","projectHs":52,"salary":86001},{"Id":500,"Role":"DEV","PM":"false","projectHs":59,"salary":82985},{"Id":119,"Role":"DEV","PM":"false","projectHs":6,"salary":96336}]},{"id":78,"name":"Regrant","type":"Front-End","employeesAndRoles":[{"Id":395,"Role":"QA","PM":"true","projectHs":11,"salary":30642},{"Id":1,"Role":"QA","PM":"false","projectHs":44,"salary":48387},{"Id":373,"Role":"DEV","PM":"false","projectHs":35,"salary":23377},{"Id":291,"Role":"QA","PM":"false","projectHs":47,"salary":85497}]},{"id":79,"name":"Mat Lam Tam","type":"Back-End","employeesAndRoles":[{"Id":461,"Role":"QA","PM":"true","projectHs":73,"salary":99253},{"Id":474,"Role":"QA","PM":"false","projectHs":91,"salary":34921},{"Id":22,"Role":"QA","PM":"false","projectHs":39,"salary":24614},{"Id":259,"Role":"TL","PM":"false","projectHs":73,"salary":39369},{"Id":131,"Role":"QA","PM":"false","projectHs":36,"salary":64700}]},{"id":80,"name":"Voltsillam","type":"Security","employeesAndRoles":[{"Id":272,"Role":"DEV","PM":"true","projectHs":38,"salary":44637},{"Id":427,"Role":"QA","PM":"false","projectHs":28,"salary":83629}]},{"id":81,"name":"Bitchip","type":"Back-End","employeesAndRoles":[{"Id":124,"Role":"QA","PM":"true","projectHs":47,"salary":34293},{"Id":472,"Role":"TL","PM":"false","projectHs":78,"salary":31634},{"Id":187,"Role":"TL","PM":"false","projectHs":95,"salary":94234},{"Id":182,"Role":"DEV","PM":"false","projectHs":3,"salary":74596}]},{"id":82,"name":"Alpha","type":"Back-End","employeesAndRoles":[{"Id":466,"Role":"QA","PM":"true","projectHs":54,"salary":77933},{"Id":331,"Role":"QA","PM":"false","projectHs":50,"salary":42851},{"Id":293,"Role":"QA","PM":"false","projectHs":56,"salary":68815},{"Id":342,"Role":"TL","PM":"false","projectHs":99,"salary":53858},{"Id":247,"Role":"QA","PM":"false","projectHs":90,"salary":79989},{"Id":106,"Role":"DEV","PM":"false","projectHs":32,"salary":50285},{"Id":139,"Role":"QA","PM":"false","projectHs":40,"salary":56176},{"Id":255,"Role":"QA","PM":"false","projectHs":95,"salary":12047}]},{"id":83,"name":"Voyatouch","type":"Testing","employeesAndRoles":[{"Id":355,"Role":"DEV","PM":"true","projectHs":96,"salary":60383},{"Id":324,"Role":"TL","PM":"false","projectHs":41,"salary":76651}]},{"id":84,"name":"Solarbreeze","type":"Database","employeesAndRoles":[{"Id":49,"Role":"DEV","PM":"true","projectHs":48,"salary":90587},{"Id":114,"Role":"QA","PM":"false","projectHs":1,"salary":31734},{"Id":373,"Role":"DEV","PM":"false","projectHs":58,"salary":80276},{"Id":243,"Role":"DEV","PM":"false","projectHs":86,"salary":56116},{"Id":129,"Role":"DEV","PM":"false","projectHs":15,"salary":95769},{"Id":305,"Role":"TL","PM":"false","projectHs":32,"salary":47327},{"Id":253,"Role":"DEV","PM":"false","projectHs":59,"salary":75010},{"Id":222,"Role":"QA","PM":"false","projectHs":8,"salary":38095},{"Id":464,"Role":"DEV","PM":"false","projectHs":40,"salary":52741}]},{"id":85,"name":"Job","type":"Testing","employeesAndRoles":[{"Id":248,"Role":"TL","PM":"true","projectHs":42,"salary":81687},{"Id":69,"Role":"QA","PM":"false","projectHs":72,"salary":24903},{"Id":112,"Role":"QA","PM":"false","projectHs":26,"salary":96538},{"Id":96,"Role":"TL","PM":"false","projectHs":19,"salary":44892},{"Id":78,"Role":"TL","PM":"false","projectHs":75,"salary":15320},{"Id":411,"Role":"DEV","PM":"false","projectHs":96,"salary":46314},{"Id":190,"Role":"TL","PM":"false","projectHs":71,"salary":93004},{"Id":233,"Role":"TL","PM":"false","projectHs":50,"salary":57089}]},{"id":86,"name":"Y-find","type":"Maintenance","employeesAndRoles":[{"Id":325,"Role":"DEV","PM":"true","projectHs":89,"salary":26174},{"Id":400,"Role":"TL","PM":"false","projectHs":93,"salary":20972}]},{"id":87,"name":"Daltfresh","type":"Front-End","employeesAndRoles":[{"Id":156,"Role":"TL","PM":"true","projectHs":47,"salary":31792},{"Id":257,"Role":"TL","PM":"false","projectHs":38,"salary":46069},{"Id":423,"Role":"QA","PM":"false","projectHs":20,"salary":45770},{"Id":315,"Role":"TL","PM":"false","projectHs":63,"salary":96262},{"Id":191,"Role":"TL","PM":"false","projectHs":13,"salary":37473},{"Id":271,"Role":"TL","PM":"false","projectHs":55,"salary":14036},{"Id":357,"Role":"QA","PM":"false","projectHs":90,"salary":10937}]},{"id":88,"name":"Konklab","type":"Testing","employeesAndRoles":[{"Id":202,"Role":"DEV","PM":"true","projectHs":86,"salary":77026},{"Id":413,"Role":"QA","PM":"false","projectHs":69,"salary":85495},{"Id":37,"Role":"TL","PM":"false","projectHs":68,"salary":75452},{"Id":293,"Role":"QA","PM":"false","projectHs":64,"salary":24114},{"Id":182,"Role":"QA","PM":"false","projectHs":20,"salary":88398},{"Id":452,"Role":"DEV","PM":"false","projectHs":51,"salary":66508}]},{"id":89,"name":"Tin","type":"Database","employeesAndRoles":[{"Id":62,"Role":"DEV","PM":"true","projectHs":16,"salary":49480},{"Id":170,"Role":"QA","PM":"false","projectHs":33,"salary":44378},{"Id":258,"Role":"DEV","PM":"false","projectHs":59,"salary":60234},{"Id":49,"Role":"DEV","PM":"false","projectHs":86,"salary":64164}]},{"id":90,"name":"Voltsillam","type":"Security","employeesAndRoles":[{"Id":338,"Role":"DEV","PM":"true","projectHs":61,"salary":29291},{"Id":500,"Role":"DEV","PM":"false","projectHs":57,"salary":14991},{"Id":262,"Role":"DEV","PM":"false","projectHs":88,"salary":72011},{"Id":459,"Role":"DEV","PM":"false","projectHs":60,"salary":68817},{"Id":190,"Role":"TL","PM":"false","projectHs":53,"salary":96285},{"Id":211,"Role":"QA","PM":"false","projectHs":1,"salary":29979}]},{"id":91,"name":"Holdlamis","type":"Back-End","employeesAndRoles":[{"Id":90,"Role":"DEV","PM":"true","projectHs":89,"salary":34599},{"Id":230,"Role":"TL","PM":"false","projectHs":95,"salary":26476},{"Id":136,"Role":"QA","PM":"false","projectHs":59,"salary":43561},{"Id":289,"Role":"TL","PM":"false","projectHs":60,"salary":19178},{"Id":77,"Role":"TL","PM":"false","projectHs":13,"salary":88518},{"Id":426,"Role":"QA","PM":"false","projectHs":14,"salary":58171},{"Id":338,"Role":"QA","PM":"false","projectHs":26,"salary":38888}]},{"id":92,"name":"Namfix","type":"Testing","employeesAndRoles":[{"Id":267,"Role":"QA","PM":"true","projectHs":73,"salary":14437},{"Id":185,"Role":"TL","PM":"false","projectHs":26,"salary":28030},{"Id":274,"Role":"QA","PM":"false","projectHs":27,"salary":44115},{"Id":473,"Role":"QA","PM":"false","projectHs":46,"salary":83264},{"Id":411,"Role":"DEV","PM":"false","projectHs":72,"salary":22821},{"Id":386,"Role":"TL","PM":"false","projectHs":77,"salary":71179}]},{"id":93,"name":"Aerified","type":"Front-End","employeesAndRoles":[{"Id":259,"Role":"TL","PM":"true","projectHs":76,"salary":10778},{"Id":458,"Role":"DEV","PM":"false","projectHs":7,"salary":77970},{"Id":414,"Role":"QA","PM":"false","projectHs":80,"salary":35000}]},{"id":94,"name":"Kanlam","type":"Security","employeesAndRoles":[{"Id":125,"Role":"TL","PM":"true","projectHs":81,"salary":96313},{"Id":158,"Role":"TL","PM":"false","projectHs":28,"salary":30875},{"Id":94,"Role":"DEV","PM":"false","projectHs":32,"salary":30115}]},{"id":95,"name":"Otcom","type":"Testing","employeesAndRoles":[{"Id":372,"Role":"QA","PM":"true","projectHs":21,"salary":81720},{"Id":413,"Role":"DEV","PM":"false","projectHs":36,"salary":10097},{"Id":250,"Role":"QA","PM":"false","projectHs":66,"salary":54818},{"Id":21,"Role":"QA","PM":"false","projectHs":10,"salary":66407}]},{"id":96,"name":"Toughjoyfax","type":"Back-End","employeesAndRoles":[{"Id":43,"Role":"QA","PM":"true","projectHs":69,"salary":52758},{"Id":14,"Role":"TL","PM":"false","projectHs":80,"salary":63354},{"Id":10,"Role":"DEV","PM":"false","projectHs":72,"salary":78199},{"Id":305,"Role":"DEV","PM":"false","projectHs":81,"salary":99023}]},{"id":97,"name":"Kanlam","type":"Testing","employeesAndRoles":[{"Id":6,"Role":"QA","PM":"true","projectHs":73,"salary":53205},{"Id":452,"Role":"TL","PM":"false","projectHs":56,"salary":88081},{"Id":494,"Role":"DEV","PM":"false","projectHs":99,"salary":34266},{"Id":131,"Role":"DEV","PM":"false","projectHs":22,"salary":83579},{"Id":204,"Role":"DEV","PM":"false","projectHs":36,"salary":64225},{"Id":409,"Role":"DEV","PM":"false","projectHs":29,"salary":20502},{"Id":457,"Role":"DEV","PM":"false","projectHs":90,"salary":19201}]},{"id":98,"name":"Toughjoyfax","type":"Back-End","employeesAndRoles":[{"Id":242,"Role":"DEV","PM":"true","projectHs":62,"salary":91371},{"Id":128,"Role":"DEV","PM":"false","projectHs":60,"salary":94842},{"Id":390,"Role":"DEV","PM":"false","projectHs":48,"salary":62573},{"Id":219,"Role":"QA","PM":"false","projectHs":100,"salary":36228},{"Id":352,"Role":"DEV","PM":"false","projectHs":70,"salary":34083},{"Id":4,"Role":"TL","PM":"false","projectHs":53,"salary":43448},{"Id":203,"Role":"TL","PM":"false","projectHs":21,"salary":85885},{"Id":102,"Role":"DEV","PM":"false","projectHs":38,"salary":71919},{"Id":71,"Role":"TL","PM":"false","projectHs":97,"salary":33099}]},{"id":99,"name":"Alphazap","type":"Database","employeesAndRoles":[{"Id":172,"Role":"TL","PM":"true","projectHs":33,"salary":54190},{"Id":14,"Role":"DEV","PM":"false","projectHs":43,"salary":40716},{"Id":47,"Role":"TL","PM":"false","projectHs":26,"salary":95780},{"Id":216,"Role":"TL","PM":"false","projectHs":24,"salary":63214},{"Id":314,"Role":"TL","PM":"false","projectHs":77,"salary":72556},{"Id":153,"Role":"QA","PM":"false","projectHs":45,"salary":59356},{"Id":4,"Role":"TL","PM":"false","projectHs":58,"salary":62082},{"Id":74,"Role":"TL","PM":"false","projectHs":4,"salary":70432},{"Id":157,"Role":"DEV","PM":"false","projectHs":12,"salary":50903}]},{"id":100,"name":"Veribet","type":"Database","employeesAndRoles":[{"Id":253,"Role":"DEV","PM":"true","projectHs":47,"salary":98620},{"Id":305,"Role":"TL","PM":"false","projectHs":34,"salary":90455},{"Id":100,"Role":"TL","PM":"false","projectHs":54,"salary":42390},{"Id":27,"Role":"DEV","PM":"false","projectHs":13,"salary":47394},{"Id":9,"Role":"DEV","PM":"false","projectHs":75,"salary":41201},{"Id":371,"Role":"TL","PM":"false","projectHs":56,"salary":30915},{"Id":22,"Role":"DEV","PM":"false","projectHs":18,"salary":24324},{"Id":17,"Role":"QA","PM":"false","projectHs":51,"salary":85494}]}]
+[
+    {
+        "id": 1,
+        "name": "asd",
+        "type": "hello",
+        "employeesAndRoles": [
+            {
+                "Id": 101,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 4,
+                "salary": 84394
+            },
+            {
+                "Id": 341,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 65,
+                "salary": 31451
+            },
+            {
+                "Id": 484,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 63,
+                "salary": 65964
+            },
+            {
+                "Id": 325,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 92,
+                "salary": 64168
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "asd",
+        "type": "hello",
+        "employeesAndRoles": [
+            {
+                "Id": 371,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 20,
+                "salary": 89454
+            },
+            {
+                "Id": 296,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 7,
+                "salary": 49793
+            },
+            {
+                "Id": 338,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 40,
+                "salary": 75612
+            },
+            {
+                "Id": 315,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 74,
+                "salary": 37241
+            },
+            {
+                "Id": 154,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 53,
+                "salary": 48915
+            },
+            {
+                "Id": 274,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 94,
+                "salary": 34447
+            },
+            {
+                "Id": 243,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 4,
+                "salary": 77326
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Konklab",
+        "type": "Security",
+        "employeesAndRoles": [
+            {
+                "Id": 232,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 67,
+                "salary": 47143
+            },
+            {
+                "Id": 357,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 84,
+                "salary": 68471
+            },
+            {
+                "Id": 104,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 34,
+                "salary": 92915
+            },
+            {
+                "Id": 111,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 67,
+                "salary": 44923
+            },
+            {
+                "Id": 316,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 46,
+                "salary": 37358
+            },
+            {
+                "Id": 188,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 17,
+                "salary": 41007
+            },
+            {
+                "Id": 21,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 4,
+                "salary": 40913
+            },
+            {
+                "Id": 309,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 18,
+                "salary": 63999
+            },
+            {
+                "Id": 468,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 14,
+                "salary": 65541
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Concla",
+        "type": "Segurity",
+        "employeesAndRoles": [
+            {
+                "Id": 151,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 63,
+                "salary": 69376
+            },
+            {
+                "Id": 450,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 64,
+                "salary": 19850
+            },
+            {
+                "Id": 167,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 37,
+                "salary": 58101
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Zoolab",
+        "type": "Maintenance",
+        "employeesAndRoles": [
+            {
+                "Id": 41,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 40,
+                "salary": 39997
+            },
+            {
+                "Id": 55,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 33,
+                "salary": 41823
+            },
+            {
+                "Id": 331,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 69,
+                "salary": 23139
+            },
+            {
+                "Id": 164,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 50,
+                "salary": 64217
+            },
+            {
+                "Id": 302,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 94,
+                "salary": 66260
+            },
+            {
+                "Id": 117,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 29,
+                "salary": 89658
+            },
+            {
+                "Id": 309,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 12,
+                "salary": 77523
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Biodex",
+        "type": "Maintenance",
+        "employeesAndRoles": [
+            {
+                "Id": 348,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 17,
+                "salary": 23401
+            },
+            {
+                "Id": 466,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 60,
+                "salary": 28174
+            },
+            {
+                "Id": 298,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 22,
+                "salary": 44094
+            },
+            {
+                "Id": 238,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 42,
+                "salary": 43653
+            },
+            {
+                "Id": 319,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 94,
+                "salary": 90127
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Otcom",
+        "type": "Front-End",
+        "employeesAndRoles": [
+            {
+                "Id": 294,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 68,
+                "salary": 43075
+            },
+            {
+                "Id": 441,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 70,
+                "salary": 41359
+            },
+            {
+                "Id": 28,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 16,
+                "salary": 38142
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Tresom",
+        "type": "Maintenance",
+        "employeesAndRoles": [
+            {
+                "Id": 493,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 85,
+                "salary": 53670
+            },
+            {
+                "Id": 417,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 79,
+                "salary": 19207
+            },
+            {
+                "Id": 279,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 89,
+                "salary": 21802
+            },
+            {
+                "Id": 114,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 54,
+                "salary": 86920
+            },
+            {
+                "Id": 199,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 55,
+                "salary": 18142
+            },
+            {
+                "Id": 363,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 36,
+                "salary": 27408
+            },
+            {
+                "Id": 252,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 67,
+                "salary": 26049
+            },
+            {
+                "Id": 433,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 9,
+                "salary": 27472
+            },
+            {
+                "Id": 370,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 12,
+                "salary": 43148
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Prodder",
+        "type": "Testing",
+        "employeesAndRoles": [
+            {
+                "Id": 250,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 12,
+                "salary": 97546
+            },
+            {
+                "Id": 147,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 6,
+                "salary": 59432
+            },
+            {
+                "Id": 340,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 92,
+                "salary": 37449
+            },
+            {
+                "Id": 317,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 20,
+                "salary": 90229
+            },
+            {
+                "Id": 473,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 78,
+                "salary": 28266
+            },
+            {
+                "Id": 54,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 38,
+                "salary": 40744
+            },
+            {
+                "Id": 398,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 44,
+                "salary": 52245
+            },
+            {
+                "Id": 233,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 23,
+                "salary": 21935
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Home Ing",
+        "type": "Testing",
+        "employeesAndRoles": [
+            {
+                "Id": 354,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 55,
+                "salary": 94225
+            },
+            {
+                "Id": 200,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 17,
+                "salary": 30946
+            },
+            {
+                "Id": 186,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 16,
+                "salary": 25480
+            },
+            {
+                "Id": 459,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 23,
+                "salary": 59466
+            },
+            {
+                "Id": 290,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 2,
+                "salary": 88288
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Ronstring",
+        "type": "Database",
+        "employeesAndRoles": [
+            {
+                "Id": 84,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 73,
+                "salary": 58343
+            },
+            {
+                "Id": 257,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 33,
+                "salary": 19089
+            },
+            {
+                "Id": 64,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 84,
+                "salary": 20898
+            },
+            {
+                "Id": 270,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 64,
+                "salary": 49136
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Redhold",
+        "type": "Front-End",
+        "employeesAndRoles": [
+            {
+                "Id": 139,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 5,
+                "salary": 77043
+            },
+            {
+                "Id": 290,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 80,
+                "salary": 84639
+            },
+            {
+                "Id": 86,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 80,
+                "salary": 77446
+            },
+            {
+                "Id": 8,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 35,
+                "salary": 49840
+            },
+            {
+                "Id": 25,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 6,
+                "salary": 17451
+            },
+            {
+                "Id": 118,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 39,
+                "salary": 77117
+            },
+            {
+                "Id": 471,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 39,
+                "salary": 76807
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Biodex",
+        "type": "Back-End",
+        "employeesAndRoles": [
+            {
+                "Id": 271,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 74,
+                "salary": 43004
+            },
+            {
+                "Id": 261,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 60,
+                "salary": 72935
+            },
+            {
+                "Id": 424,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 42,
+                "salary": 25303
+            },
+            {
+                "Id": 157,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 6,
+                "salary": 28415
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Sonsing",
+        "type": "Testing",
+        "employeesAndRoles": [
+            {
+                "Id": 237,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 9,
+                "salary": 67328
+            },
+            {
+                "Id": 389,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 16,
+                "salary": 53618
+            },
+            {
+                "Id": 219,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 28,
+                "salary": 59310
+            },
+            {
+                "Id": 5,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 13,
+                "salary": 22818
+            },
+            {
+                "Id": 170,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 80,
+                "salary": 64459
+            },
+            {
+                "Id": 73,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 23,
+                "salary": 49017
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Transcof",
+        "type": "Maintenance",
+        "employeesAndRoles": [
+            {
+                "Id": 266,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 51,
+                "salary": 90495
+            },
+            {
+                "Id": 152,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 42,
+                "salary": 51107
+            },
+            {
+                "Id": 89,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 4,
+                "salary": 66471
+            },
+            {
+                "Id": 372,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 5,
+                "salary": 52143
+            },
+            {
+                "Id": 36,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 53,
+                "salary": 59658
+            },
+            {
+                "Id": 55,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 32,
+                "salary": 59130
+            },
+            {
+                "Id": 434,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 32,
+                "salary": 13832
+            },
+            {
+                "Id": 458,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 33,
+                "salary": 84237
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Aerified",
+        "type": "Database",
+        "employeesAndRoles": [
+            {
+                "Id": 225,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 8,
+                "salary": 79792
+            },
+            {
+                "Id": 254,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 100,
+                "salary": 46315
+            },
+            {
+                "Id": 242,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 67,
+                "salary": 96170
+            },
+            {
+                "Id": 416,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 10,
+                "salary": 83294
+            },
+            {
+                "Id": 394,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 49,
+                "salary": 74851
+            },
+            {
+                "Id": 202,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 8,
+                "salary": 67313
+            },
+            {
+                "Id": 310,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 63,
+                "salary": 55015
+            },
+            {
+                "Id": 463,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 67,
+                "salary": 13880
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Ventosanzap",
+        "type": "Front-End",
+        "employeesAndRoles": [
+            {
+                "Id": 416,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 31,
+                "salary": 34153
+            },
+            {
+                "Id": 326,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 65,
+                "salary": 38425
+            },
+            {
+                "Id": 113,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 36,
+                "salary": 51586
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Tampflex",
+        "type": "Back-End",
+        "employeesAndRoles": [
+            {
+                "Id": 369,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 83,
+                "salary": 78372
+            },
+            {
+                "Id": 54,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 60,
+                "salary": 65394
+            },
+            {
+                "Id": 31,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 39,
+                "salary": 93025
+            },
+            {
+                "Id": 214,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 1,
+                "salary": 50487
+            },
+            {
+                "Id": 500,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 74,
+                "salary": 12645
+            },
+            {
+                "Id": 172,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 51,
+                "salary": 44462
+            },
+            {
+                "Id": 180,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 68,
+                "salary": 61310
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Biodex",
+        "type": "Maintenance",
+        "employeesAndRoles": [
+            {
+                "Id": 400,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 68,
+                "salary": 64457
+            },
+            {
+                "Id": 18,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 50,
+                "salary": 41774
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Keylex",
+        "type": "Back-End",
+        "employeesAndRoles": [
+            {
+                "Id": 70,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 18,
+                "salary": 92885
+            },
+            {
+                "Id": 204,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 36,
+                "salary": 67996
+            },
+            {
+                "Id": 490,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 68,
+                "salary": 45391
+            },
+            {
+                "Id": 48,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 72,
+                "salary": 69913
+            },
+            {
+                "Id": 131,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 41,
+                "salary": 58262
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "name": "Tampflex",
+        "type": "Database",
+        "employeesAndRoles": [
+            {
+                "Id": 14,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 17,
+                "salary": 79548
+            },
+            {
+                "Id": 300,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 21,
+                "salary": 34057
+            },
+            {
+                "Id": 367,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 85,
+                "salary": 33559
+            },
+            {
+                "Id": 280,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 91,
+                "salary": 34800
+            },
+            {
+                "Id": 196,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 50,
+                "salary": 14519
+            },
+            {
+                "Id": 73,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 1,
+                "salary": 91530
+            },
+            {
+                "Id": 47,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 50,
+                "salary": 75905
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "name": "Mat Lam Tam",
+        "type": "Back-End",
+        "employeesAndRoles": [
+            {
+                "Id": 373,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 18,
+                "salary": 78618
+            },
+            {
+                "Id": 105,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 29,
+                "salary": 33077
+            },
+            {
+                "Id": 213,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 100,
+                "salary": 97393
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "name": "Aerified",
+        "type": "Front-End",
+        "employeesAndRoles": [
+            {
+                "Id": 2,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 11,
+                "salary": 49079
+            },
+            {
+                "Id": 17,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 100,
+                "salary": 55920
+            },
+            {
+                "Id": 185,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 38,
+                "salary": 29940
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "name": "Bitchip",
+        "type": "Security",
+        "employeesAndRoles": [
+            {
+                "Id": 306,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 8,
+                "salary": 35875
+            },
+            {
+                "Id": 133,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 35,
+                "salary": 84149
+            },
+            {
+                "Id": 8,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 86,
+                "salary": 10177
+            },
+            {
+                "Id": 56,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 9,
+                "salary": 62472
+            },
+            {
+                "Id": 125,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 50,
+                "salary": 26075
+            },
+            {
+                "Id": 77,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 76,
+                "salary": 60429
+            }
+        ]
+    },
+    {
+        "id": 25,
+        "name": "Bytecard",
+        "type": "Back-End",
+        "employeesAndRoles": [
+            {
+                "Id": 310,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 38,
+                "salary": 16992
+            },
+            {
+                "Id": 302,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 96,
+                "salary": 88922
+            }
+        ]
+    },
+    {
+        "id": 26,
+        "name": "Flowdesk",
+        "type": "Database",
+        "employeesAndRoles": [
+            {
+                "Id": 496,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 42,
+                "salary": 44449
+            },
+            {
+                "Id": 224,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 87,
+                "salary": 56300
+            },
+            {
+                "Id": 2,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 100,
+                "salary": 18105
+            }
+        ]
+    },
+    {
+        "id": 27,
+        "name": "Flexidy",
+        "type": "Front-End",
+        "employeesAndRoles": [
+            {
+                "Id": 98,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 100,
+                "salary": 23920
+            },
+            {
+                "Id": 83,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 55,
+                "salary": 49410
+            }
+        ]
+    },
+    {
+        "id": 28,
+        "name": "Bitwolf",
+        "type": "Front-End",
+        "employeesAndRoles": [
+            {
+                "Id": 393,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 11,
+                "salary": 24653
+            },
+            {
+                "Id": 434,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 64,
+                "salary": 43484
+            },
+            {
+                "Id": 482,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 23,
+                "salary": 72233
+            },
+            {
+                "Id": 98,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 53,
+                "salary": 76019
+            },
+            {
+                "Id": 276,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 89,
+                "salary": 18734
+            },
+            {
+                "Id": 303,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 66,
+                "salary": 19250
+            },
+            {
+                "Id": 91,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 78,
+                "salary": 37339
+            },
+            {
+                "Id": 86,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 91,
+                "salary": 22853
+            }
+        ]
+    },
+    {
+        "id": 29,
+        "name": "Regrant",
+        "type": "Front-End",
+        "employeesAndRoles": [
+            {
+                "Id": 38,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 2,
+                "salary": 17740
+            },
+            {
+                "Id": 111,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 7,
+                "salary": 48385
+            },
+            {
+                "Id": 255,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 26,
+                "salary": 80826
+            },
+            {
+                "Id": 165,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 21,
+                "salary": 82755
+            },
+            {
+                "Id": 61,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 88,
+                "salary": 90930
+            },
+            {
+                "Id": 296,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 75,
+                "salary": 67874
+            }
+        ]
+    },
+    {
+        "id": 30,
+        "name": "Bytecard",
+        "type": "Maintenance",
+        "employeesAndRoles": [
+            {
+                "Id": 182,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 53,
+                "salary": 16523
+            },
+            {
+                "Id": 35,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 61,
+                "salary": 36132
+            },
+            {
+                "Id": 286,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 66,
+                "salary": 28385
+            }
+        ]
+    },
+    {
+        "id": 31,
+        "name": "Prodder",
+        "type": "Database",
+        "employeesAndRoles": [
+            {
+                "Id": 170,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 37,
+                "salary": 80718
+            },
+            {
+                "Id": 151,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 45,
+                "salary": 23985
+            },
+            {
+                "Id": 389,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 89,
+                "salary": 98485
+            },
+            {
+                "Id": 146,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 91,
+                "salary": 19856
+            }
+        ]
+    },
+    {
+        "id": 32,
+        "name": "It",
+        "type": "Front-End",
+        "employeesAndRoles": [
+            {
+                "Id": 206,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 39,
+                "salary": 31063
+            },
+            {
+                "Id": 124,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 36,
+                "salary": 95267
+            },
+            {
+                "Id": 25,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 14,
+                "salary": 29075
+            }
+        ]
+    },
+    {
+        "id": 33,
+        "name": "Zathin",
+        "type": "Back-End",
+        "employeesAndRoles": [
+            {
+                "Id": 243,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 88,
+                "salary": 24088
+            },
+            {
+                "Id": 39,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 49,
+                "salary": 89177
+            },
+            {
+                "Id": 27,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 20,
+                "salary": 94177
+            },
+            {
+                "Id": 458,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 93,
+                "salary": 89994
+            }
+        ]
+    },
+    {
+        "id": 34,
+        "name": "Solarbreeze",
+        "type": "Testing",
+        "employeesAndRoles": [
+            {
+                "Id": 426,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 17,
+                "salary": 52874
+            },
+            {
+                "Id": 368,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 79,
+                "salary": 16904
+            },
+            {
+                "Id": 166,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 96,
+                "salary": 35349
+            },
+            {
+                "Id": 100,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 17,
+                "salary": 43666
+            }
+        ]
+    },
+    {
+        "id": 35,
+        "name": "Fix San",
+        "type": "Database",
+        "employeesAndRoles": [
+            {
+                "Id": 114,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 51,
+                "salary": 63284
+            },
+            {
+                "Id": 134,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 11,
+                "salary": 17096
+            },
+            {
+                "Id": 491,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 92,
+                "salary": 36325
+            },
+            {
+                "Id": 278,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 26,
+                "salary": 75475
+            },
+            {
+                "Id": 83,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 81,
+                "salary": 65988
+            }
+        ]
+    },
+    {
+        "id": 36,
+        "name": "Regrant",
+        "type": "Back-End",
+        "employeesAndRoles": [
+            {
+                "Id": 278,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 95,
+                "salary": 23901
+            },
+            {
+                "Id": 42,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 22,
+                "salary": 47472
+            },
+            {
+                "Id": 404,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 79,
+                "salary": 50329
+            },
+            {
+                "Id": 179,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 38,
+                "salary": 92333
+            },
+            {
+                "Id": 82,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 39,
+                "salary": 76883
+            },
+            {
+                "Id": 398,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 98,
+                "salary": 38071
+            },
+            {
+                "Id": 219,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 13,
+                "salary": 29547
+            },
+            {
+                "Id": 379,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 34,
+                "salary": 56847
+            },
+            {
+                "Id": 206,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 33,
+                "salary": 74098
+            }
+        ]
+    },
+    {
+        "id": 37,
+        "name": "Viva",
+        "type": "Front-End",
+        "employeesAndRoles": [
+            {
+                "Id": 343,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 85,
+                "salary": 79226
+            },
+            {
+                "Id": 385,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 3,
+                "salary": 23143
+            }
+        ]
+    },
+    {
+        "id": 38,
+        "name": "Tempsoft",
+        "type": "Maintenance",
+        "employeesAndRoles": [
+            {
+                "Id": 217,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 4,
+                "salary": 14660
+            },
+            {
+                "Id": 424,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 15,
+                "salary": 50412
+            },
+            {
+                "Id": 329,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 70,
+                "salary": 32047
+            }
+        ]
+    },
+    {
+        "id": 39,
+        "name": "Daltfresh",
+        "type": "Maintenance",
+        "employeesAndRoles": [
+            {
+                "Id": 47,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 1,
+                "salary": 99555
+            },
+            {
+                "Id": 16,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 49,
+                "salary": 24737
+            },
+            {
+                "Id": 328,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 67,
+                "salary": 78242
+            },
+            {
+                "Id": 321,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 10,
+                "salary": 84903
+            },
+            {
+                "Id": 448,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 35,
+                "salary": 46497
+            }
+        ]
+    },
+    {
+        "id": 40,
+        "name": "Latlux",
+        "type": "Testing",
+        "employeesAndRoles": [
+            {
+                "Id": 58,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 67,
+                "salary": 12100
+            },
+            {
+                "Id": 202,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 7,
+                "salary": 62633
+            },
+            {
+                "Id": 23,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 30,
+                "salary": 71762
+            },
+            {
+                "Id": 291,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 17,
+                "salary": 26085
+            },
+            {
+                "Id": 452,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 72,
+                "salary": 13296
+            }
+        ]
+    },
+    {
+        "id": 41,
+        "name": "Daltfresh",
+        "type": "Testing",
+        "employeesAndRoles": [
+            {
+                "Id": 367,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 67,
+                "salary": 87741
+            },
+            {
+                "Id": 451,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 20,
+                "salary": 26478
+            },
+            {
+                "Id": 280,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 33,
+                "salary": 14795
+            },
+            {
+                "Id": 389,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 90,
+                "salary": 91896
+            },
+            {
+                "Id": 483,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 33,
+                "salary": 49961
+            },
+            {
+                "Id": 321,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 52,
+                "salary": 62387
+            },
+            {
+                "Id": 236,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 56,
+                "salary": 66086
+            },
+            {
+                "Id": 313,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 70,
+                "salary": 62930
+            },
+            {
+                "Id": 202,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 76,
+                "salary": 53858
+            }
+        ]
+    },
+    {
+        "id": 42,
+        "name": "Y-Solowarm",
+        "type": "Maintenance",
+        "employeesAndRoles": [
+            {
+                "Id": 206,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 54,
+                "salary": 88509
+            },
+            {
+                "Id": 308,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 20,
+                "salary": 70529
+            },
+            {
+                "Id": 216,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 99,
+                "salary": 39868
+            },
+            {
+                "Id": 478,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 92,
+                "salary": 80819
+            },
+            {
+                "Id": 488,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 70,
+                "salary": 78617
+            }
+        ]
+    },
+    {
+        "id": 43,
+        "name": "Bamity",
+        "type": "Security",
+        "employeesAndRoles": [
+            {
+                "Id": 410,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 17,
+                "salary": 67275
+            },
+            {
+                "Id": 213,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 89,
+                "salary": 89689
+            },
+            {
+                "Id": 188,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 19,
+                "salary": 18149
+            },
+            {
+                "Id": 206,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 7,
+                "salary": 88493
+            },
+            {
+                "Id": 183,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 7,
+                "salary": 50223
+            },
+            {
+                "Id": 274,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 29,
+                "salary": 48872
+            },
+            {
+                "Id": 50,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 40,
+                "salary": 85231
+            },
+            {
+                "Id": 294,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 52,
+                "salary": 13991
+            }
+        ]
+    },
+    {
+        "id": 44,
+        "name": "Viva",
+        "type": "Security",
+        "employeesAndRoles": [
+            {
+                "Id": 199,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 56,
+                "salary": 72333
+            },
+            {
+                "Id": 216,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 38,
+                "salary": 81711
+            },
+            {
+                "Id": 436,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 97,
+                "salary": 37462
+            },
+            {
+                "Id": 457,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 10,
+                "salary": 53913
+            },
+            {
+                "Id": 345,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 2,
+                "salary": 51240
+            },
+            {
+                "Id": 46,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 23,
+                "salary": 46334
+            },
+            {
+                "Id": 112,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 79,
+                "salary": 94751
+            }
+        ]
+    },
+    {
+        "id": 45,
+        "name": "Konklux",
+        "type": "Front-End",
+        "employeesAndRoles": [
+            {
+                "Id": 67,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 27,
+                "salary": 12562
+            },
+            {
+                "Id": 459,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 59,
+                "salary": 91412
+            }
+        ]
+    },
+    {
+        "id": 46,
+        "name": "Bitchip",
+        "type": "Back-End",
+        "employeesAndRoles": [
+            {
+                "Id": 236,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 87,
+                "salary": 76350
+            },
+            {
+                "Id": 60,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 21,
+                "salary": 82082
+            },
+            {
+                "Id": 461,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 15,
+                "salary": 83844
+            },
+            {
+                "Id": 85,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 95,
+                "salary": 24534
+            },
+            {
+                "Id": 53,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 32,
+                "salary": 87992
+            }
+        ]
+    },
+    {
+        "id": 47,
+        "name": "Cardguard",
+        "type": "Database",
+        "employeesAndRoles": [
+            {
+                "Id": 105,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 23,
+                "salary": 45339
+            },
+            {
+                "Id": 439,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 34,
+                "salary": 21328
+            },
+            {
+                "Id": 14,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 16,
+                "salary": 84568
+            }
+        ]
+    },
+    {
+        "id": 48,
+        "name": "Wrapsafe",
+        "type": "Security",
+        "employeesAndRoles": [
+            {
+                "Id": 86,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 62,
+                "salary": 88427
+            },
+            {
+                "Id": 19,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 23,
+                "salary": 59266
+            },
+            {
+                "Id": 133,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 51,
+                "salary": 39994
+            },
+            {
+                "Id": 337,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 25,
+                "salary": 82932
+            },
+            {
+                "Id": 183,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 81,
+                "salary": 88524
+            },
+            {
+                "Id": 178,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 29,
+                "salary": 62344
+            },
+            {
+                "Id": 401,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 45,
+                "salary": 51741
+            },
+            {
+                "Id": 88,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 71,
+                "salary": 98916
+            },
+            {
+                "Id": 247,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 72,
+                "salary": 59100
+            }
+        ]
+    },
+    {
+        "id": 49,
+        "name": "Alpha",
+        "type": "Maintenance",
+        "employeesAndRoles": [
+            {
+                "Id": 396,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 35,
+                "salary": 28513
+            },
+            {
+                "Id": 37,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 99,
+                "salary": 38087
+            },
+            {
+                "Id": 235,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 71,
+                "salary": 79105
+            },
+            {
+                "Id": 75,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 22,
+                "salary": 29087
+            },
+            {
+                "Id": 3,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 80,
+                "salary": 46468
+            }
+        ]
+    },
+    {
+        "id": 50,
+        "name": "Matsoft",
+        "type": "Maintenance",
+        "employeesAndRoles": [
+            {
+                "Id": 206,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 17,
+                "salary": 85452
+            },
+            {
+                "Id": 14,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 46,
+                "salary": 80673
+            },
+            {
+                "Id": 174,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 55,
+                "salary": 62059
+            },
+            {
+                "Id": 196,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 97,
+                "salary": 72405
+            },
+            {
+                "Id": 219,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 31,
+                "salary": 72467
+            },
+            {
+                "Id": 386,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 96,
+                "salary": 50372
+            },
+            {
+                "Id": 34,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 53,
+                "salary": 55736
+            }
+        ]
+    },
+    {
+        "id": 51,
+        "name": "Treeflex",
+        "type": "Back-End",
+        "employeesAndRoles": [
+            {
+                "Id": 330,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 62,
+                "salary": 22337
+            },
+            {
+                "Id": 179,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 22,
+                "salary": 89275
+            },
+            {
+                "Id": 143,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 42,
+                "salary": 94322
+            },
+            {
+                "Id": 287,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 57,
+                "salary": 27720
+            },
+            {
+                "Id": 388,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 5,
+                "salary": 33962
+            },
+            {
+                "Id": 479,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 46,
+                "salary": 56817
+            },
+            {
+                "Id": 4,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 2,
+                "salary": 72186
+            },
+            {
+                "Id": 194,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 68,
+                "salary": 59736
+            }
+        ]
+    },
+    {
+        "id": 52,
+        "name": "Subin",
+        "type": "Database",
+        "employeesAndRoles": [
+            {
+                "Id": 245,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 36,
+                "salary": 11207
+            },
+            {
+                "Id": 217,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 49,
+                "salary": 66034
+            }
+        ]
+    },
+    {
+        "id": 53,
+        "name": "Viva",
+        "type": "Back-End",
+        "employeesAndRoles": [
+            {
+                "Id": 113,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 22,
+                "salary": 78648
+            },
+            {
+                "Id": 264,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 71,
+                "salary": 57862
+            },
+            {
+                "Id": 38,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 47,
+                "salary": 92961
+            },
+            {
+                "Id": 394,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 86,
+                "salary": 68226
+            },
+            {
+                "Id": 471,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 8,
+                "salary": 61588
+            },
+            {
+                "Id": 18,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 83,
+                "salary": 58113
+            },
+            {
+                "Id": 335,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 6,
+                "salary": 19383
+            }
+        ]
+    },
+    {
+        "id": 54,
+        "name": "Pannier",
+        "type": "Security",
+        "employeesAndRoles": [
+            {
+                "Id": 182,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 63,
+                "salary": 21137
+            },
+            {
+                "Id": 215,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 33,
+                "salary": 90214
+            },
+            {
+                "Id": 398,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 75,
+                "salary": 73518
+            },
+            {
+                "Id": 283,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 47,
+                "salary": 23336
+            }
+        ]
+    },
+    {
+        "id": 55,
+        "name": "Andalax",
+        "type": "Testing",
+        "employeesAndRoles": [
+            {
+                "Id": 428,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 27,
+                "salary": 35654
+            },
+            {
+                "Id": 159,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 23,
+                "salary": 52699
+            },
+            {
+                "Id": 443,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 35,
+                "salary": 26381
+            },
+            {
+                "Id": 482,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 72,
+                "salary": 45692
+            },
+            {
+                "Id": 486,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 1,
+                "salary": 26830
+            },
+            {
+                "Id": 364,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 87,
+                "salary": 34837
+            }
+        ]
+    },
+    {
+        "id": 56,
+        "name": "Matsoft",
+        "type": "Back-End",
+        "employeesAndRoles": [
+            {
+                "Id": 109,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 12,
+                "salary": 65624
+            },
+            {
+                "Id": 365,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 62,
+                "salary": 58086
+            },
+            {
+                "Id": 407,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 64,
+                "salary": 28454
+            },
+            {
+                "Id": 2,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 49,
+                "salary": 70719
+            }
+        ]
+    },
+    {
+        "id": 57,
+        "name": "Aerified",
+        "type": "Back-End",
+        "employeesAndRoles": [
+            {
+                "Id": 21,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 75,
+                "salary": 97129
+            },
+            {
+                "Id": 266,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 35,
+                "salary": 20513
+            },
+            {
+                "Id": 85,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 40,
+                "salary": 20945
+            },
+            {
+                "Id": 365,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 63,
+                "salary": 12457
+            },
+            {
+                "Id": 227,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 52,
+                "salary": 36091
+            }
+        ]
+    },
+    {
+        "id": 58,
+        "name": "Zamit",
+        "type": "Testing",
+        "employeesAndRoles": [
+            {
+                "Id": 49,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 49,
+                "salary": 59723
+            },
+            {
+                "Id": 365,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 85,
+                "salary": 42302
+            },
+            {
+                "Id": 421,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 80,
+                "salary": 56357
+            }
+        ]
+    },
+    {
+        "id": 59,
+        "name": "Transcof",
+        "type": "Back-End",
+        "employeesAndRoles": [
+            {
+                "Id": 427,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 3,
+                "salary": 56759
+            },
+            {
+                "Id": 127,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 54,
+                "salary": 10127
+            },
+            {
+                "Id": 268,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 91,
+                "salary": 97122
+            }
+        ]
+    },
+    {
+        "id": 60,
+        "name": "Zathin",
+        "type": "Testing",
+        "employeesAndRoles": [
+            {
+                "Id": 72,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 74,
+                "salary": 91341
+            },
+            {
+                "Id": 303,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 27,
+                "salary": 98881
+            },
+            {
+                "Id": 71,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 60,
+                "salary": 63816
+            },
+            {
+                "Id": 89,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 36,
+                "salary": 30603
+            }
+        ]
+    },
+    {
+        "id": 61,
+        "name": "Prodder",
+        "type": "Security",
+        "employeesAndRoles": [
+            {
+                "Id": 348,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 20,
+                "salary": 37173
+            },
+            {
+                "Id": 184,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 76,
+                "salary": 35040
+            },
+            {
+                "Id": 2,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 94,
+                "salary": 65195
+            },
+            {
+                "Id": 484,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 69,
+                "salary": 51987
+            },
+            {
+                "Id": 185,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 11,
+                "salary": 20525
+            },
+            {
+                "Id": 150,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 34,
+                "salary": 23768
+            },
+            {
+                "Id": 121,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 57,
+                "salary": 62102
+            },
+            {
+                "Id": 499,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 2,
+                "salary": 46038
+            }
+        ]
+    },
+    {
+        "id": 62,
+        "name": "Daltfresh",
+        "type": "Maintenance",
+        "employeesAndRoles": [
+            {
+                "Id": 314,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 31,
+                "salary": 55268
+            },
+            {
+                "Id": 381,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 66,
+                "salary": 29556
+            }
+        ]
+    },
+    {
+        "id": 63,
+        "name": "Aerified",
+        "type": "Database",
+        "employeesAndRoles": [
+            {
+                "Id": 470,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 45,
+                "salary": 97439
+            },
+            {
+                "Id": 286,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 73,
+                "salary": 74187
+            },
+            {
+                "Id": 399,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 27,
+                "salary": 82751
+            },
+            {
+                "Id": 383,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 39,
+                "salary": 49278
+            },
+            {
+                "Id": 312,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 57,
+                "salary": 26353
+            }
+        ]
+    },
+    {
+        "id": 64,
+        "name": "Aerified",
+        "type": "Maintenance",
+        "employeesAndRoles": [
+            {
+                "Id": 439,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 64,
+                "salary": 77326
+            },
+            {
+                "Id": 95,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 15,
+                "salary": 61953
+            },
+            {
+                "Id": 39,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 20,
+                "salary": 75995
+            },
+            {
+                "Id": 201,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 72,
+                "salary": 70087
+            },
+            {
+                "Id": 423,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 7,
+                "salary": 28885
+            },
+            {
+                "Id": 408,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 37,
+                "salary": 56511
+            },
+            {
+                "Id": 421,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 92,
+                "salary": 75428
+            }
+        ]
+    },
+    {
+        "id": 65,
+        "name": "Holdlamis",
+        "type": "Security",
+        "employeesAndRoles": [
+            {
+                "Id": 90,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 73,
+                "salary": 40370
+            },
+            {
+                "Id": 171,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 71,
+                "salary": 17554
+            },
+            {
+                "Id": 454,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 95,
+                "salary": 77804
+            },
+            {
+                "Id": 66,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 14,
+                "salary": 22292
+            }
+        ]
+    },
+    {
+        "id": 66,
+        "name": "Alphazap",
+        "type": "Front-End",
+        "employeesAndRoles": [
+            {
+                "Id": 222,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 83,
+                "salary": 36712
+            },
+            {
+                "Id": 179,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 46,
+                "salary": 14696
+            },
+            {
+                "Id": 405,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 98,
+                "salary": 12958
+            },
+            {
+                "Id": 242,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 92,
+                "salary": 70197
+            },
+            {
+                "Id": 400,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 36,
+                "salary": 13477
+            },
+            {
+                "Id": 328,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 77,
+                "salary": 41493
+            },
+            {
+                "Id": 427,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 40,
+                "salary": 27016
+            },
+            {
+                "Id": 202,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 34,
+                "salary": 54281
+            }
+        ]
+    },
+    {
+        "id": 67,
+        "name": "Bitwolf",
+        "type": "Maintenance",
+        "employeesAndRoles": [
+            {
+                "Id": 482,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 46,
+                "salary": 28403
+            },
+            {
+                "Id": 101,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 52,
+                "salary": 32591
+            },
+            {
+                "Id": 234,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 11,
+                "salary": 54636
+            },
+            {
+                "Id": 78,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 48,
+                "salary": 23847
+            }
+        ]
+    },
+    {
+        "id": 68,
+        "name": "Mat Lam Tam",
+        "type": "Database",
+        "employeesAndRoles": [
+            {
+                "Id": 67,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 51,
+                "salary": 80502
+            },
+            {
+                "Id": 349,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 15,
+                "salary": 78886
+            },
+            {
+                "Id": 461,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 55,
+                "salary": 60098
+            },
+            {
+                "Id": 262,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 80,
+                "salary": 14958
+            },
+            {
+                "Id": 279,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 14,
+                "salary": 70983
+            },
+            {
+                "Id": 406,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 13,
+                "salary": 93677
+            },
+            {
+                "Id": 363,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 45,
+                "salary": 76541
+            }
+        ]
+    },
+    {
+        "id": 69,
+        "name": "Treeflex",
+        "type": "Back-End",
+        "employeesAndRoles": [
+            {
+                "Id": 52,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 65,
+                "salary": 95218
+            },
+            {
+                "Id": 214,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 99,
+                "salary": 56594
+            },
+            {
+                "Id": 137,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 19,
+                "salary": 59662
+            },
+            {
+                "Id": 65,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 9,
+                "salary": 38685
+            },
+            {
+                "Id": 376,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 58,
+                "salary": 65015
+            }
+        ]
+    },
+    {
+        "id": 70,
+        "name": "Trippledex",
+        "type": "Testing",
+        "employeesAndRoles": [
+            {
+                "Id": 70,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 88,
+                "salary": 59825
+            },
+            {
+                "Id": 244,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 76,
+                "salary": 29470
+            },
+            {
+                "Id": 260,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 97,
+                "salary": 45734
+            },
+            {
+                "Id": 124,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 37,
+                "salary": 13039
+            }
+        ]
+    },
+    {
+        "id": 71,
+        "name": "Matsoft",
+        "type": "Maintenance",
+        "employeesAndRoles": [
+            {
+                "Id": 329,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 77,
+                "salary": 61215
+            },
+            {
+                "Id": 178,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 57,
+                "salary": 23214
+            }
+        ]
+    },
+    {
+        "id": 72,
+        "name": "Tin",
+        "type": "Database",
+        "employeesAndRoles": [
+            {
+                "Id": 367,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 57,
+                "salary": 35786
+            },
+            {
+                "Id": 244,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 42,
+                "salary": 54566
+            },
+            {
+                "Id": 354,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 14,
+                "salary": 17159
+            },
+            {
+                "Id": 326,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 32,
+                "salary": 77697
+            },
+            {
+                "Id": 185,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 60,
+                "salary": 49631
+            },
+            {
+                "Id": 472,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 53,
+                "salary": 28179
+            },
+            {
+                "Id": 177,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 16,
+                "salary": 82607
+            },
+            {
+                "Id": 400,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 34,
+                "salary": 91776
+            }
+        ]
+    },
+    {
+        "id": 73,
+        "name": "Voyatouch",
+        "type": "Back-End",
+        "employeesAndRoles": [
+            {
+                "Id": 27,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 30,
+                "salary": 42639
+            },
+            {
+                "Id": 428,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 64,
+                "salary": 11831
+            },
+            {
+                "Id": 171,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 19,
+                "salary": 20512
+            }
+        ]
+    },
+    {
+        "id": 74,
+        "name": "Holdlamis",
+        "type": "Maintenance",
+        "employeesAndRoles": [
+            {
+                "Id": 454,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 90,
+                "salary": 34667
+            },
+            {
+                "Id": 253,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 37,
+                "salary": 47951
+            }
+        ]
+    },
+    {
+        "id": 75,
+        "name": "Lotlux",
+        "type": "Back-End",
+        "employeesAndRoles": [
+            {
+                "Id": 119,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 73,
+                "salary": 58199
+            },
+            {
+                "Id": 159,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 54,
+                "salary": 95226
+            },
+            {
+                "Id": 429,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 23,
+                "salary": 84334
+            },
+            {
+                "Id": 417,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 81,
+                "salary": 30471
+            },
+            {
+                "Id": 379,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 17,
+                "salary": 89160
+            },
+            {
+                "Id": 160,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 19,
+                "salary": 46797
+            },
+            {
+                "Id": 161,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 39,
+                "salary": 53024
+            },
+            {
+                "Id": 108,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 36,
+                "salary": 20547
+            },
+            {
+                "Id": 448,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 14,
+                "salary": 48796
+            }
+        ]
+    },
+    {
+        "id": 76,
+        "name": "Quo Lux",
+        "type": "Back-End",
+        "employeesAndRoles": [
+            {
+                "Id": 369,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 99,
+                "salary": 17649
+            },
+            {
+                "Id": 348,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 19,
+                "salary": 70225
+            },
+            {
+                "Id": 203,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 61,
+                "salary": 17061
+            },
+            {
+                "Id": 242,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 58,
+                "salary": 70503
+            },
+            {
+                "Id": 114,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 48,
+                "salary": 25274
+            },
+            {
+                "Id": 287,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 42,
+                "salary": 80862
+            },
+            {
+                "Id": 172,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 67,
+                "salary": 91708
+            }
+        ]
+    },
+    {
+        "id": 77,
+        "name": "Otcom",
+        "type": "Testing",
+        "employeesAndRoles": [
+            {
+                "Id": 451,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 67,
+                "salary": 25072
+            },
+            {
+                "Id": 343,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 96,
+                "salary": 55901
+            },
+            {
+                "Id": 283,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 86,
+                "salary": 85627
+            },
+            {
+                "Id": 185,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 38,
+                "salary": 59235
+            },
+            {
+                "Id": 189,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 57,
+                "salary": 21165
+            },
+            {
+                "Id": 292,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 52,
+                "salary": 86001
+            },
+            {
+                "Id": 500,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 59,
+                "salary": 82985
+            },
+            {
+                "Id": 119,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 6,
+                "salary": 96336
+            }
+        ]
+    },
+    {
+        "id": 78,
+        "name": "Regrant",
+        "type": "Front-End",
+        "employeesAndRoles": [
+            {
+                "Id": 395,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 11,
+                "salary": 30642
+            },
+            {
+                "Id": 1,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 44,
+                "salary": 48387
+            },
+            {
+                "Id": 373,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 35,
+                "salary": 23377
+            },
+            {
+                "Id": 291,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 47,
+                "salary": 85497
+            }
+        ]
+    },
+    {
+        "id": 79,
+        "name": "Mat Lam Tam",
+        "type": "Back-End",
+        "employeesAndRoles": [
+            {
+                "Id": 461,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 73,
+                "salary": 99253
+            },
+            {
+                "Id": 474,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 91,
+                "salary": 34921
+            },
+            {
+                "Id": 22,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 39,
+                "salary": 24614
+            },
+            {
+                "Id": 259,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 73,
+                "salary": 39369
+            },
+            {
+                "Id": 131,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 36,
+                "salary": 64700
+            }
+        ]
+    },
+    {
+        "id": 80,
+        "name": "Voltsillam",
+        "type": "Security",
+        "employeesAndRoles": [
+            {
+                "Id": 272,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 38,
+                "salary": 44637
+            },
+            {
+                "Id": 427,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 28,
+                "salary": 83629
+            }
+        ]
+    },
+    {
+        "id": 81,
+        "name": "Bitchip",
+        "type": "Back-End",
+        "employeesAndRoles": [
+            {
+                "Id": 124,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 47,
+                "salary": 34293
+            },
+            {
+                "Id": 472,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 78,
+                "salary": 31634
+            },
+            {
+                "Id": 187,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 95,
+                "salary": 94234
+            },
+            {
+                "Id": 182,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 3,
+                "salary": 74596
+            }
+        ]
+    },
+    {
+        "id": 82,
+        "name": "Alpha",
+        "type": "Back-End",
+        "employeesAndRoles": [
+            {
+                "Id": 466,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 54,
+                "salary": 77933
+            },
+            {
+                "Id": 331,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 50,
+                "salary": 42851
+            },
+            {
+                "Id": 293,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 56,
+                "salary": 68815
+            },
+            {
+                "Id": 342,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 99,
+                "salary": 53858
+            },
+            {
+                "Id": 247,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 90,
+                "salary": 79989
+            },
+            {
+                "Id": 106,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 32,
+                "salary": 50285
+            },
+            {
+                "Id": 139,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 40,
+                "salary": 56176
+            },
+            {
+                "Id": 255,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 95,
+                "salary": 12047
+            }
+        ]
+    },
+    {
+        "id": 83,
+        "name": "Voyatouch",
+        "type": "Testing",
+        "employeesAndRoles": [
+            {
+                "Id": 355,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 96,
+                "salary": 60383
+            },
+            {
+                "Id": 324,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 41,
+                "salary": 76651
+            }
+        ]
+    },
+    {
+        "id": 84,
+        "name": "Solarbreeze",
+        "type": "Database",
+        "employeesAndRoles": [
+            {
+                "Id": 49,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 48,
+                "salary": 90587
+            },
+            {
+                "Id": 114,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 1,
+                "salary": 31734
+            },
+            {
+                "Id": 373,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 58,
+                "salary": 80276
+            },
+            {
+                "Id": 243,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 86,
+                "salary": 56116
+            },
+            {
+                "Id": 129,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 15,
+                "salary": 95769
+            },
+            {
+                "Id": 305,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 32,
+                "salary": 47327
+            },
+            {
+                "Id": 253,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 59,
+                "salary": 75010
+            },
+            {
+                "Id": 222,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 8,
+                "salary": 38095
+            },
+            {
+                "Id": 464,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 40,
+                "salary": 52741
+            }
+        ]
+    },
+    {
+        "id": 85,
+        "name": "Job",
+        "type": "Testing",
+        "employeesAndRoles": [
+            {
+                "Id": 248,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 42,
+                "salary": 81687
+            },
+            {
+                "Id": 69,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 72,
+                "salary": 24903
+            },
+            {
+                "Id": 112,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 26,
+                "salary": 96538
+            },
+            {
+                "Id": 96,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 19,
+                "salary": 44892
+            },
+            {
+                "Id": 78,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 75,
+                "salary": 15320
+            },
+            {
+                "Id": 411,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 96,
+                "salary": 46314
+            },
+            {
+                "Id": 190,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 71,
+                "salary": 93004
+            },
+            {
+                "Id": 233,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 50,
+                "salary": 57089
+            }
+        ]
+    },
+    {
+        "id": 86,
+        "name": "Y-find",
+        "type": "Maintenance",
+        "employeesAndRoles": [
+            {
+                "Id": 325,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 89,
+                "salary": 26174
+            },
+            {
+                "Id": 400,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 93,
+                "salary": 20972
+            }
+        ]
+    },
+    {
+        "id": 87,
+        "name": "Daltfresh",
+        "type": "Front-End",
+        "employeesAndRoles": [
+            {
+                "Id": 156,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 47,
+                "salary": 31792
+            },
+            {
+                "Id": 257,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 38,
+                "salary": 46069
+            },
+            {
+                "Id": 423,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 20,
+                "salary": 45770
+            },
+            {
+                "Id": 315,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 63,
+                "salary": 96262
+            },
+            {
+                "Id": 191,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 13,
+                "salary": 37473
+            },
+            {
+                "Id": 271,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 55,
+                "salary": 14036
+            },
+            {
+                "Id": 357,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 90,
+                "salary": 10937
+            }
+        ]
+    },
+    {
+        "id": 88,
+        "name": "Konklab",
+        "type": "Testing",
+        "employeesAndRoles": [
+            {
+                "Id": 202,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 86,
+                "salary": 77026
+            },
+            {
+                "Id": 413,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 69,
+                "salary": 85495
+            },
+            {
+                "Id": 37,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 68,
+                "salary": 75452
+            },
+            {
+                "Id": 293,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 64,
+                "salary": 24114
+            },
+            {
+                "Id": 182,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 20,
+                "salary": 88398
+            },
+            {
+                "Id": 452,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 51,
+                "salary": 66508
+            }
+        ]
+    },
+    {
+        "id": 89,
+        "name": "Tin",
+        "type": "Database",
+        "employeesAndRoles": [
+            {
+                "Id": 62,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 16,
+                "salary": 49480
+            },
+            {
+                "Id": 170,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 33,
+                "salary": 44378
+            },
+            {
+                "Id": 258,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 59,
+                "salary": 60234
+            },
+            {
+                "Id": 49,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 86,
+                "salary": 64164
+            }
+        ]
+    },
+    {
+        "id": 90,
+        "name": "Voltsillam",
+        "type": "Security",
+        "employeesAndRoles": [
+            {
+                "Id": 338,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 61,
+                "salary": 29291
+            },
+            {
+                "Id": 500,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 57,
+                "salary": 14991
+            },
+            {
+                "Id": 262,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 88,
+                "salary": 72011
+            },
+            {
+                "Id": 459,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 60,
+                "salary": 68817
+            },
+            {
+                "Id": 190,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 53,
+                "salary": 96285
+            },
+            {
+                "Id": 211,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 1,
+                "salary": 29979
+            }
+        ]
+    },
+    {
+        "id": 91,
+        "name": "Holdlamis",
+        "type": "Back-End",
+        "employeesAndRoles": [
+            {
+                "Id": 90,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 89,
+                "salary": 34599
+            },
+            {
+                "Id": 230,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 95,
+                "salary": 26476
+            },
+            {
+                "Id": 136,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 59,
+                "salary": 43561
+            },
+            {
+                "Id": 289,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 60,
+                "salary": 19178
+            },
+            {
+                "Id": 77,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 13,
+                "salary": 88518
+            },
+            {
+                "Id": 426,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 14,
+                "salary": 58171
+            },
+            {
+                "Id": 338,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 26,
+                "salary": 38888
+            }
+        ]
+    },
+    {
+        "id": 92,
+        "name": "Namfix",
+        "type": "Testing",
+        "employeesAndRoles": [
+            {
+                "Id": 267,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 73,
+                "salary": 14437
+            },
+            {
+                "Id": 185,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 26,
+                "salary": 28030
+            },
+            {
+                "Id": 274,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 27,
+                "salary": 44115
+            },
+            {
+                "Id": 473,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 46,
+                "salary": 83264
+            },
+            {
+                "Id": 411,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 72,
+                "salary": 22821
+            },
+            {
+                "Id": 386,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 77,
+                "salary": 71179
+            }
+        ]
+    },
+    {
+        "id": 93,
+        "name": "Aerified",
+        "type": "Front-End",
+        "employeesAndRoles": [
+            {
+                "Id": 259,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 76,
+                "salary": 10778
+            },
+            {
+                "Id": 458,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 7,
+                "salary": 77970
+            },
+            {
+                "Id": 414,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 80,
+                "salary": 35000
+            }
+        ]
+    },
+    {
+        "id": 94,
+        "name": "Kanlam",
+        "type": "Security",
+        "employeesAndRoles": [
+            {
+                "Id": 125,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 81,
+                "salary": 96313
+            },
+            {
+                "Id": 158,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 28,
+                "salary": 30875
+            },
+            {
+                "Id": 94,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 32,
+                "salary": 30115
+            }
+        ]
+    },
+    {
+        "id": 95,
+        "name": "Otcom",
+        "type": "Testing",
+        "employeesAndRoles": [
+            {
+                "Id": 372,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 21,
+                "salary": 81720
+            },
+            {
+                "Id": 413,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 36,
+                "salary": 10097
+            },
+            {
+                "Id": 250,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 66,
+                "salary": 54818
+            },
+            {
+                "Id": 21,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 10,
+                "salary": 66407
+            }
+        ]
+    },
+    {
+        "id": 96,
+        "name": "Toughjoyfax",
+        "type": "Back-End",
+        "employeesAndRoles": [
+            {
+                "Id": 43,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 69,
+                "salary": 52758
+            },
+            {
+                "Id": 14,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 80,
+                "salary": 63354
+            },
+            {
+                "Id": 10,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 72,
+                "salary": 78199
+            },
+            {
+                "Id": 305,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 81,
+                "salary": 99023
+            }
+        ]
+    },
+    {
+        "id": 97,
+        "name": "Kanlam",
+        "type": "Testing",
+        "employeesAndRoles": [
+            {
+                "Id": 6,
+                "Role": "QA",
+                "PM": "true",
+                "projectHs": 73,
+                "salary": 53205
+            },
+            {
+                "Id": 452,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 56,
+                "salary": 88081
+            },
+            {
+                "Id": 494,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 99,
+                "salary": 34266
+            },
+            {
+                "Id": 131,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 22,
+                "salary": 83579
+            },
+            {
+                "Id": 204,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 36,
+                "salary": 64225
+            },
+            {
+                "Id": 409,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 29,
+                "salary": 20502
+            },
+            {
+                "Id": 457,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 90,
+                "salary": 19201
+            }
+        ]
+    },
+    {
+        "id": 98,
+        "name": "Toughjoyfax",
+        "type": "Back-End",
+        "employeesAndRoles": [
+            {
+                "Id": 242,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 62,
+                "salary": 91371
+            },
+            {
+                "Id": 128,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 60,
+                "salary": 94842
+            },
+            {
+                "Id": 390,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 48,
+                "salary": 62573
+            },
+            {
+                "Id": 219,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 100,
+                "salary": 36228
+            },
+            {
+                "Id": 352,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 70,
+                "salary": 34083
+            },
+            {
+                "Id": 4,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 53,
+                "salary": 43448
+            },
+            {
+                "Id": 203,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 21,
+                "salary": 85885
+            },
+            {
+                "Id": 102,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 38,
+                "salary": 71919
+            },
+            {
+                "Id": 71,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 97,
+                "salary": 33099
+            }
+        ]
+    },
+    {
+        "id": 99,
+        "name": "Alphazap",
+        "type": "Database",
+        "employeesAndRoles": [
+            {
+                "Id": 172,
+                "Role": "TL",
+                "PM": "true",
+                "projectHs": 33,
+                "salary": 54190
+            },
+            {
+                "Id": 14,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 43,
+                "salary": 40716
+            },
+            {
+                "Id": 47,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 26,
+                "salary": 95780
+            },
+            {
+                "Id": 216,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 24,
+                "salary": 63214
+            },
+            {
+                "Id": 314,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 77,
+                "salary": 72556
+            },
+            {
+                "Id": 153,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 45,
+                "salary": 59356
+            },
+            {
+                "Id": 4,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 58,
+                "salary": 62082
+            },
+            {
+                "Id": 74,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 4,
+                "salary": 70432
+            },
+            {
+                "Id": 157,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 12,
+                "salary": 50903
+            }
+        ]
+    },
+    {
+        "id": 100,
+        "name": "Veribet",
+        "type": "Database",
+        "employeesAndRoles": [
+            {
+                "Id": 253,
+                "Role": "DEV",
+                "PM": "true",
+                "projectHs": 47,
+                "salary": 98620
+            },
+            {
+                "Id": 305,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 34,
+                "salary": 90455
+            },
+            {
+                "Id": 100,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 54,
+                "salary": 42390
+            },
+            {
+                "Id": 27,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 13,
+                "salary": 47394
+            },
+            {
+                "Id": 9,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 75,
+                "salary": 41201
+            },
+            {
+                "Id": 371,
+                "Role": "TL",
+                "PM": "false",
+                "projectHs": 56,
+                "salary": 30915
+            },
+            {
+                "Id": 22,
+                "Role": "DEV",
+                "PM": "false",
+                "projectHs": 18,
+                "salary": 24324
+            },
+            {
+                "Id": 17,
+                "Role": "QA",
+                "PM": "false",
+                "projectHs": 51,
+                "salary": 85494
+            }
+        ]
+    }
+]
