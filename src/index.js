@@ -1,6 +1,6 @@
 // use "import" to import libraries
 import express from 'express';
-import * as adminControllers from './resources/admins';
+import adminsRouter from './resources/admins';
 import projectsRouter from './resources/projects';
 
 // use "require" to import JSON files
@@ -11,14 +11,7 @@ const port = process.env.PORT || 3000;
 
 app.set('json spaces', 2);
 app.use(express.json());
-
-app.get('/admins', adminControllers.getAdminsAll);
-app.get('/admins/:id', adminControllers.getAdminById);
-app.get('/admins/fname/:firstName', adminControllers.getAdminByFirstName);
-app.get('/admins/lname/:lastName', adminControllers.getAdminByLastName);
-app.post('/admins', adminControllers.createAdmin);
-app.put('/admins/:id', adminControllers.editAdmin);
-app.delete('/admins/:id', adminControllers.deleteAdmin);
+app.use('/admins', adminsRouter);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

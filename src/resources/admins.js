@@ -1,15 +1,19 @@
+import express from 'express';
+
 const fs = require('fs');
 const admins = require('../data/admins.json');
 
+const router = express.Router();
+
 // get all admins
-const getAdminsAll = (req, res) => {
+router.get('/admins', (req, res) => {
   res.status(200).json({
     data: admins,
   });
-};
+});
 
 // get admin by ID
-function getAdminById(req, res) {
+router.get('/:id', (req, res) => {
   const { id } = req.params;
   const admin = admins.find((adminFound) => adminFound.id === parseInt(id, 10));
   if (admin) {
@@ -17,10 +21,10 @@ function getAdminById(req, res) {
   } else {
     res.status(404).json(`Admin id:${id} not found`);
   }
-}
+});
 
 // filter admin by first name
-const getAdminByFirstName = (req, res) => {
+router.get('/fname/:firstName', (req, res) => {
   const { firstName } = req.params;
   const adminName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1).toLowerCase();
   const adminFound = admins.filter((filt) => filt.firstName === adminName);
@@ -29,10 +33,10 @@ const getAdminByFirstName = (req, res) => {
   } else {
     res.status(404).json(`Admin name: ${adminName} not found`);
   }
-};
+});
 
 // filter admin by last name
-const getAdminByLastName = (req, res) => {
+router.get('/lname/:lastName', (req, res) => {
   const { lastName } = req.params;
   const adminLName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1).toLowerCase();
   const adminFound = admins.filter((filt) => filt.lastName === adminLName);
@@ -41,10 +45,10 @@ const getAdminByLastName = (req, res) => {
   } else {
     res.status(404).json(`Admin name: ${adminLName} not found`);
   }
-};
+});
 
 // create admin
-function createAdmin(req, res) {
+router.post('', (req, res) => {
   const {
     firstName, lastName, id, email, adminStatus, projects,
   } = req.body;
@@ -63,10 +67,10 @@ function createAdmin(req, res) {
   } else {
     res.status(400).json({ msg: 'Error: Complete all data to create an admin and status must be true' });
   }
-}
+});
 
 // edit admin
-function editAdmin(req, res) {
+router.put('/:id', (req, res) => {
   const {
     firstName, lastName, id, email, adminStatus, projects,
   } = req.body;
@@ -95,10 +99,10 @@ function editAdmin(req, res) {
       res.status(201).json({ msg: 'Admin updated' });
     }
   });
-}
+});
 
 // delete admin
-function deleteAdmin(req, res) {
+router.delete('/:id', (req, res) => {
   const adminId = req.params.id;
   const filteredAdmins = admins.filter((admin) => admin.id !== parseInt(adminId, 10));
   if (admins.length === filteredAdmins.length) {
@@ -112,14 +116,6 @@ function deleteAdmin(req, res) {
       }
     });
   }
-}
+});
 
-module.exports = {
-  getAdminsAll,
-  getAdminById,
-  getAdminByFirstName,
-  getAdminByLastName,
-  createAdmin,
-  editAdmin,
-  deleteAdmin,
-};
+export default router;
