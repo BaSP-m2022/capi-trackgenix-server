@@ -1,4 +1,4 @@
-const fs = require('file-system');
+const fs = require('fs');
 const admins = require('../data/admins.json');
 
 // get all admins
