@@ -1,16 +1,16 @@
-// const exp = require('constants');
-const express = require('express');
+const express = require('express'); // No estoy seguro si esto esta bien asi
 const fs = require('fs');
-// const path = require('path');
 const timeSheets = require('../data/time-sheets.json');
 
 const router = express.Router();
 
-// GET method
-router.get('/get', (req, res) => res.status(200).send(timeSheets));
+// GET methods
+// Return all timeSheets
+router.get('/', (req, res) => res.status(200).send(timeSheets));
 
-router.get('/get/:id', (req, res) => {
-  const sheet = timeSheets.find((c) => c.id === parseInt(req.params.id, 10));
+// Return the timeSheet with the given ID
+router.get('/:id', (req, res) => {
+  const sheet = timeSheets.find((findSheet) => findSheet.id === parseInt(req.params.id, 10));
 
   if (!sheet) {
     return res.status(404).send('The timesheet with the given ID was not found');
@@ -19,17 +19,17 @@ router.get('/get/:id', (req, res) => {
 });
 
 // POST method
-// eslint-disable-next-line consistent-return
-router.post('/post', (req, res) => {
+// Return the timeSheet created
+router.post('/', (req, res) => {
   const { body } = req;
-  const find = timeSheets.find((c) => c.id === parseInt(body.id, 10));
+  const find = timeSheets.find((findSheet) => findSheet.id === parseInt(body.id, 10));
   const index = timeSheets.indexOf(find);
-  // eslint-disable-next-line max-len
-  if (body.id === null || body.idEmployee === null || body.hoursWorked === null || body.dailyHS === null) {
+
+  if (!body.id || !body.idEmployee || !body.hoursWorked || !body.dailyHS) {
     return res.status(404).send('The data is not correct');
-  // eslint-disable-next-line no-else-return
-  } else if (index !== -1) { // Se puede mejorar u optimizar?
-    return res.status(404).send(`The time sheets already exist \n${find}`);
+  }
+  if (index !== -1) { // Se puede mejorar u optimizar?
+    return res.status(404).send('The time sheets already exist');
   }
   const sheet = {
     id: body.id,
@@ -45,6 +45,7 @@ router.post('/post', (req, res) => {
     }
     return res.send('TimeSheet created');
   });
+  return res.send(`${sheet}`);
 });
 
 module.exports = router;
