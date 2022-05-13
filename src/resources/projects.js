@@ -54,4 +54,53 @@ router.get('/getbyType', (req, res) => {
   else res.status(400).json({ msg: `There are no ${projectType} projects` });
 });
 
+router.get('/', (req, res) => {
+  res.send(projects);
+});
+
+router.get('/:id', (req, res) => {
+  const projectId = req.params.id;
+  const projectFind = projects.find((project) => project.id === parseInt(projectId, 10));
+  if (projectFind) {
+    res.send(projectFind);
+  } else {
+    res.send('Project not found');
+  }
+});
+
+router.post('/', (req, res) => {
+  const projectData = req.body;
+  if (req.body.id && req.body.name && req.body.type && req.body.employeesAndRoles) {
+    projects.push(projectData);
+    fs.writeFile('src/data/projects.json', JSON.stringify(projects), (err) => {
+      if (err) {
+        res.send(err);
+      } else {
+        res.send('Project created');
+      }
+    });
+  } else {
+    res.send('Data missing');
+  }
+});
+
+// eslint-disable-next-line consistent-return
+router.put('/edit/:id', (req, res) => {
+  const { name, type } = req.body;
+  const sheet = projects.find((project) => project.id === parseInt(req.params.id, 10));
+  if (!name || !type || !sheet) {
+    return res.status(404).send('The data is not correct');
+  }
+  const index = projects.indexOf(sheet);
+  projects[index].name = name;
+  projects[index].type = type;
+  fs.writeFile('src/data/projects.json', JSON.stringify(projects), (err) => {
+    if (err) {
+      res.send(err);
+    } else {
+      res.send('Project edited correctly');
+    }
+  });
+});
+
 export default router;
