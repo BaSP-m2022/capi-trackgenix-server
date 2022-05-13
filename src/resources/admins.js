@@ -13,7 +13,7 @@ function getAdminById(req, res) {
   const { id } = req.params;
   const admin = admins.find((adminFound) => adminFound.id === parseInt(id, 10));
   if (admin) {
-    res.status(200).json(admin);
+    res.status(200).json({ data: admin });
   } else {
     res.status(404).json(`Admin id:${id} not found`);
   }
@@ -67,24 +67,27 @@ function createAdmin(req, res) {
 
 // edit admin
 function editAdmin(req, res) {
-  const { body } = req;
+  const {
+    firstName, lastName, id, email, adminStatus, projects,
+  } = req.body;
   const admin = admins.find((adminFound) => adminFound.id === parseInt(req.params.id, 10));
-  if (body.firstName === null
-    || body.lastName === null
-    || body.id === null
-    || body.email === null
-    || body.adminStatus === null
-    || body.projects === null
-    || !admin) {
+  if (!firstName
+    || !lastName
+    || !id
+    || !email
+    || !adminStatus
+    || !projects) {
     res.status(404).send('The data is not correct');
+  } else if (!admin) {
+    res.status(404).json('Admin not found');
   }
   const index = admins.indexOf(admin);
-  admins[index].firstName = body.firstName;
-  admins[index].lastName = body.lastName;
-  admins[index].id = body.id;
-  admins[index].email = body.email;
-  admins[index].adminStatus = body.adminStatus;
-  admins[index].projects = body.projects;
+  admins[index].firstName = firstName;
+  admins[index].lastName = lastName;
+  admins[index].id = id;
+  admins[index].email = email;
+  admins[index].adminStatus = adminStatus;
+  admins[index].projects = projects;
   fs.writeFile('./src/data/admins.json', JSON.stringify(admins), (err) => {
     if (err) {
       res.send(err);

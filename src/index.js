@@ -15,7 +15,7 @@ app.get('/admins', adminControllers.getAdminsAll);
 app.get('/admins/:id', adminControllers.getAdminById);
 app.get('/admins/fname/:firstName', adminControllers.getAdminByFirstName);
 app.get('/admins/lname/:lastName', adminControllers.getAdminByLastName);
-app.post('/admins/create', adminControllers.createAdmin);
+app.post('/admins', adminControllers.createAdmin);
 app.put('/admins/:id', adminControllers.editAdmin);
 app.delete('/admins/:id', adminControllers.deleteAdmin);
 
