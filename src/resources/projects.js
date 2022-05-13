@@ -1,4 +1,5 @@
-const express = require('express');
+import express from 'express';
+
 const fs = require('fs');
 const path = require('path');
 const projects = require('../data/projects.json');
@@ -7,7 +8,7 @@ const router = express.Router();
 
 // Delete project by Id
 
-router.delete('/delete/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
   const found = projects.some((project) => project.id === parseInt(req.params.id, 10));
   if (found) {
     const result = projects.filter((project) => project.id !== parseInt(req.params.id, 10));
@@ -53,4 +54,4 @@ router.get('/getbyType', (req, res) => {
   else res.status(400).json({ msg: `There are no ${projectType} projects` });
 });
 
-module.exports = router;
+export default router;
