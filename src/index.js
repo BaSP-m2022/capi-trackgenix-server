@@ -1,9 +1,12 @@
 // use "import" to import libraries
 import express from 'express';
+import mongoose from 'mongoose';
 import adminsRouter from './resources/admins';
 import projectsRouter from './resources/projects';
 import timeSheetsRouter from './resources/time-sheets';
 import tasksRouter from './resources/tasks';
+import employeesRouter from './resources/employees';
+import superAdminRouter from './resources/super-admins';
 
 // use "require" to import JSON files
 const admins = require('./data/admins.json');
@@ -11,14 +14,27 @@ const admins = require('./data/admins.json');
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.set('json spaces', 2);
-app.use(express.json());
-app.use('/admins', adminsRouter);
+const uri = 'mongodb+srv://RadiumRocketTrackgenix:RadiumRocket2022@trackegnix-cluster.zj7zt.mongodb.net/BaSP_database?retryWrites=true&w=majority';
+mongoose.connect(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+  .then(() => {
+    // eslint-disable-next-line no-console
+    console.log('MongoDB Connected…');
+  })
+  // eslint-disable-next-line no-console
+  .catch((err) => console.log(err));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+app.use('/admins', adminsRouter);
 app.use('/projects', projectsRouter);
+app.use('/time-sheets', timeSheetsRouter);
+app.use('/tasks', tasksRouter);
+app.use('/superadmin', superAdminRouter);
+app.use('/employees', employeesRouter);
 
 app.get('/', async (req, res) => {
   res.send('Hello World!');
@@ -34,11 +50,3 @@ app.listen(port, () => {
   // eslint-disable-next-line no-console
   console.log(`Example app listening on port ${port}`);
 });
-
-// TimeSheets middlewears
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use('/time-sheets', timeSheetsRouter);
-
-// Tasks middlewears
-app.use('/tasks', tasksRouter);
