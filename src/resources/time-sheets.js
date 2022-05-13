@@ -1,4 +1,5 @@
-const express = require('express'); // No estoy seguro si esto esta bien asi
+import express from 'express';
+
 const fs = require('fs');
 const timeSheets = require('../data/time-sheets.json');
 
@@ -48,4 +49,4 @@ router.post('/', (req, res) => {
   return res.send(`${sheet}`);
 });
 
-module.exports = router;
+export default router;

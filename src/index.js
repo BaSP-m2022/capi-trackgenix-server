@@ -2,6 +2,7 @@
 import express from 'express';
 import adminsRouter from './resources/admins';
 import projectsRouter from './resources/projects';
+import timeSheetsRouter from './resources/time-sheets';
 
 // use "require" to import JSON files
 const admins = require('./data/admins.json');
@@ -35,4 +36,4 @@ app.listen(port, () => {
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use('/time-sheets', require('./resources/time-sheets'));
+app.use('/time-sheets', timeSheetsRouter);
