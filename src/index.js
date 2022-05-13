@@ -2,6 +2,8 @@
 import express from 'express';
 import adminsRouter from './resources/admins';
 import projectsRouter from './resources/projects';
+import timeSheetsRouter from './resources/time-sheets';
+import tasksRouter from './resources/tasks';
 
 // use "require" to import JSON files
 const admins = require('./data/admins.json');
@@ -32,3 +34,11 @@ app.listen(port, () => {
   // eslint-disable-next-line no-console
   console.log(`Example app listening on port ${port}`);
 });
+
+// TimeSheets middlewears
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use('/time-sheets', timeSheetsRouter);
+
+// Tasks middlewears
+app.use('/tasks', tasksRouter);
