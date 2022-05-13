@@ -1,6 +1,4 @@
 const fs = require('file-system');
-// const fs = require('fs');
-// const req = require('express/lib/request');
 const admins = require('../data/admins.json');
 
 // get all admins
@@ -22,24 +20,28 @@ function getAdminById(req, res) {
 }
 
 // filter admin by first name
-function getAdminByFirstName(req, res) {
-  const adminName = admins.some((user) => user.firstName === req.params.firstName);
-  if (adminName) {
-    res.json(admins.filter((user) => user.firstName === req.params.firstName));
+const getAdminByFirstName = (req, res) => {
+  const { firstName } = req.params;
+  const adminName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1).toLowerCase();
+  const adminFound = admins.filter((filt) => filt.firstName === adminName);
+  if (adminFound.length) {
+    res.json({ data: adminFound });
   } else {
-    res.status(404).json(`Admin name: ${req.params.firstName} not found`);
+    res.status(404).json(`Admin name: ${adminName} not found`);
   }
-}
+};
 
 // filter admin by last name
-function getAdminByLastName(req, res) {
-  const adminName = admins.some((user) => user.lastName === req.params.lastName);
-  if (adminName) {
-    res.json(admins.filter((user) => user.lastName === req.params.lastName));
+const getAdminByLastName = (req, res) => {
+  const { lastName } = req.params;
+  const adminLName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1).toLowerCase();
+  const adminFound = admins.filter((filt) => filt.lastName === adminLName);
+  if (adminFound.length) {
+    res.json({ data: adminFound });
   } else {
-    res.status(404).json(`Admin name: ${req.params.lastName} not found`);
+    res.status(404).json(`Admin name: ${adminLName} not found`);
   }
-}
+};
 
 // create admin
 function createAdmin(req, res) {
@@ -65,28 +67,31 @@ function createAdmin(req, res) {
 
 // edit admin
 function editAdmin(req, res) {
-  const { id } = req.params;
-  const admin = admins.find((adminFound) => adminFound.id === parseInt(id, 10));
-  if (admin) {
-    const updAdmin = req.body;
-    admins.forEach((adminFound) => {
-      if (adminFound.id === parseInt(id, 10)) {
-        const adminUpdated = {};
-        adminUpdated.firstName = updAdmin.firstName ? updAdmin.firstName : adminFound.firstName;
-        adminUpdated.lastName = updAdmin.lastName ? updAdmin.lastName : adminFound.lastName;
-        adminUpdated.id = updAdmin.id ? updAdmin.id : adminFound.id;
-        adminUpdated.email = updAdmin.email ? updAdmin.email : adminFound.email;
-        adminUpdated.adminStatus = updAdmin.adminStatus
-          ? updAdmin.adminStatus : adminFound.adminStatus;
-        adminUpdated.projects = updAdmin.projects ? updAdmin.projects : adminFound.projects;
-        admins.push(adminUpdated);
-        fs.writeFile('./src/data/admins.json', JSON.stringify(admins));
-        res.status(201).json({ msg: 'Admin updated', adminUpdated });
-      }
-    });
-  } else {
-    res.status(404).json(`Admin id:${id} not found`);
+  const { body } = req;
+  const admin = admins.find((adminFound) => adminFound.id === parseInt(req.params.id, 10));
+  if (body.firstName === null
+    || body.lastName === null
+    || body.id === null
+    || body.email === null
+    || body.adminStatus === null
+    || body.projects === null
+    || !admin) {
+    res.status(404).send('The data is not correct');
   }
+  const index = admins.indexOf(admin);
+  admins[index].firstName = body.firstName;
+  admins[index].lastName = body.lastName;
+  admins[index].id = body.id;
+  admins[index].email = body.email;
+  admins[index].adminStatus = body.adminStatus;
+  admins[index].projects = body.projects;
+  fs.writeFile('./src/data/admins.json', JSON.stringify(admins), (err) => {
+    if (err) {
+      res.send(err);
+    } else {
+      res.status(201).json({ msg: 'Admin updated' });
+    }
+  });
 }
 
 // delete admin
