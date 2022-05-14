@@ -1,12 +1,7 @@
 // use "import" to import libraries
 import express from 'express';
 import mongoose from 'mongoose';
-import adminsRouter from './resources/admins';
-import projectsRouter from './resources/projects';
-import timeSheetsRouter from './resources/time-sheets';
-import tasksRouter from './resources/tasks';
-import employeesRouter from './resources/employees';
-import superAdminRouter from './resources/super-admins';
+import router from './routes';
 
 // use "require" to import JSON files
 const admins = require('./data/admins.json');
@@ -29,12 +24,7 @@ mongoose.connect(uri, {
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use('/admins', adminsRouter);
-app.use('/projects', projectsRouter);
-app.use('/time-sheets', timeSheetsRouter);
-app.use('/tasks', tasksRouter);
-app.use('/superadmin', superAdminRouter);
-app.use('/employees', employeesRouter);
+app.use(router);
 
 app.get('/', async (req, res) => {
   res.send('Hello World!');

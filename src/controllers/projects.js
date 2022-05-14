@@ -1,4 +1,5 @@
 import express from 'express';
+import models from '../models/projects';
 
 const fs = require('fs');
 const path = require('path');
@@ -7,20 +8,41 @@ const projects = require('../data/projects.json');
 const router = express.Router();
 
 // Delete project by Id
-
-router.delete('/:id', (req, res) => {
-  const found = projects.some((project) => project.id === parseInt(req.params.id, 10));
-  if (found) {
-    const result = projects.filter((project) => project.id !== parseInt(req.params.id, 10));
-    fs.writeFile(path.join(__dirname, '../data/projects.json'), JSON.stringify(result), (err) => {
-      if (err) throw err;
+const deleteProject = async (req, res) => {
+  try {
+    if (!req.params.id) {
+      return res.status(400).json({
+        msg: 'missing id parameter',
+      });
+    }
+    const result = await models.Project.findByIdAndDelete(req.params.id);
+    if (!result) {
+      return res.status(404).json({
+        msg: 'The project has not been found',
+      });
+    }
+    return res.status(200).json({
+      msg: 'The project has been deleted',
     });
-    res.json({ msg: 'Project Deleted' });
-  } else {
-    res.status(400).json({ msg: `No project with the id of ${req.params.id}` });
+  } catch (error) {
+    return res.status(500).json({
+      msg: `'There has been an error: ${error.msg}`,
+    });
   }
-});
+};
 
+const addEmployee = async (req, res) => {
+  try {
+    if (!req.params.id) {
+      return res.status(400).json({
+        msg: 'missing id parameter',
+      });
+    }
+    return res.status(201);
+  } catch (error) {
+    return res.status(500);
+  }
+};
 // Add employee and role to project by project id
 router.post('/addEmployee/:id', (req, res) => {
   const found = projects.some((project) => project.id === parseInt(req.params.id, 10));
@@ -103,4 +125,9 @@ router.put('/edit/:id', (req, res) => {
   });
 });
 
-export default router;
+export {
+  // eslint-disable-next-line import/prefer-default-export
+  deleteProject,
+  addEmployee,
+
+};
