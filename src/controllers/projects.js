@@ -1,32 +1,32 @@
-import express from 'express';
-import models from '../models/projects';
-
-const fs = require('fs');
-const path = require('path');
-const projects = require('../data/projects.json');
-
-const router = express.Router();
+import Models from '../models/projects';
 
 // Delete project by Id
 const deleteProject = async (req, res) => {
   try {
-    if (!req.params.id) {
+    const { id } = req.params;
+    if (!id.match(/^[0-9a-fA-F]{24}$/)) {
       return res.status(400).json({
-        msg: 'missing id parameter',
+        msg: 'missing or wrong id parameter',
       });
     }
-    const result = await models.Project.findByIdAndDelete(req.params.id);
+    const result = await Models.findByIdAndDelete(req.params.id);
     if (!result) {
       return res.status(404).json({
         msg: 'The project has not been found',
+        data: undefined,
+        error: true,
       });
     }
     return res.status(200).json({
       msg: 'The project has been deleted',
+      data: undefined,
+      error: false,
     });
   } catch (error) {
     return res.status(500).json({
-      msg: `'There has been an error: ${error.msg}`,
+      msg: `There has been an error: ${error}`,
+      data: undefined,
+      error: true,
     });
   }
 };
@@ -36,98 +36,56 @@ const addEmployee = async (req, res) => {
     if (!req.params.id) {
       return res.status(400).json({
         msg: 'missing id parameter',
+        data: undefined,
+        error: true,
       });
     }
-    return res.status(201);
+    const employee = {
+      role: req.body.role,
+      pm: req.body.pm,
+      hours: req.body.hours,
+      salary: req.body.salary,
+    };
+    Models.updateOne(
+      { _id: req.params.id },
+      { $push: { employees: employee } },
+      (err) => {
+        if (err) {
+          return res.status(404).json({
+            msg: 'The project has not been found',
+          });
+        }
+        return null;
+      },
+    );
+    return res.status(201).json({
+      msg: 'The Employee has been added',
+    });
   } catch (error) {
-    return res.status(500);
+    return res.json({ msg: `There has been an error: ${error}` });
   }
 };
-// Add employee and role to project by project id
-router.post('/addEmployee/:id', (req, res) => {
-  const found = projects.some((project) => project.id === parseInt(req.params.id, 10));
-  if (found) {
-    const updEmployee = req.body;
-    if (!updEmployee.id || !updEmployee.role) {
-      res.status(400).json({
-        msg: 'Please add an employee id, and the role of employee.',
-      });
-    }
-    projects.forEach((project) => {
-      if (project.id === parseInt(req.params.id, 10)) {
-        const employee = project.employeesAndRoles;
-        employee.push(updEmployee);
-      }
+const createProject = async (req, res) => {
+  try {
+    const project = new Models({
+      name: req.body.name,
+      type: req.body.type,
+      employees: req.body.employees,
     });
-    fs.writeFile(path.join(__dirname, '../data/projects.json'), JSON.stringify(projects), (err) => {
-      if (err) throw err;
+
+    const result = await project.save();
+    return res.status(201).json({
+      msg: `The project has been created. Project :${result}`,
+      data: project,
+      error: false,
     });
-    res.json('Employee added');
-  } else {
-    res.status(400).json({ msg: `No project with the id of ${req.params.id}` });
+  } catch (err) {
+    return res.json({ msg: `There has been an error: ${err}` });
   }
-});
+};
 
-// Get projects by type with a query param
-router.get('/getbyType', (req, res) => {
-  const projectType = req.query.role;
-  const filteredProjects = projects.filter((project) => project.type === projectType);
-  if (filteredProjects.length > 0) res.json(filteredProjects);
-  else res.status(400).json({ msg: `There are no ${projectType} projects` });
-});
-
-router.get('/', (req, res) => {
-  res.send(projects);
-});
-
-router.get('/:id', (req, res) => {
-  const projectId = req.params.id;
-  const projectFind = projects.find((project) => project.id === parseInt(projectId, 10));
-  if (projectFind) {
-    res.send(projectFind);
-  } else {
-    res.send('Project not found');
-  }
-});
-
-router.post('/', (req, res) => {
-  const projectData = req.body;
-  if (req.body.id && req.body.name && req.body.type && req.body.employeesAndRoles) {
-    projects.push(projectData);
-    fs.writeFile('src/data/projects.json', JSON.stringify(projects), (err) => {
-      if (err) {
-        res.send(err);
-      } else {
-        res.send('Project created');
-      }
-    });
-  } else {
-    res.send('Data missing');
-  }
-});
-
-// eslint-disable-next-line consistent-return
-router.put('/edit/:id', (req, res) => {
-  const { name, type } = req.body;
-  const sheet = projects.find((project) => project.id === parseInt(req.params.id, 10));
-  if (!name || !type || !sheet) {
-    return res.status(404).send('The data is not correct');
-  }
-  const index = projects.indexOf(sheet);
-  projects[index].name = name;
-  projects[index].type = type;
-  fs.writeFile('src/data/projects.json', JSON.stringify(projects), (err) => {
-    if (err) {
-      res.send(err);
-    } else {
-      res.send('Project edited correctly');
-    }
-  });
-});
-
-export {
-  // eslint-disable-next-line import/prefer-default-export
+export default {
   deleteProject,
   addEmployee,
-
+  createProject,
 };

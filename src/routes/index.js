@@ -3,7 +3,6 @@ import projectRoutes from './projects';
 
 const router = express.Router();
 
-router
-  .use('projects', projectRoutes);
+router.use('/projects', projectRoutes);
 
 export default router;
