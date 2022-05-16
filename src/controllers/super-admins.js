@@ -1,10 +1,4 @@
-/* eslint-disable import/prefer-default-export */
 import SuperAdmin from '../models/super-admins';
-
-// const express = require('express');
-// const fs = require('fs');
-
-// const router = express.Router();
 
 // Add Super Admin
 
