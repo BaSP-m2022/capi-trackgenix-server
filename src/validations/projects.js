@@ -22,7 +22,6 @@ const createProjectValidation = (req, res, next) => {
     });
   } return next();
 };
-
 const putEmployeeValidation = (req, res, next) => {
   const eValidation = prEmployeeValidation.validate(req.body);
   if (eValidation.error) {

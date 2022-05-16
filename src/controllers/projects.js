@@ -1,5 +1,4 @@
 import Models from '../models/Projects';
-
 // Delete project by Id
 const deleteProject = async (req, res) => {
   try {
@@ -32,7 +31,6 @@ const deleteProject = async (req, res) => {
     });
   }
 };
-
 const addEmployee = async (req, res) => {
   try {
     if (!req.params.id) {
@@ -98,8 +96,42 @@ const createProject = async (req, res) => {
   }
 };
 
+// // get all projects
+// const getAllProjects = async (res, req) => {
+//   try {
+//     const AllProjects = await Models.Project.find({});
+
+//     return res.status(200).json(AllProjects);
+//   } catch (error) {
+//     res.status(500).json({
+//       msg: 'There was an error',
+//     });
+//   }
+// };
+
+// get project by id
+const getProjectById = async (res, req) => {
+  try {
+    if (req.params.id) {
+      const Project = await Models.Project.findById(req.params.body);
+
+      return res.status(200).json(Project);
+    }
+    return res.status(400).json({
+      msg: 'Missing id parameter',
+    });
+  } catch (error) {
+    return res.json({
+      msg: error,
+    });
+  }
+};
+
 export default {
   deleteProject,
   addEmployee,
   createProject,
+  //   getAllProjects,
+  getProjectById,
+//   updateProject,
 };
