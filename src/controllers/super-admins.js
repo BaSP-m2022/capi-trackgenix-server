@@ -29,29 +29,33 @@ async function addSuperAdmin(req, res) {
 
 // Edit Super Admin
 
-// router.put('/edit/:id', (req, res) => {
-//   const found = superAdmins.some((superAdmin) => superAdmin.id === parseInt(req.params.id, 10));
-//   if (found) {
-//     const updateAdm = req.body;
-//     superAdmins.forEach((superAdmin) => {
-//       if (superAdmin.id === parseInt(req.params.id, 10)) {
-//         // eslint-disable-next-line no-param-reassign
-//         superAdmin.email = updateAdm.email ? updateAdm.email : superAdmin.email;
-//         // eslint-disable-next-line no-param-reassign
-//         superAdmin.password = updateAdm.password ? updateAdm.password : superAdmin.password;
-//         fs.writeFile('src/data/super-admins.json', JSON.stringify(superAdmins), (err) => {
-//           if (err) {
-//             res.send(err);
-//           } else {
-//             res.json({ msg: `Super Admin ${req.params.id} was updated` });
-//           }
-//         });
-//       }
-//     });
-//   } else {
-//     res.status(400).json({ msg: `No Super Admin found with the id: ${req.params.id}` });
-//   }
-// });
+async function editSuperAdmin(req, res) {
+  try {
+    if (!req.params) {
+      return res.status(400).json({
+        msg: 'Missing id parameter',
+      });
+    }
+    const edit = await SuperAdmin.findByIdAndUpdate(
+      req.params.email,
+      req.params.password,
+      { new: true },
+    );
+    if (!edit) {
+      return res.status(404).json({
+        msg: 'Super Admin not found',
+      });
+    }
+    return res.status(201).json({
+      msg: `Super Admin updated. \nSuper Admin: ${edit}`,
+    });
+  } catch (error) {
+    return res.json({
+      msg: 'And error has ocurred',
+      error: error.details[0].message,
+    });
+  }
+}
 
 // // Delete Super Admin
 
@@ -70,4 +74,5 @@ async function addSuperAdmin(req, res) {
 
 export {
   addSuperAdmin,
+  editSuperAdmin,
 };
