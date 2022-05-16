@@ -1,122 +1,184 @@
-import express from 'express';
+import Models from '../models/Tasks';
 
-const fs = require('fs');
-const tasks = require('../data/tasks.json');
-
-const router = express.Router();
-
-// Gets all tasks
-router.get('/', (req, res) => res.status(200).send(tasks));
-
-// Return the task with the given ID
-router.get('/:id', (req, res) => {
-  const task = tasks.find((findTask) => findTask.id === parseInt(req.params.id, 10));
-
-  if (!task) {
-    return res.status(404).send('The task with the given ID was not found');
-  }
-  return res.send(task);
-});
-
-// Create task
-router.post('/', (req, res) => {
-  const { body } = req;
-  const find = tasks.find((findTask) => findTask.id === parseInt(body.id, 10));
-  const index = tasks.indexOf(find);
-
-  if (!body.id || !body.employeeId || !body.taskName || !body.description || !body.status
-    || !body.priority || !body.employeeName) {
-    return res.status(404).send('The data is not correct');
-  }
-  if (index !== -1) {
-    return res.status(404).send('The time sheets already exist');
-  }
-
-  const task = {
-    id: body.id,
-    employeeId: body.employeeId,
-    taskName: body.taskName,
-    description: body.description,
-    status: body.status,
-    priority: body.priority,
-    employeeName: body.employeeName,
-  };
-
-  tasks.push(task);
-  fs.writeFile('src/data/tasks.json', JSON.stringify(tasks), (err) => {
-    if (err) {
-      return res.send(err);
+const getAllTask = async (req, res) => {
+  try {
+    const tasks = await Models.find();
+    if (!(tasks.length > 0)) {
+      return res.status(404).json({
+        msg: 'There are no task in the database',
+        data: undefined,
+        error: true,
+      });
     }
-    return res.send('Task created');
-  });
-  return res.send(`${task}`);
-});
-
-// Edit task
-router.put('/:id', (req, res) => {
-  const { body } = req;
-  const task = tasks.find((findTask) => findTask.id === parseInt(req.params.id, 10));
-
-  if (!body.taskName || !body.description || !body.status || !body.priority
-    || !body.employeeName) {
-    return res.status(404).send('The data is not correct');
+    return res.status(200).json({
+      msg: { tasks },
+      data: undefined,
+      error: false,
+    });
+  } catch (err) {
+    return res.json({ msg: `There has been an error: ${err}` });
   }
-  if (!task) { return res.status(404).send('The given id not exist'); }
+};
 
-  const index = tasks.indexOf(task);
-  tasks[index].taskName = body.taskName;
-  tasks[index].description = body.description;
-  tasks[index].status = body.status;
-  tasks[index].priority = body.priority;
-  tasks[index].employeeName = body.employeeName;
-
-  fs.writeFile('src/data/tasks.json', JSON.stringify(tasks), (err) => {
-    if (err) {
-      res.send(err);
-    } else {
-      res.send('Tasks created');
+const getTaskById = async (req, res) => {
+  try {
+    const { id } = req.params;
+    if (!id.match(/^[0-9a-fA-F]{24}$/)) {
+      return res.status(400).json({
+        msg: 'missing or wrong id parameter',
+        data: undefined,
+        error: true,
+      });
     }
-  });
-  return res.send(`${task}`);
-});
-
-// Delete task
-router.delete('/:id', (req, res) => {
-  const task = tasks.find((findTask) => findTask.id === parseInt(req.params.id, 10));
-
-  if (!task) {
-    return res.status(404).send('The task with the given ID was not found');
-  }
-  const index = tasks.indexOf(task);
-  tasks.splice(index, 1);
-
-  fs.writeFile('src/data/tasks.json', JSON.stringify(tasks), (err) => {
-    if (err) {
-      res.send(err);
-    } else {
-      res.send('Tasks edited');
+    const task = await Models.findById(id);
+    if (!task) {
+      return res.status(404).json({
+        msg: 'The task has not been found',
+        data: undefined,
+        error: true,
+      });
     }
-  });
-  return res.send(`${task}`);
-});
+    return res.status(200).json({
+      msg: { task },
+      data: undefined,
+      error: false,
+    });
+  } catch (error) {
+    return res.json({
+      msg: `There has been an error: ${error}`,
+      data: undefined,
+      error: true,
+    });
+  }
+};
 
-// Filter by priority
-router.get('/getByPiority/:id', (req, res) => {
-  let priority = '';
-  if (req.params.id === '1') {
-    priority = 'Low';
-  }
-  if (req.params.id === '2') {
-    priority = 'Medium';
-  }
-  if (req.params.id === '3') {
-    priority = 'High';
-  }
-  const taskByPriority = tasks.filter((findTaks) => findTaks.priority === priority);
-  if (taskByPriority.length === 0) {
-    return res.status(404).send(`Incorrect Priority. Low = 1, Medium = 2, High = 3 ${priority}`);
-  }
-  return res.status(200).send(taskByPriority);
-});
+const createTask = async (req, res) => {
+  try {
+    const task = new Models({
+      idEmp: req.body.idEmp,
+      name: req.body.name,
+      description: req.body.description,
+      status: req.body.status,
+      priority: req.body.priority,
+    });
 
-export default router;
+    const result = await task.save();
+    return res.status(201).json({
+      msg: 'The Task has been created',
+      data: result,
+      error: false,
+    });
+  } catch (err) {
+    return res.json({
+      msg: 'There has been an error:',
+      data: err,
+      error: true,
+    });
+  }
+};
+
+const deleteTask = async (req, res) => {
+  try {
+    const { id } = req.params;
+    if (!id.match(/^[0-9a-fA-F]{24}$/)) {
+      return res.status(400).json({
+        msg: 'missing or wrong id parameter',
+        data: undefined,
+        error: true,
+      });
+    }
+    const result = await Models.findByIdAndDelete(req.params.id);
+    if (!result) {
+      return res.status(404).json({
+        msg: 'The task has not been found',
+        data: undefined,
+        error: true,
+      });
+    }
+    return res.status(200).json({
+      msg: 'The task has been deleted',
+      data: undefined,
+      error: false,
+    });
+  } catch (error) {
+    return res.json({
+      msg: `There has been an error: ${error}`,
+      data: undefined,
+      error: true,
+    });
+  }
+};
+
+const filterByPriority = async (req, res) => {
+  try {
+    const { priority } = req.query;
+
+    const response = await Models.find({ priority });
+    if (!response || !response.length) {
+      return res.status(404).json({
+        msg: 'The task has not been found',
+        data: undefined,
+        error: true,
+      });
+    }
+    return res.status(200).json({
+      msg: 'The task has been found',
+      data: response,
+      error: false,
+    });
+  } catch (error) {
+    return res.json({
+      msg: `There has been an error: ${error}`,
+      data: undefined,
+      error: true,
+    });
+  }
+};
+
+const editTask = async (req, res) => {
+  try {
+    const { id } = req.params;
+    if (!id.match(/^[0-9a-fA-F]{24}$/)) {
+      return res.status(400).json({
+        msg: 'missing or wrong id parameter',
+        data: undefined,
+        error: true,
+      });
+    }
+    const task = req.body;
+    const response = await Models.findByIdAndUpdate(id, {
+      idEmp: task.idEmp,
+      name: task.name,
+      description: task.description,
+      status: task.status,
+      priority: task.priority,
+    });
+    if (!response) {
+      return res.status(404).json({
+        msg: 'The task has not been found',
+        data: undefined,
+        error: true,
+      });
+    }
+    return res.status(200).json({
+      msg: 'The task has been Updated',
+      data: undefined,
+      error: false,
+    });
+  } catch (error) {
+    return res.json({
+      msg: `There has been an error: ${error}`,
+      data: undefined,
+      error: true,
+    });
+  }
+};
+
+export default {
+  getAllTask,
+  getTaskById,
+  createTask,
+  deleteTask,
+  filterByPriority,
+  editTask,
+};

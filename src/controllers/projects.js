@@ -1,4 +1,4 @@
-import Models from '../models/projects';
+import Models from '../models/Projects';
 
 // Delete project by Id
 const deleteProject = async (req, res) => {
@@ -7,6 +7,8 @@ const deleteProject = async (req, res) => {
     if (!id.match(/^[0-9a-fA-F]{24}$/)) {
       return res.status(400).json({
         msg: 'missing or wrong id parameter',
+        data: undefined,
+        error: true,
       });
     }
     const result = await Models.findByIdAndDelete(req.params.id);
@@ -23,7 +25,7 @@ const deleteProject = async (req, res) => {
       error: false,
     });
   } catch (error) {
-    return res.status(500).json({
+    return res.json({
       msg: `There has been an error: ${error}`,
       data: undefined,
       error: true,
@@ -53,6 +55,8 @@ const addEmployee = async (req, res) => {
         if (err) {
           return res.status(404).json({
             msg: 'The project has not been found',
+            data: undefined,
+            error: true,
           });
         }
         return null;
@@ -60,11 +64,18 @@ const addEmployee = async (req, res) => {
     );
     return res.status(201).json({
       msg: 'The Employee has been added',
+      data: employee,
+      error: false,
     });
   } catch (error) {
-    return res.json({ msg: `There has been an error: ${error}` });
+    return res.json({
+      msg: `There has been an error: ${error}`,
+      data: undefined,
+      error: true,
+    });
   }
 };
+
 const createProject = async (req, res) => {
   try {
     const project = new Models({
@@ -72,7 +83,6 @@ const createProject = async (req, res) => {
       type: req.body.type,
       employees: req.body.employees,
     });
-
     const result = await project.save();
     return res.status(201).json({
       msg: `The project has been created. Project :${result}`,
@@ -80,7 +90,11 @@ const createProject = async (req, res) => {
       error: false,
     });
   } catch (err) {
-    return res.json({ msg: `There has been an error: ${err}` });
+    return res.json({
+      msg: `There has been an error: ${err}`,
+      data: undefined,
+      error: true,
+    });
   }
 };
 
