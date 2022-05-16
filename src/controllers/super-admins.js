@@ -57,22 +57,34 @@ async function editSuperAdmin(req, res) {
   }
 }
 
-// // Delete Super Admin
+// Delete Super Admin
 
-// router.delete('/delete/:id', (req, res) => {
-//   const found = superAdmins.some((superAdmin) => superAdmin.id === parseInt(req.params.id, 10));
-//   if (found) {
-//     const result = superAdmins.filter((superAdm) => superAdm.id !== parseInt(req.params.id, 10));
-//     fs.writeFile('src/data/super-admins.json', JSON.stringify(result), (err) => {
-//       if (err) throw err;
-//     });
-//     res.json({ msg: `SuperAdmin ${req.params.id} deleted` });
-//   } else {
-//     res.status(400).json({ msg: `No Super Admin found with the id: ${req.params.id}` });
-//   }
-// });
+async function deleteSuperAdmin(req, res) {
+  try {
+    if (!req.params.id) {
+      return res.status(400).json({
+        msg: 'Missing id parameter',
+      });
+    }
+    const del = await SuperAdmin.findByIdAndDelete(req.params.id);
+    if (!del) {
+      return res.status(404).json({
+        msg: 'Super Admin not found',
+      });
+    }
+    return res.status(204).json({
+      msg: `Super Admin succefully deleted \nSuper Admin: ${del}`,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      msg: 'An error has occurred',
+      error: error.details[0].message,
+    });
+  }
+}
 
 export {
   addSuperAdmin,
   editSuperAdmin,
+  deleteSuperAdmin,
 };
