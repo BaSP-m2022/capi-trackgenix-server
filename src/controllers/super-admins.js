@@ -1,4 +1,4 @@
-import SuperAdmin from '../models/super-admins';
+import SuperAdmin from '../models/Super-Admins';
 
 // Add Super Admin
 
