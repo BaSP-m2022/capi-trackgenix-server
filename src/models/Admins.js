@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-// const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
@@ -11,10 +10,6 @@ const adminSchema = new Schema(
     },
     lastName: {
       type: String,
-      required: true,
-    },
-    id: {
-      type: Number,
       required: true,
     },
     email: {

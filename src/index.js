@@ -29,7 +29,6 @@ mongoose.connect(uri, {
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-
 app.use(router);
 
 app.get('/', async (req, res) => {
