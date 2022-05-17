@@ -96,30 +96,28 @@ const createProject = async (req, res) => {
   }
 };
 
-// // get all projects
-// const getAllProjects = async (res, req) => {
-//   try {
-//     const AllProjects = await Models.Project.find({});
+// get all projects
+const getAllProjects = async (req, res) => {
+  try {
+    const AllProjects = await Models.find({});
 
-//     return res.status(200).json(AllProjects);
-//   } catch (error) {
-//     res.status(500).json({
-//       msg: 'There was an error',
-//     });
-//   }
-// };
+    return res.status(200).json(AllProjects);
+  } catch (error) {
+    return res.json({ msg: `There has been an error: ${error}` });
+  }
+};
 
 // get project by id
-const getProjectById = async (res, req) => {
+const getProjectById = async (req, res) => {
   try {
-    if (req.params.id) {
-      const Project = await Models.Project.findById(req.params.body);
-
-      return res.status(200).json(Project);
+    const { id } = req.params;
+    const Project = await Models.findById(id);
+    if (!Project) {
+      return res.status(400).json({
+        msg: 'Missing id parameter',
+      });
     }
-    return res.status(400).json({
-      msg: 'Missing id parameter',
-    });
+    return res.status(200).json(Project);
   } catch (error) {
     return res.json({
       msg: error,
@@ -131,7 +129,7 @@ export default {
   deleteProject,
   addEmployee,
   createProject,
-  //   getAllProjects,
+  getAllProjects,
   getProjectById,
 //   updateProject,
 };
