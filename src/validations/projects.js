@@ -31,8 +31,17 @@ const putEmployeeValidation = (req, res, next) => {
     });
   } return next();
 };
-
+const putProjectValidation = (req, res, next) => {
+  const projValidation = projectValidation.validate(req.body);
+  if (projValidation.error) {
+    return res.status(400).json({
+      msg: `There was a validation error:
+              ${projValidation.error.details.map((x) => x.message).join(', ')}`,
+    });
+  } return next();
+};
 export default {
   createProjectValidation,
   putEmployeeValidation,
+  putProjectValidation,
 };

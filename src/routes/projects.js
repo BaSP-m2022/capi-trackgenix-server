@@ -9,6 +9,7 @@ router
   .post('/addEmployee/:id', validations.putEmployeeValidation, projectsController.addEmployee)
   .delete('/:id', projectsController.deleteProject)
   .get('/', projectsController.getAllProjects)
-  .get('/:id', projectsController.getProjectById);
+  .get('/:id', projectsController.getProjectById)
+  .put('/:id', validations.putProjectValidation, projectsController.updateProject);
 
 export default router;

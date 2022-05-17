@@ -125,11 +125,46 @@ const getProjectById = async (req, res) => {
   }
 };
 
+// updateProject
+
+const updateProject = async (req, res) => {
+  try {
+    if (!req.params) {
+      return res.status(400).json({
+        msg: 'Missing id parameter',
+        error: true,
+      });
+    }
+
+    const result = await Models.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true },
+    );
+    if (!result) {
+      return res.status(404).json({
+        msg: 'The project has not been found',
+        error: true,
+      });
+    }
+    return res.status(200).json({
+      result,
+      msg: 'Project edited correctly',
+      error: false,
+    });
+  } catch (error) {
+    return res.status(400).json({
+      msg: 'An error has ocurred',
+      error: true,
+    });
+  }
+};
+
 export default {
   deleteProject,
   addEmployee,
   createProject,
   getAllProjects,
   getProjectById,
-//   updateProject,
+  updateProject,
 };
