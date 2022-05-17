@@ -11,7 +11,7 @@ const getAllAdmins = async (req, res) => {
     });
   } catch (error) {
     return res.status(500).json({
-      msg: 'There was an error',
+      msg: `There was an error: ${error}`,
       data: undefined,
       error: true,
     });
@@ -23,7 +23,7 @@ const getAdminById = async (req, res) => {
   const { id } = req.params;
   try {
     if (!id) {
-      return res.status(404).json({
+      return res.status(400).json({
         msg: 'Id incomplete',
         data: undefined,
         error: true,
@@ -36,8 +36,8 @@ const getAdminById = async (req, res) => {
       error: false,
     });
   } catch (error) {
-    return res.status(400).json({
-      msg: 'Error: data not found',
+    return res.status(404).json({
+      msg: `Error: data not found:(${error})`,
       data: undefined,
       error: true,
     });
@@ -56,20 +56,20 @@ const createAdmin = async (req, res) => {
     });
     const adminCreated = await newAdmin.save();
     return res.status(201).json({
-      msg: 'Admin created',
+      msg: 'Admin created successfully',
       data: adminCreated,
       error: false,
     });
-  } catch (err) {
+  } catch (error) {
     return res.status(400).json({
-      msg: 'There was an error creating the admin, please complete all admin information',
+      msg: `There was an error creating the admin, please complete all admin information:(${error})`,
       data: undefined,
       error: true,
     });
   }
 };
 
-// delete admin nuevo
+// delete admin
 const deleteAdmin = async (req, res) => {
   try {
     const { id } = req.params;
@@ -82,13 +82,39 @@ const deleteAdmin = async (req, res) => {
     }
     const adminFound = await Admin.findByIdAndDelete(id);
     return res.status(200).json({
-      msg: `Admin id: ${adminFound.id} deleted.`,
+      msg: `Admin id: ${adminFound.id} deleted successfully.`,
       data: adminFound,
       error: false,
     });
   } catch (error) {
     return res.status(404).json({
-      message: `Admin id: ${req.params.id} not found.`,
+      msg: `Admin id: ${req.params.id} not found.`,
+      data: undefined,
+      error: true,
+    });
+  }
+};
+
+// edit admin
+const editAdmin = async (req, res) => {
+  try {
+    const adminFound = await Admin.findByIdAndUpdate(req.params.id, req.body);
+    if (!adminFound) {
+      return res.status(404).json({
+        msg: `Admin id: ${req.params.id} not found.`,
+        data: undefined,
+        error: true,
+      });
+    }
+    const adminEdited = await Admin.findById(req.params.id);
+    return res.status(201).json({
+      msg: `Admin id: ${req.params.id} edited successfully.`,
+      data: adminEdited,
+      error: false,
+    });
+  } catch (error) {
+    return res.status(400).json({
+      msg: `There was an error editing the admin, please check the information:(${error})`,
       data: undefined,
       error: true,
     });
@@ -100,4 +126,5 @@ export default {
   getAdminById,
   createAdmin,
   deleteAdmin,
+  editAdmin,
 };

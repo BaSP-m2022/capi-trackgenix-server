@@ -22,15 +22,8 @@ const adminSchema = new Schema(
     },
     projects: [
       {
-        projectId: {
-          type: Number,
-        },
-        projectName: {
-          type: String,
-        },
-        projectStatus: {
-          type: Boolean,
-        },
+        type: String,
+        required: true,
       },
     ],
   },
