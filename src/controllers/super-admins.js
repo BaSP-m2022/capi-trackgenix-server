@@ -30,11 +30,10 @@ async function editSuperAdmin(req, res) {
         msg: 'Missing id parameter',
       });
     }
-    const edit = await SuperAdmin.findByIdAndUpdate(
-      req.params.email,
-      req.params.password,
-      { new: true },
-    );
+    const edit = await SuperAdmin.findByIdAndUpdate(req.params.id, {
+      email: req.body.email,
+      password: req.body.password,
+    });
     if (!edit) {
       return res.status(404).json({
         msg: 'Super Admin not found',
@@ -46,7 +45,6 @@ async function editSuperAdmin(req, res) {
   } catch (error) {
     return res.json({
       msg: 'And error has ocurred',
-      error: error.details[0].message,
     });
   }
 }
@@ -66,13 +64,12 @@ async function deleteSuperAdmin(req, res) {
         msg: 'Super Admin not found',
       });
     }
-    return res.status(204).json({
+    return res.status(200).json({
       msg: `Super Admin succefully deleted \nSuper Admin: ${del}`,
     });
   } catch (error) {
-    return res.status(500).json({
+    return res.json({
       msg: 'An error has occurred',
-      error: error.details[0].message,
     });
   }
 }
