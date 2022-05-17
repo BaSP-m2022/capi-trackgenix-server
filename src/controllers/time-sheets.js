@@ -1,16 +1,16 @@
 import TimeSheet from '../models/timeSheet';
 
 // Return all timeSheets
-// eslint-disable-next-line consistent-return
 const getAllSheets = async (req, res) => {
   try {
     const AllSheets = await TimeSheet.find({});
 
     return res.status(200).json(AllSheets);
   } catch (error) {
-    res.status(500).json({
-      msg: 'An error has occurred',
-      error: error.details[0].message,
+    return res.status(500).json({
+      msg: `There has been an error: ${error}`,
+      data: undefined,
+      error: true,
     });
   }
 };
@@ -27,9 +27,10 @@ const getSheetById = async (req, res) => {
       msg: 'The given ID doesnt exist',
     });
   } catch (error) {
-    return res.send({
-      msg: 'An error has occurred',
-      error: error.details[0].message,
+    return res.status(500).json({
+      msg: `There has been an error: ${error}`,
+      data: undefined,
+      error: true,
     });
   }
 };
@@ -48,47 +49,44 @@ const createSheet = async (req, res) => {
       msg: `The timeSheet has been created succesfully. \nSheet: ${added}`,
     });
   } catch (error) {
-    return res.json({
-      msg: 'An error has occurred',
-      error: error.details[0].message,
+    return res.status(500).json({
+      msg: `There has been an error: ${error}`,
+      data: undefined,
+      error: true,
     });
   }
 };
 
 // Return the timeSheet edited
-
 const editSheet = async (req, res) => {
   try {
-    if (!req.params) {
-      return res.status(400).json({
-        msg: 'Missing id parameter',
-      });
-    }
-
+    const { id } = req.params;
     const result = await TimeSheet.findByIdAndUpdate(
-      req.params.hoursWorked,
-      req.params.dailyHS,
-      { new: true },
+      id,
+      {
+        hoursWorked: req.body.hoursWorked,
+        dailyHS: req.body.dailyHS,
+      },
     );
 
     if (!result) {
       return res.status(404).json({
-        msg: 'The sheet has not been found',
+        msg: `The sheet has not been found ${result}`,
       });
     }
     return res.status(201).json({
       msg: 'The sheet has been edited',
     });
   } catch (error) {
-    return res.json({
-      msg: 'And error has ocurred',
-      error: error.details[0].message,
+    return res.status(500).json({
+      msg: `There has been an error: ${error}`,
+      data: undefined,
+      error: true,
     });
   }
 };
 
 // Return the deleted proyect
-
 const deleteSheet = async (req, res) => {
   try {
     if (!req.params.id) {
@@ -107,21 +105,35 @@ const deleteSheet = async (req, res) => {
     });
   } catch (error) {
     return res.status(500).json({
-      msg: 'An error has occurred',
-      error: error.details[0].message,
+      msg: `There has been an error: ${error}`,
+      data: undefined,
+      error: true,
     });
   }
 };
 
-// // Filter by id
+// Return the timeSheet with that horsWorked
 const getByHours = async (req, res) => {
   try {
-    const AllSheets = await TimeSheet.find(req.params.dailyHS);
-    return res.status(200).json(AllSheets);
+    const { hoursWorked } = req.query;
+    const response = await TimeSheet.find({ hoursWorked });
+    if (!response || !response.length) {
+      return res.status(404).json({
+        msg: 'The timeSheet has not been found',
+        data: undefined,
+        error: true,
+      });
+    }
+    return res.status(200).json({
+      msg: 'The timeSheet has been found',
+      data: response,
+      error: false,
+    });
   } catch (error) {
     return res.status(500).json({
-      msg: 'An error has occurred',
-      error: error.details[0].message,
+      msg: `There has been an error: ${error}`,
+      data: undefined,
+      error: true,
     });
   }
 };

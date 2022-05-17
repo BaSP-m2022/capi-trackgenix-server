@@ -6,10 +6,10 @@ const router = express.Router();
 
 router
   .get('/', timeSheetController.getAllSheets)
+  .get('/getByHours/', timeSheetController.getByHours)
   .get('/:id', timeSheetController.getSheetById)
   .post('/', timeSheetValidation.validateSheetCreation, timeSheetController.createSheet)
-  .put('/edit/:id', timeSheetValidation.validateSheetEdition, timeSheetController.editSheet)
-  .delete('/del/:id', timeSheetController.deleteSheet)
-  .get('/getByHours/:id', timeSheetController.getByHours);
+  .put('/:id', timeSheetValidation.validateSheetEdition, timeSheetController.editSheet)
+  .delete('/:id', timeSheetController.deleteSheet);
 
 export default router;
