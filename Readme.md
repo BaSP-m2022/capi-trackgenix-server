@@ -44,6 +44,7 @@ npm run lint:fix
 |Photo | Name  | Mail | Github
 | :-----: | :-----: | :-----: | :-----: |
 <img src="https://avatars.githubusercontent.com/u/20587232?v=4" height="50" width="50">| Esteban Frare | esteban.frare@radiumrocket.com | [@estefrare](https://github.com/estefrare)
+<img src="https://avatars.githubusercontent.com/u/98777077?s=400&u=3280fb477d088aae3792cea7a7aab67ca6b8f24c&v=4" height="50" width="50">| Agustin Gomez | agusleongomez@gmail.com | [@agusting19 ](https://github.com/agusting19)
 
 
 
