@@ -44,6 +44,7 @@ npm run lint:fix
 |Photo | Name  | Mail | Github
 | :-----: | :-----: | :-----: | :-----: |
 <img src="https://avatars.githubusercontent.com/u/20587232?v=4" height="50" width="50">| Esteban Frare | esteban.frare@radiumrocket.com | [@estefrare](https://github.com/estefrare)
+<img src="https://avatars.githubusercontent.com/u/101294116?s=400&u=62d364477829fce4b1eb51a25e319da9f0e6a639&v=4" height="50" width="50">| Iván Gobbi | gobbi.ivandog@gmail.com | [@IvanHGo](https://github.com/IvanHGo)
 
 
 
