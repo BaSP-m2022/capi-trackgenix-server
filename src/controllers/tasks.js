@@ -3,7 +3,7 @@ import Models from '../models/Tasks';
 const getAllTask = async (req, res) => {
   try {
     const tasks = await Models.find();
-    if (!(tasks.length > 0)) {
+    if (tasks.length <= 0) {
       return res.status(404).json({
         msg: 'There are no task in the database',
         data: undefined,
@@ -55,8 +55,8 @@ const getTaskById = async (req, res) => {
 const createTask = async (req, res) => {
   try {
     const task = new Models({
-      idEmp: req.body.idEmp,
-      name: req.body.name,
+      idEmployee: req.body.idEmployee,
+      taskName: req.body.name,
       description: req.body.description,
       status: req.body.status,
       priority: req.body.priority,
@@ -147,8 +147,8 @@ const editTask = async (req, res) => {
     }
     const task = req.body;
     const response = await Models.findByIdAndUpdate(id, {
-      idEmp: task.idEmp,
-      name: task.name,
+      idEmployee: task.idEmp,
+      taskName: task.name,
       description: task.description,
       status: task.status,
       priority: task.priority,

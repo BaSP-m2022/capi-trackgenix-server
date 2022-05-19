@@ -43,8 +43,8 @@ const addEmployee = async (req, res) => {
       });
     }
     const employee = {
-      role: req.body.role,
-      pm: req.body.pm,
+      employeeRole: req.body.role,
+      isProjectManager: req.body.isProjectManager,
       hours: req.body.hours,
       salary: req.body.salary,
     };
@@ -79,8 +79,8 @@ const addEmployee = async (req, res) => {
 const createProject = async (req, res) => {
   try {
     const project = new Models({
-      name: req.body.name,
-      type: req.body.type,
+      projectName: req.body.name,
+      projectType: req.body.type,
       employees: req.body.employees,
     });
     const result = await project.save();

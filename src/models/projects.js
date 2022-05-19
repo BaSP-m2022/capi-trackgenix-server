@@ -2,20 +2,20 @@ import mongoose from 'mongoose';
 
 const { Schema } = mongoose;
 
-const prEmpSchema = new Schema({
-  idEmp: { type: String, required: true },
-  role: { type: String, required: true },
-  pm: { type: Boolean, required: true },
+const projectEmployeeSchema = new Schema({
+  idEmployee: { type: String, required: true },
+  employeeRole: { type: String, required: true },
+  isProjectManager: { type: Boolean, required: true },
   hours: { type: Number, required: true },
   salary: { type: Number, required: true },
 });
 
-const prSchema = new Schema({
-  name: { type: String, required: true },
-  type: { type: String, required: true },
-  employees: { type: [prEmpSchema], default: [] },
+const projectSchema = new Schema({
+  projectName: { type: String, required: true },
+  projectType: { type: String, required: true },
+  employees: { type: [projectEmployeeSchema], default: [] },
 });
 
-const ProjectSchema = mongoose.model('Project', prSchema);
+const ProjectSchema = mongoose.model('Project', projectSchema);
 
 export default ProjectSchema;

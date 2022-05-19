@@ -1,15 +1,15 @@
 import Joi from 'joi';
 
 const prEmployeeValidation = Joi.object({
-  idEmp: Joi.string().required(),
-  role: Joi.string().valid('QA', 'Dev', 'TL').required(),
-  pm: Joi.bool().required(),
+  idEmployee: Joi.string().required(),
+  employeeRole: Joi.string().valid('QA', 'Dev', 'TL').required(),
+  isProjectManager: Joi.bool().required(),
   hours: Joi.number().required(),
   salary: Joi.number().required(),
 });
 const projectValidation = Joi.object({
-  name: Joi.string().min(3).required(),
-  type: Joi.string().min(3).required(),
+  projectName: Joi.string().min(3).required(),
+  projectType: Joi.string().min(3).required(),
   employees: Joi.array().items(prEmployeeValidation),
 });
 
