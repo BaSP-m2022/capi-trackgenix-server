@@ -1,5 +1,4 @@
 import Models from '../models/Projects';
-
 // Delete project by Id
 const deleteProject = async (req, res) => {
   try {
@@ -32,7 +31,6 @@ const deleteProject = async (req, res) => {
     });
   }
 };
-
 const addEmployee = async (req, res) => {
   try {
     if (!req.params.id) {
@@ -98,8 +96,75 @@ const createProject = async (req, res) => {
   }
 };
 
+// get all projects
+const getAllProjects = async (req, res) => {
+  try {
+    const AllProjects = await Models.find({});
+
+    return res.status(200).json(AllProjects);
+  } catch (error) {
+    return res.json({ msg: `There has been an error: ${error}` });
+  }
+};
+
+// get project by id
+const getProjectById = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const Project = await Models.findById(id);
+    if (!Project) {
+      return res.status(400).json({
+        msg: 'Missing id parameter',
+      });
+    }
+    return res.status(200).json(Project);
+  } catch (error) {
+    return res.json({
+      msg: error,
+    });
+  }
+};
+
+// updateProject
+
+const updateProject = async (req, res) => {
+  try {
+    if (!req.params) {
+      return res.status(400).json({
+        msg: 'Missing id parameter',
+        error: true,
+      });
+    }
+
+    const result = await Models.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true },
+    );
+    if (!result) {
+      return res.status(404).json({
+        msg: 'The project has not been found',
+        error: true,
+      });
+    }
+    return res.status(200).json({
+      result,
+      msg: 'Project edited correctly',
+      error: false,
+    });
+  } catch (error) {
+    return res.status(400).json({
+      msg: 'An error has ocurred',
+      error: true,
+    });
+  }
+};
+
 export default {
   deleteProject,
   addEmployee,
   createProject,
+  getAllProjects,
+  getProjectById,
+  updateProject,
 };
