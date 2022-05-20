@@ -1,4 +1,4 @@
-import TimeSheet from '../models/timeSheet';
+import TimeSheet from '../models/TimeSheet';
 
 // Return all timeSheets
 const getAllSheets = async (req, res) => {
