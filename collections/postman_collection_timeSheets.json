@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "e7675562-a7ef-45b5-b397-affff286adea",
+		"name": "postman_collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllSheets",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"idEmployee\": 1006,\n    \"hoursWorked\": 10,\n    \"dailyHS\": 8\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/time-sheets/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"time-sheets",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSheetById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/time-sheets/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"time-sheets",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "628266cdf7adf82df1518085"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createSheet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"idEmployee\": 333,\n    \"hoursWorked\": 333,\n    \"dailyHS\": 6\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/time-sheets/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"time-sheets",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteSheet",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/time-sheets/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"time-sheets",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "628266d2f7adf82df1518087"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editSheet",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"hoursWorked\": 23,\n    \"dailyHS\": 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/time-sheets/628266cdf7adf82df1518085",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"time-sheets",
+						"628266cdf7adf82df1518085"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getByHours",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/time-sheets/getByHours/?hoursWorked=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"time-sheets",
+						"getByHours",
+						""
+					],
+					"query": [
+						{
+							"key": "hoursWorked",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

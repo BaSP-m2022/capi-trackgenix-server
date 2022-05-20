@@ -1,99 +1,154 @@
-import express from 'express';
+import TimeSheet from '../models/TimeSheet';
 
-const fs = require('fs');
-const timeSheets = require('../data/time-sheets.json');
-
-const router = express.Router();
-
-// GET methods
 // Return all timeSheets
-router.get('/', (req, res) => res.status(200).send(timeSheets));
+const getAllSheets = async (req, res) => {
+  try {
+    const AllSheets = await TimeSheet.find({});
+
+    if (AllSheets.length === 0) {
+      return res.status(400).json({
+        msg: 'There is no timeSheets',
+      });
+    }
+
+    return res.status(200).json(AllSheets);
+  } catch (error) {
+    return res.status(500).json({
+      msg: `There has been an error: ${error}`,
+      data: undefined,
+      error: true,
+    });
+  }
+};
 
 // Return the timeSheet with the given ID
-router.get('/:id', (req, res) => {
-  const sheet = timeSheets.find((findSheet) => findSheet.id === parseInt(req.params.id, 10));
+const getSheetById = async (req, res) => {
+  try {
+    if (req.params.id) {
+      const sheet = await TimeSheet.findById(req.params.id);
 
-  if (!sheet) {
-    return res.status(404).send('The timesheet with the given ID was not found');
+      return res.status(200).json(sheet);
+    }
+    return res.status(400).json({
+      msg: 'The given ID doesnt exist',
+    });
+  } catch (error) {
+    return res.status(500).json({
+      msg: `There has been an error: ${error}`,
+      data: undefined,
+      error: true,
+    });
   }
-  return res.send(sheet);
-});
+};
 
-// POST method
 // Return the timeSheet created
-router.post('/', (req, res) => {
-  const { body } = req;
-  const find = timeSheets.find((findSheet) => findSheet.id === parseInt(body.id, 10));
-  const index = timeSheets.indexOf(find);
+const createSheet = async (req, res) => {
+  try {
+    const sheet = new TimeSheet({
+      idEmployee: req.body.idEmployee,
+      hoursWorked: req.body.hoursWorked,
+      dailyHS: req.body.dailyHS,
+    });
 
-  if (!body.id || !body.idEmployee || !body.hoursWorked || !body.dailyHS) {
-    return res.status(404).send('The data is not correct');
+    const added = await sheet.save();
+    return res.status(201).json({
+      msg: `The timeSheet has been created succesfully. \nSheet: ${added}`,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      msg: `There has been an error: ${error}`,
+      data: undefined,
+      error: true,
+    });
   }
-  if (index !== -1) { // Se puede mejorar u optimizar?
-    return res.status(404).send('The time sheets already exist');
-  }
-  const sheet = {
-    id: body.id,
-    idEmployee: body.idEmployee,
-    hoursWorked: body.hoursWorked,
-    dailyHS: body.dailyHS,
-  };
+};
 
-  timeSheets.push(sheet);
-  fs.writeFile('src/data/time-sheets.json', JSON.stringify(timeSheets), (err) => {
-    if (err) {
-      return res.send(err);
+// Return the timeSheet edited
+const editSheet = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const result = await TimeSheet.findByIdAndUpdate(
+      id,
+      {
+        hoursWorked: req.body.hoursWorked,
+        dailyHS: req.body.dailyHS,
+      },
+    );
+
+    if (!result) {
+      return res.status(404).json({
+        msg: `The sheet has not been found ${result}`,
+      });
     }
-    return res.send('TimeSheet created');
-  });
-  return res.send(`${sheet}`);
-});
-
-// PUT method
-// eslint-disable-next-line consistent-return
-router.put('/edit/:id', (req, res) => {
-  const { body } = req;
-  const sheet = timeSheets.find((c) => c.id === parseInt(req.params.id, 10));
-  if (body.hoursWorked === null || body.dailyHS === null || !sheet) {
-    return res.status(404).send('The data is not correct');
+    return res.status(201).json({
+      msg: 'The sheet has been edited',
+    });
+  } catch (error) {
+    return res.status(500).json({
+      msg: `There has been an error: ${error}`,
+      data: undefined,
+      error: true,
+    });
   }
-  const index = timeSheets.indexOf(sheet);
-  timeSheets[index].hoursWorked = body.hoursWorked;
-  timeSheets[index].dailyHS = body.dailyHS;
-  fs.writeFile('src/data/time-sheets.json', JSON.stringify(timeSheets), (err) => {
-    if (err) {
-      res.send(err);
-    } else {
-      res.send('TimeSheet created');
+};
+
+// Return the deleted proyect
+const deleteSheet = async (req, res) => {
+  try {
+    if (!req.params.id) {
+      return res.status(400).json({
+        msg: 'Missing id parameter',
+      });
     }
-  });
-});
-
-// DELETE method
-// eslint-disable-next-line consistent-return
-router.delete('/del/:id', (req, res) => {
-  const sheet = timeSheets.find((c) => c.id === parseInt(req.params.id, 10));
-
-  if (!sheet) {
-    return res.status(404).send('The timesheet with the given ID was not found');
+    const result = await TimeSheet.findByIdAndDelete(req.params.id);
+    if (!result) {
+      return res.status(404).json({
+        msg: 'The sheet has not been found',
+      });
+    }
+    return res.status(200).json({
+      msg: 'the project has been succefully deleted',
+    });
+  } catch (error) {
+    return res.status(500).json({
+      msg: `There has been an error: ${error}`,
+      data: undefined,
+      error: true,
+    });
   }
-  const index = timeSheets.indexOf(sheet);
-  timeSheets.splice(index, 1);
+};
 
-  fs.writeFile('src/data/time-sheets.json', JSON.stringify(timeSheets), (err) => {
-    if (err) {
-      res.send(err);
-    } else {
-      res.send('TimeSheet edited');
+// Return the timeSheet with that horsWorked
+const getByHours = async (req, res) => {
+  try {
+    const { hoursWorked } = req.query;
+    const response = await TimeSheet.find({ hoursWorked });
+    if (!response || !response.length) {
+      return res.status(404).json({
+        msg: 'The timeSheet has not been found',
+        data: undefined,
+        error: true,
+      });
     }
-  });
-});
+    return res.status(200).json({
+      msg: 'The timeSheet has been found',
+      data: response,
+      error: false,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      msg: `There has been an error: ${error}`,
+      data: undefined,
+      error: true,
+    });
+  }
+};
 
-// Filter by id
-router.get('/getByHours/:id', (req, res) => {
-  const byHours = timeSheets.filter((find) => find.dailyHS === parseInt(req.params.id, 10));
-  if (byHours.length === 0) res.status(404).json('No employee worked this amount of Hs');
-  res.status(200).json(byHours);
-});
-
-export default router;
+export {
+  getAllSheets,
+  getSheetById,
+  createSheet,
+  editSheet,
+  deleteSheet,
+  getByHours,
+};
