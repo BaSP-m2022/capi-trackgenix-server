@@ -1,6 +1,6 @@
 import express from 'express';
 import projectsController from '../controllers/projects';
-import validations from '../validations/projects';
+import validations from '../validations/Projects';
 
 const router = express.Router();
 

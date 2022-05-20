@@ -2,10 +2,8 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import router from './routes';
-<<<<<<< HEAD
-=======
+
 // use "require" to import JSON files
->>>>>>> bfffc81 (TG: Finished Git methods, routes and schema. Fixed minor problems. Added PostMan.)
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -23,10 +21,7 @@ mongoose.connect(uri, {
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(router);
-<<<<<<< HEAD
 
-=======
->>>>>>> bfffc81 (TG: Finished Git methods, routes and schema. Fixed minor problems. Added PostMan.)
 app.get('/', async (req, res) => {
   res.send('Hello World!');
 });
