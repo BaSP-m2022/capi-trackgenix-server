@@ -58,14 +58,14 @@ async function deleteSuperAdmin(req, res) {
         msg: 'Missing id parameter',
       });
     }
-    const del = await SuperAdmin.findByIdAndDelete(req.params.id);
-    if (!del) {
+    const deletion = await SuperAdmin.findByIdAndDelete(req.params.id);
+    if (!deletion) {
       return res.status(404).json({
         msg: 'Super Admin not found',
       });
     }
     return res.status(200).json({
-      msg: `Super Admin succefully deleted \nSuper Admin: ${del}`,
+      msg: `Super Admin succefully deleted \nSuper Admin: ${deletion}`,
     });
   } catch (error) {
     return res.json({
