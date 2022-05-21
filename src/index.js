@@ -1,23 +1,26 @@
-// use "import" to import libraries
 import mongoose from 'mongoose';
-import router from './routes';
+import dotenv from 'dotenv';
 import app from './app';
 
-// use "require" to import JSON files
-
-app.use(router);
+dotenv.config();
 
 const port = process.env.PORT || 3000;
 
-mongoose
-  .connect(process.env.URL)
-  .then(() => {
-    console.log('Connected to Mongo!');
-    app.listen(port, () => {
+const mongoDBURL = process.env.URL;
+
+mongoose.connect(
+  mongoDBURL,
+  (error) => {
+    if (error) {
       // eslint-disable-next-line no-console
-      console.log(`Example app listening on port ${port}`);
-    });
-  })
-  .catch((err) => {
-    console.error('Error connecting to Mongo', err);
-  });
+      console.log('Fail to connect', error);
+    } else {
+      // eslint-disable-next-line no-console
+      console.log('Connected to database');
+      app.listen(port, () => {
+        // eslint-disable-next-line no-console
+        console.log(`Example app listening on port ${port}`);
+      });
+    }
+  },
+);

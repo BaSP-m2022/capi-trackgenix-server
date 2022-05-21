@@ -7,9 +7,11 @@ beforeAll(async () => {
   await Admin.collection.insertMany(adminsSeed);
 });
 
-describe('/GET /admins', () => {
-  test('return status 200 admins', async () => {
-    const response = request(app).get('/admins');
-    console.log('responseresponseresponseresponse', response.data);
+describe('Test Admins routes', () => {
+  test('It should get the project list', async () => {
+    const response = await request(app).get('/admins');
+    expect(response.statusCode).toBe(200);
+    expect(response.body.data.length).toBeGreaterThan(0);
+    expect(response.body.error).toBe(false);
   });
 });
