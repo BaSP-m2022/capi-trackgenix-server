@@ -25,6 +25,8 @@ const getAllAdmins = async (req, res) => {
   }
 };
 
+// NA QUE VE
+
 // get admin by ID
 const getAdminById = async (req, res) => {
   const { id } = req.params;
