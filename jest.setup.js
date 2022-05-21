@@ -7,8 +7,7 @@ let mongo;
 // Make the connection to a fake database
 beforeAll(async () => {
   mongo = await MongoMemoryServer.create();
-  const uri = mongo.getUri();
-
+  const uri = await mongo.getUri();
   const mongooseOpts = {
     useNewUrlParser: true,
     useUnifiedTopology: true,

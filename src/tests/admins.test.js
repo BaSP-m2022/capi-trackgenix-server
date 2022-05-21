@@ -1,5 +1,5 @@
 import request from 'supertest';
-import app from '../index';
+import app from '../app';
 import Admin from '../models/Admins';
 import adminsSeed from '../seeds/admins';
 
@@ -9,7 +9,9 @@ beforeAll(async () => {
 
 describe('/GET /admins', () => {
   test('return status 200 admins', async () => {
-    const response = await request(app).get('/admins').send();
+    const response = await request(app);
+    console.log(response);
+
     expect(response.error).toBeFalsy();
   });
 });
