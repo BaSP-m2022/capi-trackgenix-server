@@ -11,6 +11,7 @@ beforeAll(async () => {
 describe('/GET /admins', () => {
   test('return status 200 admins', async () => {
     const response = await request(app).get('/');
+    console.log('responseresponseresponseresponse', response);
     expect(response.error).toBeFalsy();
   });
 });
