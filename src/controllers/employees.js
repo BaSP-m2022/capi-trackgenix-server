@@ -3,6 +3,13 @@ import Employees from '../models/Employees';
 const getAllEmployees = async (req, res) => {
   const allEmployees = await Employees.find({});
   try {
+    if (allEmployees.length > 0) {
+      return res.status(404).json({
+        msg: 'Employees list is empty',
+        data: undefined,
+        error: true,
+      });
+    }
     return res.status(200).json({
       data: allEmployees,
       error: false,
@@ -42,13 +49,20 @@ const createEmployee = async (req, res) => {
     const newEmployee = new Employees({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
-      dob: req.body.dob,
+      dateOfBirth: req.body.dateOfBirth,
       email: req.body.email,
       phone: req.body.phone,
       address: req.body.address,
       location: req.body.location,
     });
     const newEmp = await newEmployee.save();
+    if (newEmp) {
+      return res.status(400).json({
+        msg: 'Error, Employee creation failed',
+        data: undefined,
+        error: true,
+      });
+    }
     return res.status(201).json({
       msg: 'New Employee created',
       data: newEmp,

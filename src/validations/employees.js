@@ -4,7 +4,7 @@ const createValidation = (req, res, next) => {
   const Schema = joi.object({
     firstName: joi.string().min(2).required(),
     lastName: joi.string().min(2).required(),
-    dob: joi.date().required(),
+    dateOfBirth: joi.date().required(),
     email: joi.string().min(8).required(),
     phone: joi.string().min(12).max(12).required(),
     address: joi.string().min(4).required(),
@@ -26,7 +26,7 @@ const editEmployeeValidation = (req, res, next) => {
   const Schema = joi.object({
     firstName: joi.string().min(2),
     lastName: joi.string().min(2),
-    dob: joi.date(),
+    dateOfBirth: joi.date(),
     email: joi.string().min(8),
     phone: joi.string().min(12).max(12),
     address: joi.string().min(4),
