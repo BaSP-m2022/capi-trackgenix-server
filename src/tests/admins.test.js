@@ -4,14 +4,13 @@ import Admin from '../models/Admins';
 import adminsSeed from '../seeds/admins';
 
 beforeAll(async () => {
-  await Admin.collection.insertMany(adminsSeed);
+  const algo = await Admin.collection.insertMany(adminsSeed);
+  console.log(algo);
 });
 
 describe('/GET /admins', () => {
   test('return status 200 admins', async () => {
-    const response = await request(app);
-    console.log(response);
-
+    const response = await request(app).get('/');
     expect(response.error).toBeFalsy();
   });
 });
