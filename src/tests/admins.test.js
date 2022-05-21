@@ -9,8 +9,7 @@ beforeAll(async () => {
 
 describe('/GET /admins', () => {
   test('return status 200 admins', async () => {
-    const response = await request(app).get('/');
+    const response = await request(app).get('/admins');
     console.log('responseresponseresponseresponse', response.data);
-    expect(response.error).toBeFalsy();
   });
 });
