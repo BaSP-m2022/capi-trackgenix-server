@@ -3,9 +3,10 @@ import express from 'express';
 import mongoose from 'mongoose';
 import router from './routes';
 
+// use "require" to import JSON files
+
 const app = express();
 const port = process.env.PORT || 3000;
-
 const uri = 'mongodb+srv://RadiumRocketTrackgenix:RadiumRocket2022@trackegnix-cluster.zj7zt.mongodb.net/BaSP_database?retryWrites=true&w=majority';
 mongoose.connect(uri, {
   useNewUrlParser: true,
@@ -17,7 +18,6 @@ mongoose.connect(uri, {
   })
   // eslint-disable-next-line no-console
   .catch((err) => console.log(err));
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(router);
