@@ -1,8 +1,8 @@
 import Joi from 'joi';
 
 const taskValidateUpdate = Joi.object({
-  idEmp: Joi.string(),
-  name: Joi.string().min(3),
+  idEmployee: Joi.string(),
+  taskName: Joi.string().min(3),
   description: Joi.string().min(6),
   status: Joi.string().min(2).valid(
     'To do',
@@ -16,8 +16,8 @@ const taskValidateUpdate = Joi.object({
 });
 
 const taskValidationCreate = Joi.object({
-  idEmp: Joi.string().required(),
-  name: Joi.string().min(3).required(),
+  idEmployee: Joi.string().required(),
+  taskName: Joi.string().min(3).required(),
   description: Joi.string().min(6).required(),
   status: Joi.string().min(2).valid(
     'To do',

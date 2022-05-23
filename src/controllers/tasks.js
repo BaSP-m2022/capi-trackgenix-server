@@ -56,7 +56,7 @@ const createTask = async (req, res) => {
   try {
     const task = new Models({
       idEmployee: req.body.idEmployee,
-      taskName: req.body.name,
+      taskName: req.body.taskName,
       description: req.body.description,
       status: req.body.status,
       priority: req.body.priority,
