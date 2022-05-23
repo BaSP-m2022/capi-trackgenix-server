@@ -1,7 +1,7 @@
 import Joi from 'joi';
 
 const taskValidateUpdate = Joi.object({
-  idEmployee: Joi.string(),
+  idEmployee: Joi.string().min(24),
   taskName: Joi.string().min(3),
   description: Joi.string().min(6),
   status: Joi.string().min(2).valid(
@@ -16,7 +16,7 @@ const taskValidateUpdate = Joi.object({
 });
 
 const taskValidationCreate = Joi.object({
-  idEmployee: Joi.string().required(),
+  idEmployee: Joi.string().min(24).required(),
   taskName: Joi.string().min(3).required(),
   description: Joi.string().min(6).required(),
   status: Joi.string().min(2).valid(
@@ -37,7 +37,7 @@ const createTaskValidation = (req, res, next) => {
       msg: `There was a validation error:
       ${validation.error.details.map((x) => x.message).join(', ')}`,
       data: null,
-      err: true,
+      error: true,
     });
   } return next();
 };
@@ -49,7 +49,7 @@ const updateTaskValidation = (req, res, next) => {
       msg: `There was a validation error:
         ${validation.error.details.map((x) => x.message).join(', ')}`,
       data: null,
-      err: true,
+      error: true,
     });
   } return next();
 };

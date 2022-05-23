@@ -2,7 +2,7 @@ import Models from '../models/Tasks';
 
 const getAllTask = async (req, res) => {
   try {
-    const tasks = await Models.find();
+    const tasks = await Models.find({}).populate('employee', 'firstName lastName');
     if (tasks.length <= 0) {
       return res.status(404).json({
         msg: 'There are no task in the database',
@@ -11,12 +11,16 @@ const getAllTask = async (req, res) => {
       });
     }
     return res.status(200).json({
-      msg: { tasks },
-      data: undefined,
+      msg: 'The tasks are :',
+      data: tasks,
       error: false,
     });
-  } catch (err) {
-    return res.json({ msg: `There has been an error: ${err}` });
+  } catch (error) {
+    return res.json({
+      msg: 'There has been an error:',
+      data: error,
+      error: true,
+    });
   }
 };
 
@@ -30,7 +34,7 @@ const getTaskById = async (req, res) => {
         error: true,
       });
     }
-    const task = await Models.findById(id);
+    const task = await Models.findById(id).populate('employee', 'firstName lastName');
     if (!task) {
       return res.status(404).json({
         msg: 'The task has not been found',
@@ -39,14 +43,14 @@ const getTaskById = async (req, res) => {
       });
     }
     return res.status(200).json({
-      msg: { task },
-      data: undefined,
+      msg: 'The task has been found',
+      data: task,
       error: false,
     });
   } catch (error) {
     return res.json({
-      msg: `There has been an error: ${error}`,
-      data: undefined,
+      msg: 'There has been an error:',
+      data: error,
       error: true,
     });
   }
@@ -55,7 +59,7 @@ const getTaskById = async (req, res) => {
 const createTask = async (req, res) => {
   try {
     const task = new Models({
-      idEmployee: req.body.idEmployee,
+      employee: req.body.employee,
       taskName: req.body.taskName,
       description: req.body.description,
       status: req.body.status,
@@ -68,10 +72,10 @@ const createTask = async (req, res) => {
       data: result,
       error: false,
     });
-  } catch (err) {
+  } catch (error) {
     return res.json({
       msg: 'There has been an error:',
-      data: err,
+      data: error,
       error: true,
     });
   }
@@ -102,8 +106,8 @@ const deleteTask = async (req, res) => {
     });
   } catch (error) {
     return res.json({
-      msg: `There has been an error: ${error}`,
-      data: undefined,
+      msg: 'There has been an error:',
+      data: error,
       error: true,
     });
   }
@@ -113,7 +117,7 @@ const filterByPriority = async (req, res) => {
   try {
     const { priority } = req.query;
 
-    const response = await Models.find({ priority });
+    const response = await Models.find({ priority }).populate('employee', 'firstName lastName');
     if (!response || !response.length) {
       return res.status(404).json({
         msg: 'The task has not been found',
@@ -128,8 +132,8 @@ const filterByPriority = async (req, res) => {
     });
   } catch (error) {
     return res.json({
-      msg: `There has been an error: ${error}`,
-      data: undefined,
+      msg: 'There has been an error:',
+      data: error,
       error: true,
     });
   }
@@ -147,7 +151,7 @@ const editTask = async (req, res) => {
     }
     const task = req.body;
     const response = await Models.findByIdAndUpdate(id, {
-      idEmployee: task.idEmp,
+      employee: task.idEmp,
       taskName: task.name,
       description: task.description,
       status: task.status,
@@ -167,8 +171,8 @@ const editTask = async (req, res) => {
     });
   } catch (error) {
     return res.json({
-      msg: `There has been an error: ${error}`,
-      data: undefined,
+      msg: 'There has been an error',
+      data: error,
       error: true,
     });
   }

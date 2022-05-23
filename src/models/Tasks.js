@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
 const taskSchema = new Schema({
-  idEmployee: { type: String, required: true },
+  employee: { type: Schema.Types.ObjectId, ref: 'Employee' },
   taskName: { type: String, required: true },
   description: { type: String, required: true },
   status: { type: String, required: true },
