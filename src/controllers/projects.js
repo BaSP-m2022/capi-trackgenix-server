@@ -77,8 +77,8 @@ const addEmployee = async (req, res) => {
 const createProject = async (req, res) => {
   try {
     const project = new Models({
-      projectName: req.body.name,
-      projectType: req.body.type,
+      projectName: req.body.projectName,
+      projectType: req.body.projectType,
       employees: req.body.employees,
     });
     const result = await project.save();
