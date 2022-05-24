@@ -34,6 +34,40 @@ describe('POST /projects', () => {
     expect(response.status).toBe(201);
     expect(response.body.error).toBe(false);
   });
+
+  test('It should pop a validation error, project name and type missing', async () => {
+    const response = await request(app).post('/projects').send({
+      projectName: '',
+      employees: [{}],
+    });
+    expect(response.status).toBe(400);
+  });
+});
+
+describe('POST /projects/addEmployee', () => {
+  test('It should add an employee to the project', async () => {
+    const response = await request(app).post('/projects/addEmployee/628beae11c36e7cc087664ae').send({
+      idEmployee: '1234',
+      employeeRole: 'QA',
+      isProjectManager: true,
+      hours: 38,
+      salary: 50000,
+    });
+    expect(response.status).toBe(201);
+    expect(response.body.error).toBe(false);
+  });
+
+  test('It should not add an employee, empty strings', async () => {
+    const response = await request(app).post('/projects/addEmployee/628beae11c36e7cc087664ae').send({
+      idEmployee: '',
+      employeeRole: '',
+      isProjectManager: true,
+      hours: 38,
+      salary: 50000,
+    });
+    expect(response.status).toBe(400);
+    expect(response.body.error).not.toBe(false);
+  });
 });
 
 describe('PUT /projects/:id', () => {
@@ -46,6 +80,15 @@ describe('PUT /projects/:id', () => {
     expect(response.status).toBe(200);
     expect(response.body.error).toBe(false);
   });
+
+  test('It should not edit the project', async () => {
+    const response = await request(app).put('/projects/628beae11c36e7cc087664ae').send({
+      projectName: '',
+      projectType: '',
+      employees: [],
+    });
+    expect(response.status).toBe(400);
+  });
 });
 
 describe('DELETE /projects', () => {
@@ -53,5 +96,11 @@ describe('DELETE /projects', () => {
     const response = await request(app).delete('/projects/628beae11c36e7cc087664ae').send();
     expect(response.status).toBe(200);
     expect(response.body.error).toBe(false);
+  });
+
+  test('It should not delete a project', async () => {
+    const response = await request(app).delete('/projects/628beae11c36e7cc08766asd').send();
+    expect(response.status).toBe(400);
+    expect(response.body.error).not.toBe(false);
   });
 });
