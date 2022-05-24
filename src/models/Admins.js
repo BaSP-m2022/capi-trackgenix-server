@@ -22,8 +22,8 @@ const adminSchema = new Schema(
     },
     projects: [
       {
-        type: String,
-        required: true,
+        type: Schema.Types.ObjectId,
+        ref: 'Project',
       },
     ],
   },

@@ -3,7 +3,7 @@ import Admin from '../models/Admins';
 // get all admins
 const getAllAdmins = async (req, res) => {
   try {
-    const allAdmins = await Admin.find({});
+    const allAdmins = await Admin.find({}).populate('projects', 'projectName');
     if (allAdmins.length <= 0) {
       return res.status(404).json({
         msg: 'Admins list is empty',
@@ -36,7 +36,7 @@ const getAdminById = async (req, res) => {
         error: true,
       });
     }
-    const adminFound = await Admin.findOne({ _id: id }).exec();
+    const adminFound = await Admin.findOne({ _id: id }).populate('projects', 'projectName');
     if (!adminFound) {
       return res.status(404).json({
         msg: `Admin id: ${adminFound.id} not found.`,

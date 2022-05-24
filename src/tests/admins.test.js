@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import request from 'supertest';
 import app from '../app';
 import Admin from '../models/Admins';
@@ -22,9 +23,10 @@ describe('GET /admins', () => {
   });
   describe('get by id /admins/:id', () => {
     test('should return one admin', async () => {
-      const response = await request(app).get('/admins/62894b9257165ab30f868536').send();
+      const response = await request(app).get(`/admins/${adminsSeed[0]._id}`).send();
       expect(response.status).toBe(200);
       expect(response.error).toBeFalsy();
+      expect(response.body.msg).toBe(`Admin id: ${adminsSeed[0]._id} found.`);
     });
     test('should not return admin, wrong id', async () => {
       const response = await request(app).get('/admins/62894b9257165ab30f868535').send();
@@ -32,11 +34,6 @@ describe('GET /admins', () => {
       expect(response.error).toBeTruthy();
       expect(response.body.msg).toBe("Error, data not found:(TypeError: Cannot read properties of null (reading 'id'))");
     });
-  //   test('response should return at least one admin', async () => {
-  //     const response = await request(app).get('/admins/62894b9257165ab30f868536').send();
-  //     console.log(response.body.data.length);
-  //     expect(response.body.data.length).toBeGreaterThan(0);
-  //   });
   });
 });
 
@@ -84,7 +81,7 @@ describe('POST /admins', () => {
 
 describe('PUT /admins/:id', () => {
   test('should edit an admin', async () => {
-    const response = await request(app).put('/admins/62894b9257165ab30f868536').send({
+    const response = await request(app).put(`/admins/${adminsSeed[0]._id}`).send({
       firstName: 'testeo changed',
       lastName: 'garcia changed',
       email: 'djeffray9@uol.com.br',
@@ -93,7 +90,7 @@ describe('PUT /admins/:id', () => {
     });
     expect(response.status).toBe(201);
     expect(response.error).toBeFalsy();
-    expect(response.body.msg).toBe('Admin id: 62894b9257165ab30f868536 edited successfully.');
+    expect(response.body.msg).toBe(`Admin id: ${adminsSeed[0]._id} edited successfully.`);
   });
   test('should not edit an admin, id incorrect', async () => {
     const response = await request(app).put('/admins/62894b9257165ab30f868535').send({
@@ -111,10 +108,10 @@ describe('PUT /admins/:id', () => {
 
 describe('DELETE /admins/:id', () => {
   test('should delete an admin', async () => {
-    const response = await request(app).delete('/admins/62894b9257165ab30f868536').send();
+    const response = await request(app).delete(`/admins/${adminsSeed[0]._id}`).send();
     expect(response.status).toBe(200);
     expect(response.error).toBeFalsy();
-    expect(response.body.msg).toBe('Admin id: 62894b9257165ab30f868536 deleted successfully.');
+    expect(response.body.msg).toBe(`Admin id: ${adminsSeed[0]._id} deleted successfully.`);
   });
   test('should not delete an admin, id incorrect', async () => {
     const response = await request(app).delete('/admins/62894b9257165ab30f868535').send();
