@@ -19,6 +19,7 @@ describe('POST /tasks', () => {
     });
     expect(response.status).toBe(201);
     expect(response.body.error).toBe(false);
+    expect(response.body.msg).toBe('The Task has been created');
   });
   test('it should give a validation error', async () => {
     const response = await request(app).post('/tasks').send({
@@ -29,6 +30,7 @@ describe('POST /tasks', () => {
     });
     expect(response.status).toBe(400);
     expect(response.body.error).toBe(true);
+    expect(response.body.msg).toBe('There was a validation error:');
   });
   test('it should return a validation error', async () => {
     const response = await request(app).post('/tasks').send({
@@ -40,6 +42,17 @@ describe('POST /tasks', () => {
     });
     expect(response.status).toBe(400);
     expect(response.body.error).toBe(true);
+    expect(response.body.msg).toBe('There was a validation error:');
+  });
+  test('it should fail to find the post ', async () => {
+    const response = await request(app).post('/tasadfdss').send({
+      idEmployee: '62894b9257165ab30f868589',
+      taskName: 'Test',
+      description: 'loremlormeofjkldjakljlakgklhdlalkfhajhlh',
+      status: 'To do',
+      priority: 'affgfa',
+    });
+    expect(response.status).toBe(404);
   });
 });
 describe('DELETE /tasks/', () => {
@@ -47,6 +60,10 @@ describe('DELETE /tasks/', () => {
     const response = await request(app).delete(`/tasks/${taskSeed[0]._id}`).send();
     expect(response.status).toBe(200);
     expect(response.body.error).toBe(false);
+  });
+  test('It should fail to delete a task', async () => {
+    const response = await request(app).delete('/tas4566').send();
+    expect(response.status).toBe(404);
   });
 });
 
@@ -56,6 +73,10 @@ describe('GET /tasks', () => {
     expect(response.statusCode).toBe(200);
     expect(response.body.error).toBe(false);
     expect(response.body.data.length).toBeGreaterThan(0);
+  });
+  test('It should fail to get the tasks list', async () => {
+    const response = await request(app).get('/tsafsdags').send();
+    expect(response.statusCode).toBe(404);
   });
 });
 
@@ -70,6 +91,10 @@ describe('GET /tasks/filter', () => {
     expect(response.status).toBe(200);
     expect(response.body.data.length).toBeGreaterThan(0);
     expect(response.body.data.length).toBe(1);
+  });
+  test('It should return no tasks', async () => {
+    const response = await request(app).get('/tasks/filter/?priority=Low').send();
+    expect(response.status).toBe(404);
   });
 });
 

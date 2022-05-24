@@ -34,9 +34,8 @@ const createTaskValidation = (req, res, next) => {
   const validation = taskValidationCreate.validate(req.body);
   if (validation.error) {
     return res.status(400).json({
-      msg: `There was a validation error:
-      ${validation.error.details.map((x) => x.message).join(', ')}`,
-      data: null,
+      msg: 'There was a validation error:',
+      data: validation.error.details.map((x) => x.message).join(', '),
       error: true,
     });
   } return next();
@@ -46,9 +45,8 @@ const updateTaskValidation = (req, res, next) => {
   const validation = taskValidateUpdate.validate(req.body);
   if (validation.error) {
     return res.status(400).json({
-      msg: `There was a validation error:
-        ${validation.error.details.map((x) => x.message).join(', ')}`,
-      data: null,
+      msg: 'There was a validation error:',
+      data: validation.error.details.map((x) => x.message).join(', '),
       error: true,
     });
   } return next();
