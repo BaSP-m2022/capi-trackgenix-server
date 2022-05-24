@@ -67,9 +67,9 @@ async function addSuperAdmin(req, res) {
       email: superData.email,
       password: superData.password,
     });
-    const added = await superAdmin.save();
+    await superAdmin.save();
     return res.status(201).json({
-      msg: `Super Admin succesfully added. \nSuper Admin: ${added}`,
+      msg: 'Super Admin succesfully added',
     });
   } catch (error) {
     return res.json({
@@ -98,7 +98,7 @@ async function editSuperAdmin(req, res) {
       });
     }
     return res.status(201).json({
-      msg: `Super Admin updated. \nSuper Admin: ${edit}`,
+      msg: 'Super Admin updated.',
     });
   } catch (error) {
     return res.json({
@@ -123,7 +123,7 @@ async function deleteSuperAdmin(req, res) {
       });
     }
     return res.status(200).json({
-      msg: `Super Admin succefully deleted \nSuper Admin: ${deletion}`,
+      msg: 'Super Admin succefully deleted',
     });
   } catch (error) {
     return res.json({
