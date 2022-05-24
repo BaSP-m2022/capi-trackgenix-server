@@ -73,8 +73,6 @@ async function addSuperAdmin(req, res) {
     });
   } catch (error) {
     return res.json({
-    //   msg: 'An error has occurred',
-    // It already shows the validation message.
       error: error.details[0].message,
     });
   }
@@ -84,11 +82,6 @@ async function addSuperAdmin(req, res) {
 
 async function editSuperAdmin(req, res) {
   try {
-    if (!req.params) {
-      return res.status(400).json({
-        msg: 'Missing id parameter',
-      });
-    }
     const edit = await SuperAdmin.findByIdAndUpdate(req.params.id, {
       email: req.body.email,
       password: req.body.password,
@@ -103,7 +96,6 @@ async function editSuperAdmin(req, res) {
     });
   } catch (error) {
     return res.json({
-      msg: 'And error has ocurred',
       error: error.details[0].message,
     });
   }
@@ -113,11 +105,6 @@ async function editSuperAdmin(req, res) {
 
 async function deleteSuperAdmin(req, res) {
   try {
-    if (!req.params.id) {
-      return res.status(400).json({
-        msg: 'Missing id parameter',
-      });
-    }
     const deletion = await SuperAdmin.findByIdAndDelete(req.params.id);
     if (!deletion) {
       return res.status(404).json({
