@@ -46,16 +46,16 @@ describe('GET /time-sheets/', () => {
 });
 
 describe('POST /time-sheets', () => {
-//   test('Response should return the created timeSheet', async () => {
-//     const response = await request(app).post('/time-sheets/').send({
-//       employee: 400,
-//       hoursWorked: 64,
-//       dailyHS: 8,
-//     });
+  test('Response should return the created timeSheet', async () => {
+    const response = await request(app).post('/time-sheets/').send({
+      employee: '628266cdf7adf82df1518085',
+      hoursWorked: 64,
+      dailyHS: 8,
+    });
 
-  //     expect(response.status).toBe(201);
-  //     expect(response.error).toBe(false);
-  //   });
+    expect(response.status).toBe(201);
+    expect(response.error).toBe(false);
+  });
 
   test('Response should return validation error 1 (missing idEmployee)', async () => {
     const response = await request(app).post('/time-sheets/').send({

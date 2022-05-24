@@ -1,7 +1,7 @@
 import Joi from 'joi';
 
 const createSheet = Joi.object({
-  idEmployee: Joi.number().required(),
+  employee: Joi.string().required(),
   hoursWorked: Joi.number().required(),
   dailyHS: Joi.number().required(),
 });
