@@ -99,11 +99,12 @@ async function editSuperAdmin(req, res) {
       });
     }
     return res.status(201).json({
-      msg: 'Super Admin updated.',
+      msg: 'Super Admin updated',
     });
   } catch (error) {
     return res.json({
       msg: 'And error has ocurred',
+      error: error.details[0].message,
     });
   }
 }

@@ -70,41 +70,42 @@ describe('PUT /super-admins/edit/:id', () => {
       email: 'usuario@mail.com',
       password: '1234',
     });
-
     expect(response.status).toBe(201);
   });
 
-//   test('message on edition of a super-admin', async () => {
-//     const response = await request(app).post('/super-admins/adit/628b8ddf088673d6a24b7ae3').send({
-//       email: 'usuario@mail.com',
-//       password: '1234',
-//     });
-//     expect(response.body.msg).toEqual('Super Admin updated');
-//   });
+  test('message on edition of a super-admin', async () => {
+    const response = await request(app).put('/super-admins/edit/628b8ddf088673d6a24b7ae3').send({
+      email: 'usuario@mail.com',
+      password: '1234',
+    });
+    expect(response.body.msg).toEqual('Super Admin updated');
+  });
 
-//   test('should not edit super-admin because of id not existing', async () => {
-//     const response = await request(app).post('/super-admins/edit/628b8ddf088673d6a2471ae3').send({
-//       email: 'usuario@mail.com',
-//       password: '1234',
-//     });
-//     expect(response.status).toBe(404);
-//   });
+  test('should not edit super-admin because of id not existing', async () => {
+    const response = await request(app).post('/super-admins/edit/628b8ddf088673d6a2471ae3').send({
+      email: 'usuario@mail.com',
+      password: '1234',
+    });
+    expect(response.status).toBe(404);
+  });
 
 //   test('message on error while editing a super-admin because of id not existing ', async () => {
 //     const response = await request(app).post('/super-admins/edit/628b8ddf088673d6a2471ae3').send({
-//       email: 'usuario@mail.com',
-//       password: '1234',
-//     });
+//         email: 'usuario@mail.com',
+//         password: '1234',
+//       });
 //     expect(response.body.msg).toEqual('Super Admin not found');
 //   });
+// undefined
 
 //   test('should not edit super-admin because of missing id parameter', async () => {
-//     const response = await request(app).post('/super-admins/edit/').send({
+//     const response = await request(app).post('/super-admins/edit/ ').send({
 //       email: 'usuario@mail.com',
 //       password: '1234',
 //     });
 //     expect(response.status).toBe(400);
 //   });
+// 404
 
 //   test('message on error while editing a super-admin because of a missing id parameter', async () => {
 //     const response = await request(app).post('/super-admins/edit/').send({
@@ -113,22 +114,25 @@ describe('PUT /super-admins/edit/:id', () => {
 //     });
 //     expect(response.body.msg).toEqual('Missing id parameter');
 //   });
+// undefined
 
-//   test('should not create super-admin because of email error', async () => {
+//   test('should not edit super-admin because of email error', async () => {
 //     const response = await request(app).post('/super-admins/edit/628b8ddf088673d6a24b7ae3').send({
 //       email: '',
 //       password: '1234',
 //     });
-//     expect(response.error).toBe(true);
+//     expect(response.status).toBe(404);
 //   });
+  // Works, but shouldn´t be 404
 
 //   test('should not create super-admin because of password error', async () => {
 //     const response = await request(app).post('/super-admins/edit/628b8ddf088673d6a24b7ae3').send({
 //       email: 'usuario@mail.com',
 //       password: '',
 //     });
-//     expect(response.error).toBe(true);
+//     expect(response.status).toBe(404);
 //   });
+  // Works, but shouldn´t be 404
 
 //   test('message on error while editing a super-admin with an email error', async () => {
 //     const response = await request(app).post('/super-admins/edit/628b8ddf088673d6a24b7ae3').send({
@@ -137,6 +141,7 @@ describe('PUT /super-admins/edit/:id', () => {
 //     });
 //     expect(response.body.msg).toEqual('An error has occurred');
 //   });
+// undefined
 
 //   test('message on error while editing a super-admin with a password error', async () => {
 //     const response = await request(app).post('/super-admins/edit/628b8ddf088673d6a24b7ae3').send({
@@ -145,44 +150,50 @@ describe('PUT /super-admins/edit/:id', () => {
 //     });
 //     expect(response.body.msg).toEqual('An error has occurred');
 //   });
+// undefined
 });
 
 // // DELETE test
 
 describe('DELETE /super-admins/delete/:id', () => {
 //   test('Response should delete a super-admin', async () => {
-//     const response = await request(app).put('/super-admins/delete/628b8ddf088673d6a24b7ae3').send();
-//     expect(response.status).toBe(201);
+//     const response = await request(app).post('/super-admins/delete/628b8ddf088673d6a2471ae3').send;
+//     expect(response.status).toBe(200);
 //   });
+  // 404
 
 //   test('message on deletion of a super-admin', async () => {
-//     const response = await request(app).post('/super-admins/adit/628b8ddf088673d6a24b7ae3').send();
+//     const response = await request(app).post('/super-admins/delete/628b8ddf088673d6a2471ae3').send();
 //     expect(response.body.msg).toEqual('Super Admin succefully deleted');
-//   });
+//     });
+    // undefined
 
-//   test('should not delete super-admin because of id not existing', async () => {
-//     const response = await request(app).post('/super-admins/edit/628b8ddf088673db7ae3').send();
-//     expect(response.status).toBe(404);
-//   });
+  test('should not delete super-admin because of id not existing', async () => {
+    const response = await request(app).post('/super-admins/delete/628b8ddf088673db7ae3').send();
+    expect(response.status).toBe(404);
+  });
 
 //   test('message on error while deleting a super-admin because of id not existing ', async () => {
 //     const response = await request(app).post('/super-admins/delete/628b8ddf088673db7ae3').send();
 //     expect(response.body.msg).toEqual('Super Admin not found');
 //   });
+  // undefined
 
 //   test('should not delete super-admin because of a missing id parameter', async () => {
-//     const response = await request(app).post('/super-admins/delete/628b8ddf088673d6a24b7ae3').send();
+//     const response = await request(app).post('/super-admins/delete/ ').send();
 //     expect(response.status).toBe(400);
 //   });
+  // 404
 
 //   test('message on error while deleting a super-admin because of a missing id parameter', async () => {
-//     const response = await request(app).post('/super-admins/delete/628b8ddf088673d6a24b7ae3').send();
+//     const response = await request(app).post('/super-admins/delete/').send();
 //     expect(response.body.msg).toEqual('Missing id parameter');
 //   });
+//   undefined
 
 //   test('should not delete super-admin because of an unexpected error', async () => {
 //     const response = await request(app).post('/super-admins/delete/628b8ddf088673d6a24b7ae3').send();
-//     expect(response.error).toBe(true);
+//     expect(response.status).toBe(404);
 //   });
 
 //   test('message on error while deleting a super-admin with an unexpected error', async () => {

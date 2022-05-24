@@ -17,7 +17,7 @@ const superAdminEditionValidation = (req, res, next) => {
   const validate = superAdminObject.validate(req.body);
   if (validate.error) {
     return res.status(400).json({
-      msg: 'Super Admin edit validation error ',
+      msg: 'Super Admin edit validation error',
     });
   }
   return next();
