@@ -1,9 +1,9 @@
 import Employees from '../models/Employees';
 
 const getAllEmployees = async (req, res) => {
-  const allEmployees = await Employees.find({});
   try {
-    if (allEmployees.length > 0) {
+    const allEmployees = await Employees.find({}).populate('projectId');
+    if (allEmployees.length <= 0) {
       return res.status(404).json({
         msg: 'Employees list is empty',
         data: undefined,
@@ -24,14 +24,14 @@ const getAllEmployees = async (req, res) => {
 
 const getEmployeeById = async (req, res) => {
   try {
-    const empl = await Employees.findById(req.params.id);
+    const empl = await Employees.findById(req.params.id).populate('projectId');
     if (empl) {
       return res.status(200).json({
         data: empl,
         error: false,
       });
     }
-    return res.status(400).json({
+    return res.status(404).json({
       msg: `No Employee with id = ${req.params.id}`,
       data: undefined,
       error: true,
@@ -54,17 +54,19 @@ const createEmployee = async (req, res) => {
       phone: req.body.phone,
       address: req.body.address,
       location: req.body.location,
+      projectId: req.body.projectId,
     });
     const newEmp = await newEmployee.save();
-    if (newEmp) {
+    if (!newEmp) {
       return res.status(400).json({
         msg: 'Error, Employee creation failed',
-        data: undefined,
         error: true,
+        data: undefined,
       });
     }
     return res.status(201).json({
-      msg: 'New Employee created',
+      msg: 'Employee created correctly',
+      error: false,
       data: newEmp,
     });
   } catch (error) {
@@ -116,7 +118,7 @@ const editEmployee = async (req, res) => {
       });
     }
     return res.status(200).json({
-      message: 'Employee succesfully updated',
+      message: 'Employee successfully updated',
       data: emplo,
       error: false,
     });
