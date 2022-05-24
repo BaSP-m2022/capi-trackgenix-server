@@ -73,7 +73,8 @@ async function addSuperAdmin(req, res) {
     });
   } catch (error) {
     return res.json({
-      msg: 'An error has occurred',
+    //   msg: 'An error has occurred',
+    // It already shows the validation message.
       error: error.details[0].message,
     });
   }

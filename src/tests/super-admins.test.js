@@ -37,29 +37,31 @@ describe('POST /super-admins/add', () => {
     expect(response.status).toBe(400);
   });
 
-//   test('should not create super-admin because of missing password', async () => {
-//     const response = await request(app).post('/super-admins/add').send({
-//       email: 'usuario@mail.com',
-//     });
-//     expect(response.status).toBe(400);
-//   });
-
-//   test('message on error while creating a super-admin without email', async () => {
-//     const response = await request(app).post('/super-admins/add').send({
-//         email: '',
-//       password: '1234',
-//     });
-//     expect(response.body.msg).toEqual('An error has occurred');
-//   });
-
-//   test('message on error while creating a super-admin without password', async () => {
-//     const response = await request(app).post('/super-admins/add').send({
-//       email: 'usuario@mail.com',
-//       password: '',
-//     });
-//     expect(response.body.msg).toEqual('An error has occurred');
+  test('should not create super-admin because of missing password', async () => {
+    const response = await request(app).post('/super-admins/add').send({
+      email: 'usuario@mail.com',
+    });
+    expect(response.status).toBe(400);
   });
 
+  test('message on error while creating a super-admin without email', async () => {
+    const response = await request(app).post('/super-admins/add').send({
+        email: '',
+      password: '1234',
+    });
+    expect(response.body.msg).toEqual('Super Admin add validation error');
+    // Message comes from validations
+  });
+
+  test('message on error while creating a super-admin without password', async () => {
+    const response = await request(app).post('/super-admins/add').send({
+      email: 'usuario@mail.com',
+      password: '',
+    });
+    expect(response.body.msg).toEqual('Super Admin add validation error');
+    // Message comes from validations
+  });
+});
 // // PUT test
 
 describe('PUT /super-admins/edit/:id', () => {
