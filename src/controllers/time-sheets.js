@@ -3,7 +3,7 @@ import TimeSheet from '../models/TimeSheet';
 // Return all timeSheets
 const getAllSheets = async (req, res) => {
   try {
-    const AllSheets = await TimeSheet.find({});
+    const AllSheets = await TimeSheet.find({}).populate('employee', 'firstName lastName');
 
     if (AllSheets.length === 0) {
       return res.status(400).json({
@@ -14,8 +14,8 @@ const getAllSheets = async (req, res) => {
     return res.status(200).json(AllSheets);
   } catch (error) {
     return res.status(500).json({
-      msg: `There has been an error: ${error}`,
-      data: undefined,
+      msg: 'There has been an error',
+      data: error,
       error: true,
     });
   }
@@ -25,7 +25,7 @@ const getAllSheets = async (req, res) => {
 const getSheetById = async (req, res) => {
   try {
     if (req.params.id) {
-      const sheet = await TimeSheet.findById(req.params.id);
+      const sheet = await TimeSheet.findById(req.params.id).populate('employee', 'firstName lastName');
 
       return res.status(200).json(sheet);
     }
@@ -34,8 +34,8 @@ const getSheetById = async (req, res) => {
     });
   } catch (error) {
     return res.status(500).json({
-      msg: `There has been an error: ${error}`,
-      data: undefined,
+      msg: 'There has been an error',
+      data: error,
       error: true,
     });
   }
@@ -45,18 +45,20 @@ const getSheetById = async (req, res) => {
 const createSheet = async (req, res) => {
   try {
     const sheet = new TimeSheet({
-      idEmployee: req.body.idEmployee,
+      employee: req.body.employee,
       hoursWorked: req.body.hoursWorked,
       dailyHS: req.body.dailyHS,
     });
 
     const added = await sheet.save();
     return res.status(201).json({
-      msg: `The timeSheet has been created succesfully. \nSheet: ${added}`,
+      msg: 'The timeSheet has been created succesfully',
+      data: added,
+      error: false,
     });
   } catch (error) {
     return res.status(500).json({
-      msg: `There has been an error: ${error}`,
+      msg: 'There has been an error',
       data: undefined,
       error: true,
     });
@@ -77,7 +79,9 @@ const editSheet = async (req, res) => {
 
     if (!result) {
       return res.status(404).json({
-        msg: `The sheet has not been found ${result}`,
+        msg: 'The sheet has not been found',
+        data: undefined,
+        error: true,
       });
     }
     return res.status(201).json({
@@ -86,7 +90,7 @@ const editSheet = async (req, res) => {
   } catch (error) {
     return res.status(500).json({
       msg: `There has been an error: ${error}`,
-      data: undefined,
+      data: error,
       error: true,
     });
   }
@@ -112,7 +116,7 @@ const deleteSheet = async (req, res) => {
   } catch (error) {
     return res.status(500).json({
       msg: `There has been an error: ${error}`,
-      data: undefined,
+      data: error,
       error: true,
     });
   }
@@ -122,7 +126,7 @@ const deleteSheet = async (req, res) => {
 const getByHours = async (req, res) => {
   try {
     const { hoursWorked } = req.query;
-    const response = await TimeSheet.find({ hoursWorked });
+    const response = await TimeSheet.find({ hoursWorked }).populate('employee', 'firstName lastName');
     if (!response || !response.length) {
       return res.status(404).json({
         msg: 'The timeSheet has not been found',
@@ -138,7 +142,7 @@ const getByHours = async (req, res) => {
   } catch (error) {
     return res.status(500).json({
       msg: `There has been an error: ${error}`,
-      data: undefined,
+      data: error,
       error: true,
     });
   }
