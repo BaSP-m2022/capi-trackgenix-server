@@ -2,7 +2,8 @@
 	"info": {
 		"_postman_id": "e7675562-a7ef-45b5-b397-affff286adea",
 		"name": "postman_collection",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20853462"
 	},
 	"item": [
 		{
@@ -23,12 +24,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/time-sheets/",
+					"raw": "http://localhost:5000/time-sheets/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3000",
+					"port": "5000",
 					"path": [
 						"time-sheets",
 						""
@@ -43,12 +44,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/time-sheets/:id",
+					"raw": "http://localhost:5000/time-sheets/:id",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3000",
+					"port": "5000",
 					"path": [
 						"time-sheets",
 						":id"
@@ -56,7 +57,7 @@
 					"variable": [
 						{
 							"key": "id",
-							"value": "628266cdf7adf82df1518085"
+							"value": "628c3d9c544ae1fb77c48570"
 						}
 					]
 				}
@@ -70,7 +71,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"idEmployee\": 333,\n    \"hoursWorked\": 333,\n    \"dailyHS\": 6\n}",
+					"raw": "{\n    \"employee\": \"628266cdf7adf82df1518095\",\n    \"hoursWorked\": 100,\n    \"dailyHS\": 2\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -78,12 +79,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/time-sheets/",
+					"raw": "http://localhost:5000/time-sheets/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3000",
+					"port": "5000",
 					"path": [
 						"time-sheets",
 						""
@@ -98,12 +99,12 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/time-sheets/:id",
+					"raw": "http://localhost:5000/time-sheets/:id",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3000",
+					"port": "5000",
 					"path": [
 						"time-sheets",
 						":id"
@@ -111,7 +112,7 @@
 					"variable": [
 						{
 							"key": "id",
-							"value": "628266d2f7adf82df1518087"
+							"value": "628c3daa544ae1fb77c48572"
 						}
 					]
 				}
@@ -125,7 +126,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"hoursWorked\": 23,\n    \"dailyHS\": 4\n}",
+					"raw": "{\n    \"hoursWorked\": 99,\n    \"dailyHS\": 9\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -133,15 +134,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/time-sheets/628266cdf7adf82df1518085",
+					"raw": "http://localhost:5000/time-sheets/628cd99a622863f708d26dcd",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3000",
+					"port": "5000",
 					"path": [
 						"time-sheets",
-						"628266cdf7adf82df1518085"
+						"628cd99a622863f708d26dcd"
 					]
 				}
 			},
@@ -153,12 +154,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/time-sheets/getByHours/?hoursWorked=10",
+					"raw": "http://localhost:5000/time-sheets/getByHours/?hoursWorked=99",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3000",
+					"port": "5000",
 					"path": [
 						"time-sheets",
 						"getByHours",
@@ -167,7 +168,7 @@
 					"query": [
 						{
 							"key": "hoursWorked",
-							"value": "10"
+							"value": "99"
 						}
 					]
 				}

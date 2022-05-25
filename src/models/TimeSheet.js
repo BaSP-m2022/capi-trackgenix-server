@@ -3,7 +3,10 @@ import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
 const timeSheetSchema = new Schema({
-  idEmployee: Number,
+  employee: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Employee',
+  },
   hoursWorked: { type: Number, required: true },
   dailyHS: { type: Number, required: true },
 });
