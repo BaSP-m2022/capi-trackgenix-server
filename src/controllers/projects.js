@@ -77,14 +77,14 @@ const addEmployee = async (req, res) => {
 const createProject = async (req, res) => {
   try {
     const project = new Models({
-      projectName: req.body.name,
-      projectType: req.body.type,
+      projectName: req.body.projectName,
+      projectType: req.body.projectType,
       employees: req.body.employees,
     });
     const result = await project.save();
     return res.status(201).json({
-      msg: `The project has been created. Project :${result}`,
-      data: project,
+      msg: 'The project has been created. Project:',
+      data: result,
       error: false,
     });
   } catch (err) {

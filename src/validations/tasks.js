@@ -1,8 +1,8 @@
 import Joi from 'joi';
 
 const taskValidateUpdate = Joi.object({
-  idEmp: Joi.string(),
-  name: Joi.string().min(3),
+  idEmployee: Joi.string().min(24),
+  taskName: Joi.string().min(3),
   description: Joi.string().min(6),
   status: Joi.string().min(2).valid(
     'To do',
@@ -16,8 +16,8 @@ const taskValidateUpdate = Joi.object({
 });
 
 const taskValidationCreate = Joi.object({
-  idEmp: Joi.string().required(),
-  name: Joi.string().min(3).required(),
+  idEmployee: Joi.string().min(24).required(),
+  taskName: Joi.string().min(3).required(),
   description: Joi.string().min(6).required(),
   status: Joi.string().min(2).valid(
     'To do',
@@ -34,10 +34,9 @@ const createTaskValidation = (req, res, next) => {
   const validation = taskValidationCreate.validate(req.body);
   if (validation.error) {
     return res.status(400).json({
-      msg: `There was a validation error:
-      ${validation.error.details.map((x) => x.message).join(', ')}`,
-      data: null,
-      err: true,
+      msg: 'There was a validation error:',
+      data: validation.error.details.map((x) => x.message).join(', '),
+      error: true,
     });
   } return next();
 };
@@ -46,10 +45,9 @@ const updateTaskValidation = (req, res, next) => {
   const validation = taskValidateUpdate.validate(req.body);
   if (validation.error) {
     return res.status(400).json({
-      msg: `There was a validation error:
-        ${validation.error.details.map((x) => x.message).join(', ')}`,
-      data: null,
-      err: true,
+      msg: 'There was a validation error:',
+      data: validation.error.details.map((x) => x.message).join(', '),
+      error: true,
     });
   } return next();
 };
