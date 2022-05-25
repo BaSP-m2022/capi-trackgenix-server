@@ -9,31 +9,30 @@ beforeAll(async () => {
 });
 
 describe('GET /admins', () => {
-  describe('get all /admins', () => {
-    test('should return all admins list', async () => {
-      const response = await request(app).get('/admins').send();
-      expect(response.status).toBe(200);
-      expect(response.error).toBeFalsy();
-      expect(response.body.data.length).toBeGreaterThan(0);
-    });
-    test('should not return all admins list, wrong path', async () => {
-      const response = await request(app).get('/admin').send();
-      expect(response.status).toBe(404);
-    });
+  test('should return all admins list', async () => {
+    const response = await request(app).get('/admins').send();
+    expect(response.status).toBe(200);
+    expect(response.error).toBeFalsy();
+    expect(response.body.data.length).toBeGreaterThan(0);
   });
-  describe('get by id /admins/:id', () => {
-    test('should return one admin', async () => {
-      const response = await request(app).get(`/admins/${adminsSeed[0]._id}`).send();
-      expect(response.status).toBe(200);
-      expect(response.error).toBeFalsy();
-      expect(response.body.msg).toBe(`Admin id: ${adminsSeed[0]._id} found.`);
-    });
-    test('should not return admin, wrong id', async () => {
-      const response = await request(app).get('/admins/62894b9257165ab30f868535').send();
-      expect(response.status).toBe(404);
-      expect(response.error).toBeTruthy();
-      expect(response.body.msg).toBe("Error, data not found:(TypeError: Cannot read properties of null (reading 'id'))");
-    });
+  test('should not return all admins list, wrong path', async () => {
+    const response = await request(app).get('/admin').send();
+    expect(response.status).toBe(404);
+  });
+});
+
+describe('GET /admins/:id', () => {
+  test('should return one admin found by id', async () => {
+    const response = await request(app).get(`/admins/${adminsSeed[0]._id}`).send();
+    expect(response.status).toBe(200);
+    expect(response.error).toBeFalsy();
+    expect(response.body.msg).toBe(`Admin id: ${adminsSeed[0]._id} found.`);
+  });
+  test('should not return admin, wrong id', async () => {
+    const response = await request(app).get('/admins/62894b9257165ab30f868535').send();
+    expect(response.status).toBe(404);
+    expect(response.error).toBeTruthy();
+    expect(response.body.msg).toBe("Error, data not found:(TypeError: Cannot read properties of null (reading 'id'))");
   });
 });
 
