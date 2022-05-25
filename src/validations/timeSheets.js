@@ -15,7 +15,7 @@ const validateSheetCreation = (req, res, next) => {
   const validate = createSheet.validate(req.body);
   if (validate.error) {
     return res.status(400).json({
-      msg: 'Validation error 1',
+      msg: 'Validation error, wrongly entered data',
     });
   }
   return next();
@@ -26,7 +26,7 @@ const validateSheetEdition = (req, res, next) => {
 
   if (validate.error) {
     return res.status(400).json({
-      msg: 'Validation error 2',
+      msg: 'Validation error, wrongly entered data',
     });
   }
   return next();

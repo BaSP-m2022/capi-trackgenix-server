@@ -47,7 +47,7 @@ describe('GET /time-sheets/', () => {
 
 describe('POST /time-sheets', () => {
   test('Response should return the created timeSheet', async () => {
-    const response = await request(app).post('/time-sheets/').send({
+    const response = await request(app).post('/time-sheets').send({
       employee: '628266cdf7adf82df1518085',
       hoursWorked: 64,
       dailyHS: 8,
@@ -58,40 +58,40 @@ describe('POST /time-sheets', () => {
   });
 
   test('Response should return validation error 1 (missing idEmployee)', async () => {
-    const response = await request(app).post('/time-sheets/').send({
+    const response = await request(app).post('/time-sheets').send({
       hoursWorked: 64,
       dailyHS: 8,
     });
 
     expect(response.status).toBe(400);
-    expect(response.body.msg).toEqual('Validation error 1');
+    expect(response.body.msg).toEqual('Validation error, wrongly entered data');
   });
 
   test('Response should return validation error 1 (missing hoursWorked)', async () => {
-    const response = await request(app).post('/time-sheets/').send({
+    const response = await request(app).post('/time-sheets').send({
       idEmployee: 1099,
       dailyHS: 8,
     });
 
     expect(response.status).toBe(400);
-    expect(response.body.msg).toEqual('Validation error 1');
+    expect(response.body.msg).toEqual('Validation error, wrongly entered data');
   });
 
   test('Response should return validation error 1 (missing dailyHS)', async () => {
-    const response = await request(app).post('/time-sheets/').send({
+    const response = await request(app).post('/time-sheets').send({
       idEmployee: 1099,
       hoursWorked: 64,
     });
 
     expect(response.status).toBe(400);
-    expect(response.body.msg).toEqual('Validation error 1');
+    expect(response.body.msg).toEqual('Validation error, wrongly entered data');
   });
 
   test('Response should return validation error 1 (empty object)', async () => {
-    const response = await request(app).post('/time-sheets/').send({});
+    const response = await request(app).post('/time-sheets').send({});
 
     expect(response.status).toBe(400);
-    expect(response.body.msg).toEqual('Validation error 1');
+    expect(response.body.msg).toEqual('Validation error, wrongly entered data');
   });
 });
 
@@ -112,7 +112,7 @@ describe('PUT /time-sheets/:id', () => {
     });
 
     expect(response.status).toBe(400);
-    expect(response.body.msg).toEqual('Validation error 2');
+    expect(response.body.msg).toEqual('Validation error, wrongly entered data');
   });
 
   test('Response should return a validation error 2 (missing dailyHS)', async () => {
@@ -121,7 +121,7 @@ describe('PUT /time-sheets/:id', () => {
     });
 
     expect(response.status).toBe(400);
-    expect(response.body.msg).toEqual('Validation error 2');
+    expect(response.body.msg).toEqual('Validation error, wrongly entered data');
   });
 });
 
