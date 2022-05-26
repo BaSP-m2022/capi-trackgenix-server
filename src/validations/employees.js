@@ -5,10 +5,11 @@ const createValidation = (req, res, next) => {
     firstName: joi.string().min(2).required(),
     lastName: joi.string().min(2).required(),
     dateOfBirth: joi.date().required(),
-    email: joi.string().min(8).required(),
+    email: joi.string().email().min(8).required(),
     phone: joi.string().min(12).max(12).required(),
     address: joi.string().min(4).required(),
     location: joi.string().min(2).required(),
+    projectId: joi.string().min(24).max(24).required(),
   });
 
   const validation = Schema.validate(req.body);
@@ -27,10 +28,11 @@ const editEmployeeValidation = (req, res, next) => {
     firstName: joi.string().min(2),
     lastName: joi.string().min(2),
     dateOfBirth: joi.date(),
-    email: joi.string().min(8),
+    email: joi.string().email().min(8),
     phone: joi.string().min(12).max(12),
     address: joi.string().min(4),
     location: joi.string().min(2),
+    projectId: joi.string().min(24).max(24),
   });
 
   const validation = Schema.validate(req.body);
