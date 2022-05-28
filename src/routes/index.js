@@ -12,7 +12,7 @@ router.use('/projects', projectRoutes);
 router.use('/tasks', tasksRoutes);
 router.use('/time-sheets', timeSheetsRoutes);
 router.use('/admins', adminsRoutes);
-router.use('/Super-Admins', routesSuperAdmin);
+router.use('/super-admins', routesSuperAdmin);
 router.use('/employees', employees);
 
 export default router;

@@ -67,13 +67,12 @@ async function addSuperAdmin(req, res) {
       email: superData.email,
       password: superData.password,
     });
-    const added = await superAdmin.save();
+    await superAdmin.save();
     return res.status(201).json({
-      msg: `Super Admin succesfully added. \nSuper Admin: ${added}`,
+      msg: 'Super Admin succesfully added',
     });
   } catch (error) {
     return res.json({
-      msg: 'An error has occurred',
       error: error.details[0].message,
     });
   }
@@ -83,11 +82,6 @@ async function addSuperAdmin(req, res) {
 
 async function editSuperAdmin(req, res) {
   try {
-    if (!req.params) {
-      return res.status(400).json({
-        msg: 'Missing id parameter',
-      });
-    }
     const edit = await SuperAdmin.findByIdAndUpdate(req.params.id, {
       email: req.body.email,
       password: req.body.password,
@@ -98,11 +92,11 @@ async function editSuperAdmin(req, res) {
       });
     }
     return res.status(201).json({
-      msg: `Super Admin updated. \nSuper Admin: ${edit}`,
+      msg: 'Super Admin updated',
     });
   } catch (error) {
     return res.json({
-      msg: 'And error has ocurred',
+      error: error.details[0].message,
     });
   }
 }
@@ -111,11 +105,6 @@ async function editSuperAdmin(req, res) {
 
 async function deleteSuperAdmin(req, res) {
   try {
-    if (!req.params.id) {
-      return res.status(400).json({
-        msg: 'Missing id parameter',
-      });
-    }
     const deletion = await SuperAdmin.findByIdAndDelete(req.params.id);
     if (!deletion) {
       return res.status(404).json({
@@ -123,7 +112,7 @@ async function deleteSuperAdmin(req, res) {
       });
     }
     return res.status(200).json({
-      msg: `Super Admin succefully deleted \nSuper Admin: ${deletion}`,
+      msg: 'Super Admin succefully deleted',
     });
   } catch (error) {
     return res.json({
