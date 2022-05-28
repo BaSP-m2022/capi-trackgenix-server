@@ -82,6 +82,7 @@ const createProject = async (req, res) => {
       employees: req.body.employees,
     });
     const result = await project.save();
+
     return res.status(201).json({
       msg: 'The project has been created. Project:',
       data: result,
